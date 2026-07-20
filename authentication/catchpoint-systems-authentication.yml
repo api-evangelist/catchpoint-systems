@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: openapi/catchpoint-systems-rest-api-v2-openapi.json
+docs: https://docs.catchpoint.com/docs/rest-api-v2-guide
+summary:
+  types:
+  - http
+  scheme: bearer
+  bearer_format: JWT
+notes: >-
+  Catchpoint REST API v2 authenticates with a bearer (JWT) token passed in the Authorization header
+  (Authorization: Bearer <token>). API credentials (a REST API key/client id and secret) are generated
+  from the Catchpoint Portal under API settings; the credentials are exchanged for a short-lived bearer
+  token that is then sent on every request. There are no OAuth2 scopes declared in the spec.
+schemes:
+- name: bearer
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  in: header
+  header: Authorization
+  sources:
+  - openapi/catchpoint-systems-rest-api-v2-openapi.json
