@@ -1,0 +1,32 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Catchpoint REST API v2
+  version: 1.0.0
+extends: openapi/catchpoint-systems-rest-api-v2-openapi.json
+actions:
+- target: $.info
+  update:
+    description: >-
+      Catchpoint REST API v2 — Internet Performance Monitoring platform API. Manage synthetic and
+      endpoint tests, folders, products, nodes, contacts, labels, alerts, assertions, SLAs and SLOs,
+      and retrieve raw and aggregated performance, real-user, and endpoint data. Authenticated with a
+      bearer (JWT) token.
+    contact:
+      name: Catchpoint Support
+      url: https://support.catchpoint.com/hc/en-us
+    x-apievangelist-rating: 3
+    x-apievangelist-enhancements:
+    - Documented HTTP error statuses (401/403/429) absent from the source spec (see errors/).
+    - Captured bearer-JWT auth profile (see authentication/).
+    - Captured rate-limit and pagination conventions (see conventions/).
+    - Captured webhook event surface (see asyncapi/).
+- target: $.servers
+  update:
+    description: Base host resolved from docs; spec server url is the relative "/api" path.
+- target: $.info.x-rate-limits
+  update:
+    per_second: 7
+    per_minute: 20
+    per_hour: 500
+    per_day: 2000
+    scope: requestor IP

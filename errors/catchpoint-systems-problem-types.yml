@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/catchpoint-systems-rest-api-v2-openapi.json
+format: custom
+envelope:
+  schema: Catchpoint.Symphony.Response.ErrorCode
+  fields:
+  - name: id
+    type: integer
+    detail: numeric error/code identifier
+  - name: name
+    type: string
+  - name: message
+    type: string
+    detail: human-readable error message
+  - name: isWarning
+    type: boolean
+    detail: true when the item is a warning rather than a hard error
+  detail: >-
+    Catchpoint REST API v2 returns error and warning detail as ErrorCode objects carried in the
+    response payload (messages/errors collections) rather than as RFC 9457 problem+json bodies.
+http_statuses:
+  note: >-
+    The published OpenAPI documents only 200 responses per operation (a spec-completeness gap); the
+    concrete HTTP error statuses below are documented in the REST API guide and rate-limit reference,
+    not in the spec.
+  documented:
+  - status: 401
+    title: Unauthorized
+    detail: Missing or invalid bearer token.
+  - status: 403
+    title: Forbidden
+    detail: Token lacks permission for the requested resource.
+  - status: 429
+    title: Too Many Requests
+    detail: Request rate exceeded the enforced REST API limits (see conventions rate_limiting).
+    source: https://docs.catchpoint.com/docs/enforcing-rest-api-limits

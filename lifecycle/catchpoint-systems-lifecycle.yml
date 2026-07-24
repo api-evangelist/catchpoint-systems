@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.catchpoint.com/docs/rest-api-v2-guide
+versioning:
+  scheme: uri-path
+  current: v2
+  detail: The REST API is versioned in the URI path (/api/v2/...). A legacy v1 API also exists.
+  docs: https://docs.catchpoint.com/docs/rest-api-v2-guide
+status_page: https://status.catchpoint.com
+support: https://support.catchpoint.com/hc/en-us
+release_notes:
+  detail: >-
+    Catchpoint publishes agent/product release notes and node-update notices in its documentation, but
+    does not maintain a single dated REST API changelog surface.
+  docs: https://docs.catchpoint.com/docs/agent-releases.md
+deprecation:
+  policy_documented: false
+  detail: >-
+    No formal REST API deprecation policy or RFC 8594 Sunset/Deprecation header support is documented.
+deprecated_operations: []

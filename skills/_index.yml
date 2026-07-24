@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/catchpoint-systems-rest-api-v2-openapi.json
+skills:
+- file: catchpoint-systems-create-and-monitor-test.md
+  name: Create and monitor a Catchpoint synthetic test
+  api: openapi/catchpoint-systems-rest-api-v2-openapi.json
+  operations:
+  - 'POST /v2/tests'
+  - 'GET /v2/tests'
+  - 'GET /v2/tests/{testIds}'
+  - 'GET /v2/tests/records/waterfall/{testId}'
+  - 'GET /v2/tests/errors/raw/{testIds}'
+- file: catchpoint-systems-alerts-and-nodes.md
+  name: Review Catchpoint alerts and monitoring nodes
+  api: openapi/catchpoint-systems-rest-api-v2-openapi.json
+  operations:
+  - 'GET /v2/tests/alerts'
+  - 'PATCH /v2/tests/alerts'
+  - 'GET /v2/nodes'
+  - 'GET /v2/nodes/all'
+  - 'GET /v2/iw/outages'

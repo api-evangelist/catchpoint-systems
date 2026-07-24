@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.catchpoint.com/docs/webhooks.md
+spec_type: Webhooks
+summary: >-
+  Catchpoint publishes an outbound event surface via webhooks (no AsyncAPI document). Two webhook
+  families deliver events to customer endpoints: Alert Webhooks (fired on alert state changes) and
+  Test Data Webhooks (streaming raw/aggregated test results). Payloads support JSON and XML templates
+  with a macro system, and webhook receivers can be secured with signatures/secrets.
+webhooks:
+- name: Alert Webhook
+  trigger: alert condition state changes (triggered / warning / recovered)
+  formats: [JSON, XML]
+  docs: https://docs.catchpoint.com/docs/alert-webhook-guide
+  payload_docs: https://docs.catchpoint.com/docs/alert-webhook-json-result
+  templates: https://docs.catchpoint.com/docs/alert-webhook-templates
+  macros: https://docs.catchpoint.com/docs/alert-webhook-macro-index
+- name: Test Data Webhook
+  trigger: completed test runs (raw and aggregated performance data)
+  formats: [JSON, XML]
+  docs: https://docs.catchpoint.com/docs/test-data-webhook-guide
+  templates: https://docs.catchpoint.com/docs/test-data-webhook-templates
+  macros: https://docs.catchpoint.com/docs/test-data-webhook-macros-1
+  security: https://docs.catchpoint.com/docs/test-data-webhook-security-and-wait-times
+- name: BGP Data Webhook
+  trigger: BGP monitoring events
+  docs: https://docs.catchpoint.com/docs/bgp-data-webhook
+security:
+  detail: Webhook receivers can be secured; see Add Security for Webhooks.
+  docs: https://docs.catchpoint.com/docs/add-security-for-webhooks

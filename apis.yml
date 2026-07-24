@@ -1,23 +1,548 @@
 aid: catchpoint-systems
 name: Catchpoint Systems
-description: Catchpoint Systems is a company surfaced as a portfolio company of battery-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Catchpoint Systems is an Internet Performance Monitoring (IPM) platform that helps enterprises
+  observe the performance, reachability, and reliability of applications, APIs, networks, and services
+  across the public internet. The platform combines synthetic monitoring (web, transaction, API, DNS,
+  BGP, SSL, streaming, and network-layer tests), real user monitoring (RUM), endpoint/employee-experience
+  monitoring, Internet Sonar outage detection, and a global observability network of monitoring nodes.
+  Catchpoint exposes a REST API v2 (bearer/JWT authenticated, documented via a public Swagger UI) plus
+  Alert and Test Data webhooks so teams can automate test management, pull raw and aggregated performance
+  data, manage nodes and SLAs, and stream results into their own tooling. The company was added to the
+  API Evangelist network as a portfolio company of Battery Ventures.
 url: https://raw.githubusercontent.com/api-evangelist/catchpoint-systems/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-from-public-api
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://cdn.prod.website-files.com/61027bb0bc31fc6cafefbc0c/6387709b977c72057fb211e3_CATCHPOINT_OPENGRAPH_1.png
 tags:
 - Company
-apis: []
+- Monitoring
+- Observability
+- Internet Performance Monitoring
+- Synthetic Monitoring
+- Real User Monitoring
+- Network Monitoring
+- Digital Experience Monitoring
+- APIs
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: catchpoint-systems:catchpoint-systems-account-api
+  name: Catchpoint Systems Account API
+  description: The Account API from Catchpoint Systems — 1 operation(s) for account.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-account-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-alerts-api
+  name: Catchpoint Systems Alerts API
+  description: The Alerts API from Catchpoint Systems — 2 operation(s) for alerts.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Alerts
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-alerts-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-asns-api
+  name: Catchpoint Systems ASNs API
+  description: The ASNs API from Catchpoint Systems — 3 operation(s) for asns.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - ASNs
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-asns-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-assertions-api
+  name: Catchpoint Systems Assertions API
+  description: The Assertions API from Catchpoint Systems — 1 operation(s) for assertions.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Assertions
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-assertions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-commandcontrol-api
+  name: Catchpoint Systems CommandControl API
+  description: The CommandControl API from Catchpoint Systems — 1 operation(s) for commandcontrol.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - CommandControl
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-commandcontrol-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-contacts-api
+  name: Catchpoint Systems Contacts API
+  description: The Contacts API from Catchpoint Systems — 3 operation(s) for contacts.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-contacts-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-credentials-api
+  name: Catchpoint Systems Credentials API
+  description: The Credentials API from Catchpoint Systems — 3 operation(s) for credentials.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Credentials
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-credentials-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-divisions-api
+  name: Catchpoint Systems Divisions API
+  description: The Divisions API from Catchpoint Systems — 1 operation(s) for divisions.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Divisions
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-divisions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-endpointdevice-api
+  name: Catchpoint Systems EndpointDevice API
+  description: The EndpointDevice API from Catchpoint Systems — 7 operation(s) for endpointdevice.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - EndpointDevice
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-endpointdevice-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-endpointdeviceperformance-api
+  name: Catchpoint Systems EndpointDevicePerformance API
+  description: >-
+    The EndpointDevicePerformance API from Catchpoint Systems — 3 operation(s) for endpointdeviceperformance.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - EndpointDevicePerformance
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-endpointdeviceperformance-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-folder-api
+  name: Catchpoint Systems Folder API
+  description: The Folder API from Catchpoint Systems — 3 operation(s) for folder.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Folder
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-folder-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-insights-api
+  name: Catchpoint Systems Insights API
+  description: The Insights API from Catchpoint Systems — 4 operation(s) for insights.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Insights
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-insights-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-instances-api
+  name: Catchpoint Systems Instances API
+  description: The Instances API from Catchpoint Systems — 6 operation(s) for instances.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Instances
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-instances-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-instanttest-api
+  name: Catchpoint Systems InstantTest API
+  description: The InstantTest API from Catchpoint Systems — 4 operation(s) for instanttest.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - InstantTest
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-instanttest-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-internetweather-api
+  name: Catchpoint Systems InternetWeather API
+  description: The InternetWeather API from Catchpoint Systems — 1 operation(s) for internetweather.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - InternetWeather
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-internetweather-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-label-api
+  name: Catchpoint Systems Label API
+  description: The Label API from Catchpoint Systems — 3 operation(s) for label.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Label
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-label-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-node-api
+  name: Catchpoint Systems Node API
+  description: The Node API from Catchpoint Systems — 13 operation(s) for node.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Node
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-node-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-nodegroup-api
+  name: Catchpoint Systems NodeGroup API
+  description: The NodeGroup API from Catchpoint Systems — 5 operation(s) for nodegroup.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - NodeGroup
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-nodegroup-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-nodeutilization-api
+  name: Catchpoint Systems NodeUtilization API
+  description: The NodeUtilization API from Catchpoint Systems — 6 operation(s) for nodeutilization.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - NodeUtilization
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-nodeutilization-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-product-api
+  name: Catchpoint Systems Product API
+  description: The Product API from Catchpoint Systems — 3 operation(s) for product.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Product
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-product-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-realuser-api
+  name: Catchpoint Systems RealUser API
+  description: The RealUser API from Catchpoint Systems — 6 operation(s) for realuser.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - RealUser
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-realuser-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-recenterrors-api
+  name: Catchpoint Systems RecentErrors API
+  description: The RecentErrors API from Catchpoint Systems — 2 operation(s) for recenterrors.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - RecentErrors
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-recenterrors-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-sla-api
+  name: Catchpoint Systems SLA API
+  description: The SLA API from Catchpoint Systems — 4 operation(s) for sla.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - SLA
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-sla-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-slo-api
+  name: Catchpoint Systems SLO API
+  description: The SLO API from Catchpoint Systems — 4 operation(s) for slo.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - SLO
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-slo-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-test-api
+  name: Catchpoint Systems Test API
+  description: The Test API from Catchpoint Systems — 7 operation(s) for test.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Test
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-test-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-testperformance-api
+  name: Catchpoint Systems TestPerformance API
+  description: The TestPerformance API from Catchpoint Systems — 11 operation(s) for testperformance.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - TestPerformance
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-testperformance-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-testtemplates-api
+  name: Catchpoint Systems TestTemplates API
+  description: The TestTemplates API from Catchpoint Systems — 4 operation(s) for testtemplates.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - TestTemplates
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-testtemplates-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-usagereport-api
+  name: Catchpoint Systems UsageReport API
+  description: The UsageReport API from Catchpoint Systems — 1 operation(s) for usagereport.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - UsageReport
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-usagereport-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-useridentity-api
+  name: Catchpoint Systems UserIdentity API
+  description: The UserIdentity API from Catchpoint Systems — 1 operation(s) for useridentity.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - UserIdentity
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-useridentity-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-userrole-api
+  name: Catchpoint Systems UserRole API
+  description: The UserRole API from Catchpoint Systems — 3 operation(s) for userrole.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - UserRole
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-userrole-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+- aid: catchpoint-systems:catchpoint-systems-workflow-api
+  name: Catchpoint Systems Workflow API
+  description: The Workflow API from Catchpoint Systems — 1 operation(s) for workflow.
+  humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  baseURL: https://io.catchpoint.com/api
+  tags:
+  - Workflow
+  properties:
+  - type: OpenAPI
+    url: openapi/catchpoint-systems-workflow-api-openapi.yml
+  - type: Documentation
+    url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+  - type: Swagger
+    url: https://io.catchpoint.com/api/swagger/index.html
+common:
+- type: DomainSecurity
+  url: security/catchpoint-systems-domain-security.yml
+- type: AgenticAccess
+  url: agentic-access/catchpoint-systems-agentic-access.yml
+- type: Authentication
+  url: authentication/catchpoint-systems-authentication.yml
+- type: DeveloperPortal
+  url: https://docs.catchpoint.com/
+- type: Documentation
+  url: https://docs.catchpoint.com/
+- type: APIReference
+  url: https://io.catchpoint.com/api/swagger/index.html
+- type: GettingStarted
+  url: https://docs.catchpoint.com/docs/rest-api-v2-guide
+- type: Support
+  url: https://support.catchpoint.com/hc/en-us
+- type: Blog
+  url: https://www.catchpoint.com/blog
+- type: Pricing
+  url: https://www.catchpoint.com/pricing
+- type: SignUp
+  url: https://portal.catchpoint.com/
+- type: Login
+  url: https://portal.catchpoint.com/
+- type: TermsOfService
+  url: https://www.catchpoint.com/legal/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.catchpoint.com/legal/privacy-policy
+- type: StatusPage
+  url: https://status.catchpoint.com
+- type: TrustCenter
+  url: https://www.catchpoint.com/legal/trust
+- type: Compliance
+  url: https://www.catchpoint.com/legal/trust
+- type: LLMsTxt
+  url: llms/catchpoint-systems-llms.txt
+- type: WellKnown
+  url: well-known/catchpoint-systems-well-known.yml
+- type: Conventions
+  url: conventions/catchpoint-systems-conventions.yml
+- type: ErrorCatalog
+  url: errors/catchpoint-systems-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/catchpoint-systems-lifecycle.yml
+- type: Conformance
+  url: conformance/catchpoint-systems-conformance.yml
+- type: MCPServer
+  url: mcp/catchpoint-systems-mcp.yml
+- type: Overlay
+  url: overlays/catchpoint-systems-rest-api-v2-overlay.yaml
+- type: Webhooks
+  url: asyncapi/catchpoint-systems-webhooks.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: RateLimits
+  url: conventions/catchpoint-systems-conventions.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

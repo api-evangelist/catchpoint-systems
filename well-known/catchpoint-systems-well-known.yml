@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of /.well-known/ on Catchpoint hosts
+hosts:
+- host: https://www.catchpoint.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://io.catchpoint.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+notes: >-
+  No /.well-known/ discovery documents are published on the Catchpoint marketing (www.catchpoint.com)
+  or API (io.catchpoint.com) hosts as of the probe date. Absence recorded as valid data.

@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: openapi/catchpoint-systems-rest-api-v2-openapi.json + https://www.catchpoint.com/legal/trust
+standards:
+- id: oauth2
+  conforms: false
+  evidence: securityScheme is http bearer (JWT), not oauth2
+- id: oidc
+  conforms: false
+- id: http-bearer-jwt
+  conforms: true
+  evidence: components.securitySchemes.bearer type http scheme bearer bearerFormat JWT
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors returned as ErrorCode objects, not application/problem+json
+- id: openapi-3.0
+  conforms: true
+  evidence: published OpenAPI 3.0.1 document (io.catchpoint.com/api/swagger/v2.0/swagger.json)
+- id: json-api
+  conforms: false
+- id: fhir
+  conforms: false
+compliance_program:
+  published: true
+  url: https://www.catchpoint.com/legal/trust
+  certifications:
+  - SOC 2 Type 2
+  - ISO 27001
+  - GDPR
+  - CCPA
+  additional:
+  - Annual third-party penetration testing
+  - Quarterly vulnerability scans
+  - NIST server hardening standards
+  - 24x7 SOC monitoring (SIEM / IDS / threat response)

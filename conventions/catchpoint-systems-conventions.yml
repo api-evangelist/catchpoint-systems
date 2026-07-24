@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.catchpoint.com/docs/rest-api-v2-guide
+spec: openapi/catchpoint-systems-rest-api-v2-openapi.json
+authentication:
+  style: bearer-jwt
+  header: Authorization
+  detail: Bearer JWT token; see authentication/catchpoint-systems-authentication.yml
+idempotency:
+  supported: false
+  detail: >-
+    Catchpoint REST API v2 does not document an idempotency-key header or parameter; write operations
+    (POST/PATCH/DELETE) are not advertised as idempotent-by-key.
+pagination:
+  style: page-number
+  params:
+  - name: pageNumber
+    in: query
+    detail: 1-based page index
+  - name: pageSize
+    in: query
+    detail: number of items per page
+  detail: >-
+    List endpoints accept pageNumber and pageSize query parameters; responses carry the requested page
+    of items along with paging metadata.
+versioning:
+  scheme: uri-path
+  current: v2
+  detail: The API is versioned in the URI path (/api/v2/...).
+rate_limiting:
+  documented: true
+  docs: https://docs.catchpoint.com/docs/enforcing-rest-api-limits
+  limits:
+  - 7 requests per second
+  - 20 requests per minute
+  - 500 requests per hour
+  - 2000 requests per day
+  scope: per requestor IP address
+  reset: daily counters reset at 00:00:00 UTC
+  detail: >-
+    Requests exceeding the published thresholds are rejected; limits are enforced by the requestor's
+    IP address across per-second, per-minute, per-hour and per-day windows.
+error_envelope:
+  detail: >-
+    Errors are returned with an ErrorCode object (id, name, message, isWarning) inside the response
+    messages/errors collection; see errors/catchpoint-systems-problem-types.yml.
+cross_links:
+  authentication: authentication/catchpoint-systems-authentication.yml
+  errors: errors/catchpoint-systems-problem-types.yml
+  lifecycle: lifecycle/catchpoint-systems-lifecycle.yml

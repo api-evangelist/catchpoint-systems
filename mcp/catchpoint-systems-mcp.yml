@@ -1,0 +1,592 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/catchpoint-systems-rest-api-v2-openapi.json
+server:
+  name: catchpoint-systems
+  transport: stdio
+  note: No official Catchpoint MCP server found; candidate tool list derived one-per-operation from the REST API v2 OpenAPI.
+tools:
+- name: get_account_activity
+  tag: Account
+  description: Returns Account Activity details by the parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/account/activity
+- name: get_tests_alerts
+  tag: Alerts
+  description: Returns alert details based on the alert IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/alerts/{alertIds}
+- name: get_tests_alerts_2
+  tag: Alerts
+  description: Returns alert details based on the parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/alerts
+- name: update_tests_alerts
+  tag: Alerts
+  description: Assign, Acknowledge or Drop alerts.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/tests/alerts
+- name: get_library_asns
+  tag: ASNs
+  description: Return ASN's details by the IDs passed
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/library/asns/{ids}
+- name: delete_library_asns
+  tag: ASNs
+  description: Deletes existing ASNs by parameters passed
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/library/asns/{ids}
+- name: get_library_asns_2
+  tag: ASNs
+  description: Return ASN details by the parameters passed
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/library/asns
+- name: create_library_asns
+  tag: ASNs
+  description: Create an ASN based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/library/asns
+- name: update_library_asns
+  tag: ASNs
+  description: Update an existing ASN based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/library/asns/{asnId}
+- name: get_assertions
+  tag: Assertions
+  description: Returns the assertions by the IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/assertions
+- name: create_assertions
+  tag: Assertions
+  description: Create a new assertion based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/assertions
+- name: update_assertions
+  tag: Assertions
+  description: Update an existing assertion based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/assertions
+- name: delete_assertions
+  tag: Assertions
+  description: Delete an existing assertion by parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/assertions
+- name: get_commandcontrol
+  tag: CommandControl
+  description: Returns all the external IPs and hostnames of the available Catchpoint Servers for whitelisting purposes.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/commandcontrol
+- name: get_contacts
+  tag: Contacts
+  description: Return contact details by the IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/contacts/{contactIds}
+- name: get_contacts_2
+  tag: Contacts
+  description: Returns Contact details by parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/contacts
+- name: delete_contacts
+  tag: Contacts
+  description: Deletes existing contacts by parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/contacts
+- name: create_contacts
+  tag: Contacts
+  description: Create a new contact based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/contacts
+- name: update_contacts
+  tag: Contacts
+  description: Update an existing contact based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/contacts/{contactId}
+- name: get_library_credentials
+  tag: Credentials
+  description: Return credential details by the IDs passed
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/library/credentials/{ids}
+- name: delete_library_credentials
+  tag: Credentials
+  description: Delete credentials based on the list of the IDs
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/library/credentials/{ids}
+- name: get_library_credentials_2
+  tag: Credentials
+  description: Return credential details by the parameters passed
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/library/credentials
+- name: create_library_credentials
+  tag: Credentials
+  description: Create a Credential based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/library/credentials
+- name: update_library_credentials
+  tag: Credentials
+  description: Update an existing library credential based on the request body
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/library/credentials/{id}
+- name: get_divisions
+  tag: Divisions
+  description: Returns details about a Division per the parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/divisions
+- name: get_endpoints_device
+  tag: EndpointDevice
+  description: Returns the details of endpoint devices based on the User ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/endpoints/device/{userIds}
+- name: get_endpoints_device_2
+  tag: EndpointDevice
+  description: Returns the details of endpoint devices based on the parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/endpoints/device
+- name: get_endpoints_device_status
+  tag: EndpointDevice
+  description: Returns the endpoint device status based on the User ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/endpoints/device/status/{userIds}
+- name: update_endpoints_device_status
+  tag: EndpointDevice
+  description: Allows to set the status of an existing endpoint device to Active or Inactive.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/endpoints/device/status
+- name: get_endpoints_device_label
+  tag: EndpointDevice
+  description: Returns the endpoint device labels based on the User ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/endpoints/device/label/{userIds}
+- name: update_endpoints_device_label
+  tag: EndpointDevice
+  description: Allows to update the existing endpoint device label.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/endpoints/device/label
+- name: update_endpoints_device
+  tag: EndpointDevice
+  description: Update properties of an existing endpoint device based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/endpoints/device/{userId}
+- name: get_endpoints_device_explorer_enumeration
+  tag: EndpointDevicePerformance
+  description: Returns the enumeration to help automate endpoint performance data pull.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/endpoints/device/explorer/enumeration
+- name: get_endpoints_device_explorer_raw
+  tag: EndpointDevicePerformance
+  description: Returns the raw performance chart data based on the User ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/endpoints/device/explorer/raw
+- name: get_endpoints_device_explorer_aggregated
+  tag: EndpointDevicePerformance
+  description: Returns the aggregated performance chart data based on the User ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/endpoints/device/explorer/aggregated
+- name: get_folders
+  tag: Folder
+  description: Return properties of one or more folders based on folder IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/folders/{folderIds}
+- name: get_folders_2
+  tag: Folder
+  description: Return folders per the parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/folders
+- name: create_folders
+  tag: Folder
+  description: Create a new folder per the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/folders
+- name: update_folders
+  tag: Folder
+  description: Update a property of an existing folder.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/folders/{folderId}
+- name: get_insights
+  tag: Insights
+  description: Returns the insight details from tracepoints and indicators for tokens passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/insights/{insightTokens}
+- name: get_insights_insights
+  tag: Insights
+  description: Returns the insight details from tracepoints and indicators for parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/insights/insights
+- name: create_insights
+  tag: Insights
+  description: Create a new insight based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/insights
+- name: update_insights
+  tag: Insights
+  description: Update an existing insight based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/insights/{insightType}/{insightToken}
+- name: get_instances
+  tag: Instances
+  description: Return details of the Node and all associated Instances.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/instances/{nodeIds}
+- name: get_instances_2
+  tag: Instances
+  description: Returns the Instance details based on the parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/instances
+- name: create_instances
+  tag: Instances
+  description: Create a new instance within a new node or add a new instance to an existing node.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/instances
+- name: update_instances
+  tag: Instances
+  description: Update properties of an existing instance based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/instances/{instanceId}
+- name: get_instances_status
+  tag: Instances
+  description: Returns the Instance status, active or inactive, based on the Instance IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/instances/status/{instanceIds}
+- name: update_instances_status
+  tag: Instances
+  description: Allows to set the status of an existing instance to Active or Inactive.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/instances/status
+- name: get_instances_hardware
+  tag: Instances
+  description: Returns the instance hardware usage based on the Node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/instances/hardware/{nodeId}
+- name: create_instanttests
+  tag: InstantTest
+  description: Runs a new instant test based on the POST data.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/instanttests
+- name: get_instanttests_configuration
+  tag: InstantTest
+  description: Returns properties of one instant test based on instant test ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/instanttests/configuration/{instantTestId}
+- name: get_instanttests
+  tag: InstantTest
+  description: Return instant test results performance data based on an instant test ID and node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/instanttests/{instantTestId}
+- name: create_instanttests_2
+  tag: InstantTest
+  description: Runs an instant test by ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/instanttests/{testId}
+- name: get_iw_outages
+  tag: InternetWeather
+  description: Returns the list of internet service outages. Default last one hour data.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/iw/outages
+- name: get_labels
+  tag: Label
+  description: Returns the label details for the label key IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/labels/{labelKeyIds}
+- name: get_labels_2
+  tag: Label
+  description: Return the label details based on parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/labels
+- name: create_labels
+  tag: Label
+  description: Create a new label based on the Post data.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/labels
+- name: update_labels
+  tag: Label
+  description: Update an existing label based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/labels/{labelKeyId}
+- name: delete_labels
+  tag: Label
+  description: Delete labels by Label Key ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/labels/{labelKeyId}
+- name: get_nodes
+  tag: Node
+  description: Returns node details by Node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/{nodeIds}
+- name: get_nodes_2
+  tag: Node
+  description: Returns the details of Enterprise Nodes within a Client or a Division.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes
+- name: get_nodes_all
+  tag: Node
+  description: Returns the details of nodes of all network types based on parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/all
+- name: get_nodes_state
+  tag: Node
+  description: Returns the Node state, paused or not, based on the Node IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/state/{nodeIds}
+- name: update_nodes_state
+  tag: Node
+  description: Allows to pause or resume an existing node.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/nodes/state
+- name: get_nodes_status
+  tag: Node
+  description: Returns the Node status, active or inactive, based on the Node IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/status/{nodeIds}
+- name: update_nodes_status
+  tag: Node
+  description: Allows to set the status of an existing node to Active or Inactive.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/nodes/status
+- name: update_nodes
+  tag: Node
+  description: Update properties of an existing node.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/nodes/{nodeId}
+- name: get_nodes_os
+  tag: Node
+  description: Returns a list of all the operating system names that match the parameter passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/os
+- name: get_nodes_isp
+  tag: Node
+  description: Returns a list of all the ISP names that match the parameter passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/isp
+- name: get_nodes_package
+  tag: Node
+  description: Returns the available enterprise packages for the Client or Division.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/package
+- name: get_nodes_geographycity
+  tag: Node
+  description: Returns all the available cities that can be used while creating a Node.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/geographycity
+- name: get_nodes_chromeversions
+  tag: Node
+  description: Retrieves the Chrome versions information for the Enterprise node, this will include all versions installed
+    on the node, even if not targeted.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/chromeversions
+- name: create_nodes_chromeversions
+  tag: Node
+  description: Update the chrome versions for the specified Enterprise node based on the payload sent.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/nodes/chromeversions
+- name: get_nodes_groups
+  tag: NodeGroup
+  description: Returns the node group details based on the ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/groups/{nodeGroupIds}
+- name: get_nodes_groups_2
+  tag: NodeGroup
+  description: Returns the node group details based on the parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/groups
+- name: create_nodes_groups
+  tag: NodeGroup
+  description: Create a new node group based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/nodes/groups
+- name: update_nodes_groups
+  tag: NodeGroup
+  description: Update properties of an existing node group based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/nodes/groups
+- name: delete_nodes_groups
+  tag: NodeGroup
+  description: Deletes existing node group by parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/nodes/groups
+- name: get_nodes_groups_networktype
+  tag: NodeGroup
+  description: Returns the list of network types supported for node group.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/groups/networktype
+- name: get_nodes_groups_objecttype
+  tag: NodeGroup
+  description: Retrieves the list of object Types supported for node group location.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/groups/objecttype
+- name: get_nodes_groups_nodelocations
+  tag: NodeGroup
+  description: This endpoint allows to fetch all the available continents, countries and cities that can be used as Node Locations
+    when creating a Node Group
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/groups/nodelocations
+- name: get_nodes_testrun
+  tag: NodeUtilization
+  description: Returns the list of all tests that ran on a node based on Node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/testrun/{nodeId}
+- name: get_nodes_runrate
+  tag: NodeUtilization
+  description: Returns the node run rate and slippage information based on Node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/runrate/{nodeId}
+- name: get_nodes_capacityutilization
+  tag: NodeUtilization
+  description: Returns the node capacity utilization percentage based on Node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/capacityutilization/{nodeId}
+- name: get_nodes_errors
+  tag: NodeUtilization
+  description: Returns the error count details based on Node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/errors/{nodeId}
+- name: get_nodes_testruncount
+  tag: NodeUtilization
+  description: Returns the number of tests based on Node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/testruncount/{nodeId}
+- name: get_nodes_testtime
+  tag: NodeUtilization
+  description: Returns the average test time taken based on Node ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/testtime/{nodeId}
+- name: get_products
+  tag: Product
+  description: Returns properties of one or more products based on product ID(s).
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/products/{productIds}
+- name: create_products
+  tag: Product
+  description: Create a new product per the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/products
+- name: get_products_2
+  tag: Product
+  description: Return products that match all provided parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/products
+- name: update_products
+  tag: Product
+  description: Update a property of an existing product.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/products/{productId}
+- name: get_realuser_favoritechart
+  tag: RealUser
+  description: Returns the list of real user favorite charts from a client or a division.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/realuser/favoritechart
+- name: get_realuser_favoritechart_2
+  tag: RealUser
+  description: Returns the real user favorite chart details based on the favorite chart ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/realuser/favoritechart/{favoritechartIds}
+- name: get_realuser_favoritechart_data
+  tag: RealUser
+  description: Returns the real user favorite chart data based on the ID and the parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/realuser/favoritechart/data/{favoriteChartId}
+- name: get_realuser_explorer_data
+  tag: RealUser
+  description: Returns the real user explorer data by site ID and filters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/realuser/explorer/data/{siteIds}
+- name: get_realuser_favoritechart_defaultdata
+  tag: RealUser
+  description: Returns the real user favorite chart default data set by the user when the favorite chart was created based
+    on the ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/realuser/favoritechart/defaultdata/{favoriteChartId}
+- name: get_realuser_explorer_enumeration
+  tag: RealUser
+  description: Returns the real user enumeration details for automation.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/realuser/explorer/enumeration
+- name: get_tests_errors_raw
+  tag: RecentErrors
+  description: Returns errors from the last 3 hours for the provided Test IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/errors/raw/{testIds}
+- name: get_tests_errors_raw_2
+  tag: RecentErrors
+  description: Returns errors based on the parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/errors/raw
+- name: get_slapurgeitems
+  tag: SLA
+  description: Return SLA purge item details by the IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/slapurgeitems/{ids}
+- name: get_slapurgeitems_2
+  tag: SLA
+  description: Returns Schedule details by parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/slapurgeitems
+- name: create_slapurgeitems
+  tag: SLA
+  description: Create an SLA purge item based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/slapurgeitems
+- name: update_slapurgeitems_status
+  tag: SLA
+  description: Update the status of existing SLA purge items based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/slapurgeitems/status
+- name: update_slapurgeitems
+  tag: SLA
+  description: Update an existing SLA purge item based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/slapurgeitems/{slaId}
+- name: get_slo
+  tag: SLO
+  description: Retrieve properties of one or more SLOs based on SLO IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/slo/{sloIds}
+- name: update_slo
+  tag: SLO
+  description: Update properties of an existing SLO based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/slo/{sloIds}
+- name: delete_slo
+  tag: SLO
+  description: Delete one or more SLOs based on SLO IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/slo/{sloIds}
+- name: get_slo_2
+  tag: SLO
+  description: Retrieve SLOs that match all included parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/slo
+- name: create_slo
+  tag: SLO
+  description: Create a new SLO configured per the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/slo
+- name: get_slo_enumeration
+  tag: SLO
+  description: Retrieve SLO property enumerations.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/slo/enumeration
+- name: get_slo_violations
+  tag: SLO
+  description: Retrieve violation data for all SLOs matching request parameters within the requested date range.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/slo/violations
+- name: get_tests
+  tag: Test
+  description: Returns properties of one or more tests based on test IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/{testIds}
+- name: delete_tests
+  tag: Test
+  description: Delete tests based on the specified list of IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/tests/{testIds}
+- name: create_tests
+  tag: Test
+  description: Create a new test per the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/tests
+- name: get_tests_2
+  tag: Test
+  description: Returns tests that match all included parameters.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests
+- name: get_tests_alert_state
+  tag: Test
+  description: Return the alert state of one or more tests based on test IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/alert/state/{testIds}
+- name: update_tests_alert_state
+  tag: Test
+  description: Pause or unpause alerts for the specified test IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/tests/alert/state
+- name: update_tests
+  tag: Test
+  description: Update a property of an existing test.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/tests/{testId}
+- name: get_tests_enumeration
+  tag: Test
+  description: Returns the enumeration to help automate test creation.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/enumeration
+- name: create_tests_scriptconvert
+  tag: Test
+  description: Convert a script to a specified language. Only Selenium (1) to Playwright (3) is currently supported.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/tests/scriptconvert
+- name: get_tests_records_waterfall
+  tag: TestPerformance
+  description: Returns waterfall tokens based on test IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/records/waterfall/{testId}
+- name: get_tests_records_waterfall_data
+  tag: TestPerformance
+  description: Returns the test waterfall data for a waterfall token.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/records/waterfall/data/{waterfallToken}
+- name: get_tests_records_waterfall_screenshot
+  tag: TestPerformance
+  description: Returns the test records waterfall screenshot based on the waterfall token.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/records/waterfall/screenshot/{waterfallToken}
+- name: get_tests_records_waterfall_filmstrip
+  tag: TestPerformance
+  description: Returns the test records waterfall filmstrip based on the waterfall token.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/records/waterfall/filmstrip/{waterfallToken}
+- name: get_tests_explorer_favoritechart
+  tag: TestPerformance
+  description: Returns the list of favorite charts from a client or a division.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/favoritechart
+- name: get_tests_explorer_favoritechart_2
+  tag: TestPerformance
+  description: Returns the favorite chart details based on the favorite chart ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/favoritechart/{favoriteChartId}
+- name: get_tests_explorer_favoritechart_data
+  tag: TestPerformance
+  description: Returns favorite chart data based on the ID and parameters provided.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/favoritechart/data/{favoriteChartId}
+- name: get_tests_explorer_raw
+  tag: TestPerformance
+  description: Returns raw performance data for the provided Test IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/raw
+- name: get_tests_explorer_aggregated
+  tag: TestPerformance
+  description: Returns aggregated performance data for the provided Test IDs.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/aggregated
+- name: get_tests_explorer_enumeration
+  tag: TestPerformance
+  description: Returns the test raw enumeration details for automation.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/enumeration
+- name: get_tests_explorer_favoritechart_defaultdata
+  tag: TestPerformance
+  description: Returns favorite chart default data set by the user when the favorite chart was created based on the ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/favoritechart/defaultdata/{favoriteChartId}
+- name: get_testtemplates
+  tag: TestTemplates
+  description: Returns Test Template details by the IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/testtemplates/{ids}
+- name: get_testtemplates_2
+  tag: TestTemplates
+  description: Returns Test Template details by parameters passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/testtemplates
+- name: create_testtemplates
+  tag: TestTemplates
+  description: Create a new test template based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/testtemplates
+- name: update_testtemplates
+  tag: TestTemplates
+  description: Update an existing test template based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/testtemplates/{id}
+- name: get_testtemplates_applicationgroups
+  tag: TestTemplates
+  description: Returns the Application group enumeration details for automation.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/testtemplates/applicationgroups
+- name: get_account_usagereport
+  tag: UsageReport
+  description: Returns the Usage Report
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/account/usagereport
+- name: get_useridentity
+  tag: UserIdentity
+  description: Returns the user contact details based on the REST API Key.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/useridentity
+- name: get_userroles
+  tag: UserRole
+  description: Return user role details by the IDs passed.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/userroles/{userRoleIds}
+- name: get_userroles_2
+  tag: UserRole
+  description: Return user role details by the Parameters passed
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/userroles
+- name: create_userroles
+  tag: UserRole
+  description: Create a new User Role based on the PostData.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/userroles
+- name: delete_userroles
+  tag: UserRole
+  description: Delete existing User Roles by Ids.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/userroles
+- name: update_userroles
+  tag: UserRole
+  description: Update an existing User Role based on the request body.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#PATCH /v2/userroles/{userRoleId}
+- name: create_workflow
+  tag: Workflow
+  description: Build a custom workflow based on Workflow ID.
+  source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/workflow/{workflow_id}
