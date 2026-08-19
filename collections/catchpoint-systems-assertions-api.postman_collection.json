@@ -1,0 +1,484 @@
+{
+  "item": [
+    {
+      "id": "4c440b32-087e-4f8b-ae5e-2e7863f2da93",
+      "name": "Assertions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "44f77e73-3ff2-436f-b248-7ff58422fc74",
+          "name": "Returns the assertions by the IDs passed.",
+          "request": {
+            "name": "Returns the assertions by the IDs passed.",
+            "description": {
+              "content": "If no parameters are passed, the details of all assertions for current level are returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "assertions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "assertionIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Assertion IDs"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2532d977-299d-437d-9aff-734dfb3c9e7b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "assertions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "assertionIds",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"assertions\": [\n      {\n        \"id\": 4750,\n        \"assertions\": [\n          {\n            \"key\": \"string\",\n            \"value\": \"string\"\n          },\n          {\n            \"key\": \"string\",\n            \"value\": \"string\"\n          }\n        ],\n        \"priority\": 7362,\n        \"accessLevel\": null,\n        \"ssoLevel\": 2889,\n        \"systemAccess\": 8414,\n        \"regex\": true,\n        \"testAccessRestrictType\": null,\n        \"testAccessRestrictionIds\": [\n          7193,\n          587\n        ],\n        \"rumAccessRestrictionType\": null,\n        \"rumAccessRestrictionIds\": [\n          8914,\n          1610\n        ]\n      },\n      {\n        \"id\": 7374,\n        \"assertions\": [\n          {\n            \"key\": \"string\",\n            \"value\": \"string\"\n          },\n          {\n            \"key\": \"string\",\n            \"value\": \"string\"\n          }\n        ],\n        \"priority\": 6975,\n        \"accessLevel\": null,\n        \"ssoLevel\": 3044,\n        \"systemAccess\": 8452,\n        \"regex\": true,\n        \"testAccessRestrictType\": null,\n        \"testAccessRestrictionIds\": [\n          4046,\n          7797\n        ],\n        \"rumAccessRestrictionType\": null,\n        \"rumAccessRestrictionIds\": [\n          3836,\n          1163\n        ]\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 9216,\n    \"lastRequestTimestamp\": \"1996-03-04T09:51:30.608Z\",\n    \"limits\": {\n      \"minute\": 2778,\n      \"hour\": 3838,\n      \"day\": 8232\n    },\n    \"runs\": {\n      \"minute\": 4851,\n      \"hour\": 2048,\n      \"day\": 8204\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 5085,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2132,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3966\n          },\n          {\n            \"consumerId\": 4915,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2365\n          }\n        ]\n      },\n      {\n        \"divisionId\": 9047,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5179,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8995\n          },\n          {\n            \"consumerId\": 1836,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1150\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9462da9f-8de4-45fe-ae76-9ec77f74c73b",
+          "name": "Create a new assertion based on the PostData.",
+          "request": {
+            "name": "Create a new assertion based on the PostData.",
+            "description": {
+              "content": "To get payload for creating a new assertion and to get the created assertion details refer InternalLink[Identity Provider Assertions Endpoint,operations-tag-Assertions,operations-Assertions-get_v2_assertions] Endpoint. (add hyperlink to endpoint). Pass “0” for assertion ID to create a new assertion.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "assertions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the created object in the response body, otherwise the response body will only return created object ID."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assertions\": [\n    {\n      \"id\": \"<integer>\",\n      \"assertions\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"priority\": \"<integer>\",\n      \"accessLevel\": \"<integer>\",\n      \"ssoLevel\": \"<long>\",\n      \"systemAccess\": \"<integer>\",\n      \"regex\": \"<boolean>\",\n      \"testAccessRestrictType\": \"<integer>\",\n      \"testAccessRestrictionIds\": [\n        \"<long>\",\n        \"<long>\"\n      ],\n      \"rumAccessRestrictionType\": \"<integer>\",\n      \"rumAccessRestrictionIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    },\n    {\n      \"id\": \"<integer>\",\n      \"assertions\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"priority\": \"<integer>\",\n      \"accessLevel\": \"<integer>\",\n      \"ssoLevel\": \"<long>\",\n      \"systemAccess\": \"<integer>\",\n      \"regex\": \"<boolean>\",\n      \"testAccessRestrictType\": \"<integer>\",\n      \"testAccessRestrictionIds\": [\n        \"<long>\",\n        \"<long>\"\n      ],\n      \"rumAccessRestrictionType\": \"<integer>\",\n      \"rumAccessRestrictionIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0e0c5c2f-9c93-4ae9-adaf-f90de055e4d1",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "assertions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"assertions\": [\n    {\n      \"id\": \"<integer>\",\n      \"assertions\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"priority\": \"<integer>\",\n      \"accessLevel\": \"<integer>\",\n      \"ssoLevel\": \"<long>\",\n      \"systemAccess\": \"<integer>\",\n      \"regex\": \"<boolean>\",\n      \"testAccessRestrictType\": \"<integer>\",\n      \"testAccessRestrictionIds\": [\n        \"<long>\",\n        \"<long>\"\n      ],\n      \"rumAccessRestrictionType\": \"<integer>\",\n      \"rumAccessRestrictionIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    },\n    {\n      \"id\": \"<integer>\",\n      \"assertions\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"priority\": \"<integer>\",\n      \"accessLevel\": \"<integer>\",\n      \"ssoLevel\": \"<long>\",\n      \"systemAccess\": \"<integer>\",\n      \"regex\": \"<boolean>\",\n      \"testAccessRestrictType\": \"<integer>\",\n      \"testAccessRestrictionIds\": [\n        \"<long>\",\n        \"<long>\"\n      ],\n      \"rumAccessRestrictionType\": \"<integer>\",\n      \"rumAccessRestrictionIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"assertions\": [\n      {\n        \"id\": \"<integer>\",\n        \"assertions\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<string>\"\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<string>\"\n          }\n        ],\n        \"priority\": \"<integer>\",\n        \"accessLevel\": \"<integer>\",\n        \"ssoLevel\": \"<long>\",\n        \"systemAccess\": \"<integer>\",\n        \"regex\": \"<boolean>\",\n        \"testAccessRestrictType\": \"<integer>\",\n        \"testAccessRestrictionIds\": [\n          \"<long>\",\n          \"<long>\"\n        ],\n        \"rumAccessRestrictionType\": \"<integer>\",\n        \"rumAccessRestrictionIds\": [\n          \"<long>\",\n          \"<long>\"\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"assertions\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<string>\"\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<string>\"\n          }\n        ],\n        \"priority\": \"<integer>\",\n        \"accessLevel\": \"<integer>\",\n        \"ssoLevel\": \"<long>\",\n        \"systemAccess\": \"<integer>\",\n        \"regex\": \"<boolean>\",\n        \"testAccessRestrictType\": \"<integer>\",\n        \"testAccessRestrictionIds\": [\n          \"<long>\",\n          \"<long>\"\n        ],\n        \"rumAccessRestrictionType\": \"<integer>\",\n        \"rumAccessRestrictionIds\": [\n          \"<long>\",\n          \"<long>\"\n        ]\n      }\n    ],\n    \"assertionIds\": [\n      6887,\n      7815\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 5050,\n    \"lastRequestTimestamp\": \"1977-08-18T20:40:03.067Z\",\n    \"limits\": {\n      \"minute\": 2476,\n      \"hour\": 9638,\n      \"day\": 9416\n    },\n    \"runs\": {\n      \"minute\": 7016,\n      \"hour\": 2571,\n      \"day\": 6190\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 9596,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1389,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9960\n          },\n          {\n            \"consumerId\": 9792,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6148\n          }\n        ]\n      },\n      {\n        \"divisionId\": 2415,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4622,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5509\n          },\n          {\n            \"consumerId\": 246,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4909\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "493b8e9b-bfe0-416c-a139-03cad600a87a",
+          "name": "Update an existing assertion based on the request body.",
+          "request": {
+            "name": "Update an existing assertion based on the request body.",
+            "description": {
+              "content": "**Request:**\r\n            \r\nOnly the property to be updated can be passed in the request body instead of the whole object. The update request body requires a total of three keys to be filled with appropriate value as listed below:\r\n* **value** – The value property provides the new value.\r\n            \r\n* **path** – The path property indicates the element to update. The entire path with slashes needs to be provided here. Example: /status/id\r\n            \r\n* **op** – The op property indicates the type of operation; we support the following three operations.\r\n            \r\n    * **add** - Add a property or array element. For existing property: set value.\r\n            \r\n    * **Remove** - Remove a property or array element.\r\n            \r\n    * **replace** - Same as remove followed by add at same location.\r\n            \r\n* **from** - [Not Used]\r\n            \r\n    * **Explanation** - The \"from\" parameter represents the starting or current value of the resource that the operation intends to modify. The from parameter is included in the example value schema but is not utilized in this endpoint's functionality. It is reserved for potential future use or could be used in specific scenarios not covered by the current implementation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "assertions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "Assertion ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the updated object in the response body, otherwise the response body will only return the updated object ID."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3c056a10-d8be-459b-a9b5-43d1396c99ff",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "assertions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"assertions\": [\n      {\n        \"id\": \"<integer>\",\n        \"assertions\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<string>\"\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<string>\"\n          }\n        ],\n        \"priority\": \"<integer>\",\n        \"accessLevel\": \"<integer>\",\n        \"ssoLevel\": \"<long>\",\n        \"systemAccess\": \"<integer>\",\n        \"regex\": \"<boolean>\",\n        \"testAccessRestrictType\": \"<integer>\",\n        \"testAccessRestrictionIds\": [\n          \"<long>\",\n          \"<long>\"\n        ],\n        \"rumAccessRestrictionType\": \"<integer>\",\n        \"rumAccessRestrictionIds\": [\n          \"<long>\",\n          \"<long>\"\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"assertions\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<string>\"\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<string>\"\n          }\n        ],\n        \"priority\": \"<integer>\",\n        \"accessLevel\": \"<integer>\",\n        \"ssoLevel\": \"<long>\",\n        \"systemAccess\": \"<integer>\",\n        \"regex\": \"<boolean>\",\n        \"testAccessRestrictType\": \"<integer>\",\n        \"testAccessRestrictionIds\": [\n          \"<long>\",\n          \"<long>\"\n        ],\n        \"rumAccessRestrictionType\": \"<integer>\",\n        \"rumAccessRestrictionIds\": [\n          \"<long>\",\n          \"<long>\"\n        ]\n      }\n    ],\n    \"assertionIds\": [\n      8298,\n      6625\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 4128,\n    \"lastRequestTimestamp\": \"1989-01-03T12:28:12.383Z\",\n    \"limits\": {\n      \"minute\": 1658,\n      \"hour\": 1486,\n      \"day\": 30\n    },\n    \"runs\": {\n      \"minute\": 9882,\n      \"hour\": 2324,\n      \"day\": 8165\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 1321,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5651,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6979\n          },\n          {\n            \"consumerId\": 4929,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9460\n          }\n        ]\n      },\n      {\n        \"divisionId\": 6856,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2334,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3884\n          },\n          {\n            \"consumerId\": 3342,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6458\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4f288e76-ec6f-419e-a9f6-f8d58472c162",
+          "name": "Delete an existing assertion by parameters passed.",
+          "request": {
+            "name": "Delete an existing assertion by parameters passed.",
+            "description": {
+              "content": "To delete assertions based on the specified list of IDs, the IDs need to be separated by commas. This endpoint allows partial deletion; if you provide a list of five IDs and only three of them are valid, then it will delete those three assertions. The response will indicate the three that were deleted, and the two invalid IDs will be listed as errors.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "assertions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "assertionIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Assertion IDs"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "34c73bae-4578-4228-9523-8e89f44706bd",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "assertions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "assertionIds",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"deletedAssertionIds\": [\n      7974,\n      9545\n    ],\n    \"notDeletedAssertionIds\": [\n      4189,\n      8869\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 1546,\n    \"lastRequestTimestamp\": \"1982-05-01T16:17:54.585Z\",\n    \"limits\": {\n      \"minute\": 391,\n      \"hour\": 4137,\n      \"day\": 6667\n    },\n    \"runs\": {\n      \"minute\": 1899,\n      \"hour\": 232,\n      \"day\": 594\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 6519,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3020,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9861\n          },\n          {\n            \"consumerId\": 1245,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2892\n          }\n        ]\n      },\n      {\n        \"divisionId\": 9727,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 9340,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7145\n          },\n          {\n            \"consumerId\": 9653,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6788\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3e8bd501-d2ff-4fd1-8b71-955ca8716719",
+    "name": "Catchpoint REST API v2.0 Account Assertions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

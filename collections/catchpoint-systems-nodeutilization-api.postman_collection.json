@@ -1,0 +1,812 @@
+{
+  "item": [
+    {
+      "id": "e93b0e22-0e1e-473f-96d5-4f6ec571956a",
+      "name": "NodeUtilization",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4a876816-8791-449b-93d4-02f3ddfe72c9",
+          "name": "Returns the list of all tests that ran on a node based on Node ID.",
+          "request": {
+            "name": "Returns the list of all tests that ran on a node based on Node ID.",
+            "description": {
+              "content": "*[Analytics Endpoint]*\r\n            \r\nWorks only on Enterprise Nodes.\r\n            \r\nThe maximum time range allowed is 1 hour. When no time range is provided, last 1 hour test runs are returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "nodes",
+                "testrun",
+                ":nodeId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<string>",
+                  "description": "Start time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<string>",
+                  "description": "End time in UTC (YYYY-MM-DDThh:mm:ss)"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "nodeId",
+                  "description": "(Required) Node ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6d58381b-fc85-4cd5-b71c-c4c551f22454",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "nodes",
+                    "testrun",
+                    ":nodeId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "nodeId",
+                      "description": "(Required) Node ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"node\": {\n      \"instances\": [\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 312,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 1607,\n          \"memory\": 1037\n        },\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 2951,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 3025,\n          \"memory\": 6828\n        }\n      ],\n      \"isPaused\": true,\n      \"country\": {\n        \"id\": 6308,\n        \"name\": \"string\"\n      },\n      \"state\": {\n        \"id\": 5631,\n        \"name\": \"string\"\n      },\n      \"continent\": {\n        \"id\": 6831,\n        \"name\": \"string\"\n      },\n      \"latitude\": \"string\",\n      \"longitude\": \"string\",\n      \"runRate\": 331.60932877091767,\n      \"instanceCount\": 2749,\n      \"activeInstanceCount\": 3250,\n      \"capacity\": 6837,\n      \"id\": 8763,\n      \"name\": \"string\",\n      \"status\": {\n        \"id\": 6287,\n        \"name\": \"string\"\n      },\n      \"networkType\": {\n        \"id\": 967,\n        \"name\": \"string\"\n      },\n      \"osType\": {\n        \"id\": 1950,\n        \"name\": \"string\"\n      },\n      \"size\": 4350,\n      \"isIPv6\": false,\n      \"nodeToNodeAddress\": \"string\",\n      \"internetServiceProvider\": {\n        \"id\": 6923,\n        \"name\": \"string\"\n      },\n      \"city\": {\n        \"id\": 5049,\n        \"name\": \"string\"\n      },\n      \"package\": {\n        \"id\": 9456,\n        \"name\": \"string\"\n      },\n      \"utilizedInstances\": 70\n    },\n    \"testRuns\": [\n      {\n        \"testId\": 3619,\n        \"testName\": \"string\",\n        \"divisionName\": \"string\",\n        \"runs\": 6414,\n        \"usagePercentage\": 5103.915523838006,\n        \"downTimePercentage\": 1478,\n        \"monitorGroup\": null\n      },\n      {\n        \"testId\": 6192,\n        \"testName\": \"string\",\n        \"divisionName\": \"string\",\n        \"runs\": 2158,\n        \"usagePercentage\": 5525.211651313776,\n        \"downTimePercentage\": 4908,\n        \"monitorGroup\": null\n      }\n    ],\n    \"totalTests\": 3710,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 2382,\n    \"lastRequestTimestamp\": \"2017-05-03T18:45:46.441Z\",\n    \"limits\": {\n      \"minute\": 4719,\n      \"hour\": 1854,\n      \"day\": 9402\n    },\n    \"runs\": {\n      \"minute\": 483,\n      \"hour\": 3912,\n      \"day\": 3850\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 2224,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3155,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2910\n          },\n          {\n            \"consumerId\": 586,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4817\n          }\n        ]\n      },\n      {\n        \"divisionId\": 381,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 911,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 904\n          },\n          {\n            \"consumerId\": 4360,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2775\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d6ae41b-9224-45cb-aea8-915d3af28890",
+          "name": "Returns the node run rate and slippage information based on Node ID.",
+          "request": {
+            "name": "Returns the node run rate and slippage information based on Node ID.",
+            "description": {
+              "content": "Works only on Enterprise Nodes.\r\n            \r\nThe maximum time range allowed is 7 days over the period of last 365 days. If no time range is provided, last 1 hour of data is returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "nodes",
+                "runrate",
+                ":nodeId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<string>",
+                  "description": "Start time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<string>",
+                  "description": "End time in UTC (YYYY-MM-DDThh:mm:ss)"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "nodeId",
+                  "description": "(Required) Node ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7dcf2dfa-2629-42db-968a-160f56656349",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "nodes",
+                    "runrate",
+                    ":nodeId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "nodeId",
+                      "description": "(Required) Node ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"node\": {\n      \"instances\": [\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 8043,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 2457,\n          \"memory\": 9781\n        },\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 6484,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 4606,\n          \"memory\": 7410\n        }\n      ],\n      \"isPaused\": false,\n      \"country\": {\n        \"id\": 737,\n        \"name\": \"string\"\n      },\n      \"state\": {\n        \"id\": 4376,\n        \"name\": \"string\"\n      },\n      \"continent\": {\n        \"id\": 9311,\n        \"name\": \"string\"\n      },\n      \"latitude\": \"string\",\n      \"longitude\": \"string\",\n      \"runRate\": 8993.851917354403,\n      \"instanceCount\": 9258,\n      \"activeInstanceCount\": 6747,\n      \"capacity\": 4477,\n      \"id\": 7211,\n      \"name\": \"string\",\n      \"status\": {\n        \"id\": 5086,\n        \"name\": \"string\"\n      },\n      \"networkType\": {\n        \"id\": 7866,\n        \"name\": \"string\"\n      },\n      \"osType\": {\n        \"id\": 5653,\n        \"name\": \"string\"\n      },\n      \"size\": 7622,\n      \"isIPv6\": false,\n      \"nodeToNodeAddress\": \"string\",\n      \"internetServiceProvider\": {\n        \"id\": 926,\n        \"name\": \"string\"\n      },\n      \"city\": {\n        \"id\": 1097,\n        \"name\": \"string\"\n      },\n      \"package\": {\n        \"id\": 9747,\n        \"name\": \"string\"\n      },\n      \"utilizedInstances\": 5681\n    },\n    \"requestSlippages\": [\n      {\n        \"reportTime\": \"1952-08-13T13:17:35.296Z\",\n        \"value\": 8715.623152228482\n      },\n      {\n        \"reportTime\": \"1976-01-11T19:33:16.627Z\",\n        \"value\": 9376.697909117163\n      }\n    ],\n    \"runRates\": [\n      {\n        \"reportTime\": \"1999-05-15T18:22:58.461Z\",\n        \"value\": 688.9127319132915\n      },\n      {\n        \"reportTime\": \"1956-11-30T14:11:06.368Z\",\n        \"value\": 7197.166440762685\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 3493,\n    \"lastRequestTimestamp\": \"1950-07-05T04:09:48.609Z\",\n    \"limits\": {\n      \"minute\": 2259,\n      \"hour\": 692,\n      \"day\": 6135\n    },\n    \"runs\": {\n      \"minute\": 7772,\n      \"hour\": 5740,\n      \"day\": 3214\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 9153,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5947,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9783\n          },\n          {\n            \"consumerId\": 5097,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2988\n          }\n        ]\n      },\n      {\n        \"divisionId\": 9712,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5878,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4658\n          },\n          {\n            \"consumerId\": 76,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5633\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d40d9673-28ec-45a0-aaa0-2138ccd0692c",
+          "name": "Returns the node capacity utilization percentage based on Node ID.",
+          "request": {
+            "name": "Returns the node capacity utilization percentage based on Node ID.",
+            "description": {
+              "content": "Works only on Enterprise Nodes.\r\n            \r\nThe maximum time range allowed is 7 days over the period of last 365 days. If no time range is provided, last 24-hour data is returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "nodes",
+                "capacityutilization",
+                ":nodeId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<string>",
+                  "description": "Start time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<string>",
+                  "description": "End time in UTC (YYYY-MM-DDThh:mm:ss)"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "nodeId",
+                  "description": "(Required) Node ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8671e469-3a4c-4423-b12f-54e51b9c22e3",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "nodes",
+                    "capacityutilization",
+                    ":nodeId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "nodeId",
+                      "description": "(Required) Node ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"node\": {\n      \"instances\": [\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 2919,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 4858,\n          \"memory\": 275\n        },\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 4611,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 6346,\n          \"memory\": 8217\n        }\n      ],\n      \"isPaused\": true,\n      \"country\": {\n        \"id\": 5611,\n        \"name\": \"string\"\n      },\n      \"state\": {\n        \"id\": 9110,\n        \"name\": \"string\"\n      },\n      \"continent\": {\n        \"id\": 6731,\n        \"name\": \"string\"\n      },\n      \"latitude\": \"string\",\n      \"longitude\": \"string\",\n      \"runRate\": 4482.689252826422,\n      \"instanceCount\": 382,\n      \"activeInstanceCount\": 3806,\n      \"capacity\": 4578,\n      \"id\": 3236,\n      \"name\": \"string\",\n      \"status\": {\n        \"id\": 2571,\n        \"name\": \"string\"\n      },\n      \"networkType\": {\n        \"id\": 2959,\n        \"name\": \"string\"\n      },\n      \"osType\": {\n        \"id\": 3251,\n        \"name\": \"string\"\n      },\n      \"size\": 6038,\n      \"isIPv6\": false,\n      \"nodeToNodeAddress\": \"string\",\n      \"internetServiceProvider\": {\n        \"id\": 2188,\n        \"name\": \"string\"\n      },\n      \"city\": {\n        \"id\": 2439,\n        \"name\": \"string\"\n      },\n      \"package\": {\n        \"id\": 7918,\n        \"name\": \"string\"\n      },\n      \"utilizedInstances\": 7561\n    },\n    \"data\": [\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"2012-02-15T07:24:33.099Z\",\n            \"value\": 2293.9090615027826\n          },\n          {\n            \"reportTime\": \"1986-11-02T02:24:17.839Z\",\n            \"value\": 9378.870288715583\n          }\n        ]\n      },\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"1999-06-22T20:20:59.814Z\",\n            \"value\": 1667.019261091691\n          },\n          {\n            \"reportTime\": \"2002-12-30T10:09:30.211Z\",\n            \"value\": 7227.1741825943745\n          }\n        ]\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 7203,\n    \"lastRequestTimestamp\": \"1970-07-27T00:59:48.695Z\",\n    \"limits\": {\n      \"minute\": 6074,\n      \"hour\": 5417,\n      \"day\": 1940\n    },\n    \"runs\": {\n      \"minute\": 6928,\n      \"hour\": 5039,\n      \"day\": 2551\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 7393,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2147,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2772\n          },\n          {\n            \"consumerId\": 9647,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5466\n          }\n        ]\n      },\n      {\n        \"divisionId\": 8254,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3656,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1711\n          },\n          {\n            \"consumerId\": 6904,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4391\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2394fa85-6e8b-422f-9750-1fac51bd47f0",
+          "name": "Returns the error count details based on Node ID.",
+          "request": {
+            "name": "Returns the error count details based on Node ID.",
+            "description": {
+              "content": "Works only on Enterprise Nodes.\r\n            \r\nThe maximum time range allowed is 7 days over the period of last 365 days. If no time range is provided, last 24-hour data is returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "nodes",
+                "errors",
+                ":nodeId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<string>",
+                  "description": "Start time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<string>",
+                  "description": "End time in UTC (YYYY-MM-DDThh:mm:ss)"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "nodeId",
+                  "description": "(Required) Node ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c73fefc7-4fa6-4dbb-ad48-8c5bc100e191",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "nodes",
+                    "errors",
+                    ":nodeId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "nodeId",
+                      "description": "(Required) Node ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"node\": {\n      \"instances\": [\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 4130,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 276,\n          \"memory\": 5195\n        },\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 2767,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 9388,\n          \"memory\": 2002\n        }\n      ],\n      \"isPaused\": true,\n      \"country\": {\n        \"id\": 9838,\n        \"name\": \"string\"\n      },\n      \"state\": {\n        \"id\": 7893,\n        \"name\": \"string\"\n      },\n      \"continent\": {\n        \"id\": 1713,\n        \"name\": \"string\"\n      },\n      \"latitude\": \"string\",\n      \"longitude\": \"string\",\n      \"runRate\": 1701.3406513716245,\n      \"instanceCount\": 4093,\n      \"activeInstanceCount\": 9496,\n      \"capacity\": 9411,\n      \"id\": 4588,\n      \"name\": \"string\",\n      \"status\": {\n        \"id\": 6899,\n        \"name\": \"string\"\n      },\n      \"networkType\": {\n        \"id\": 8019,\n        \"name\": \"string\"\n      },\n      \"osType\": {\n        \"id\": 6768,\n        \"name\": \"string\"\n      },\n      \"size\": 298,\n      \"isIPv6\": true,\n      \"nodeToNodeAddress\": \"string\",\n      \"internetServiceProvider\": {\n        \"id\": 2622,\n        \"name\": \"string\"\n      },\n      \"city\": {\n        \"id\": 7997,\n        \"name\": \"string\"\n      },\n      \"package\": {\n        \"id\": 1263,\n        \"name\": \"string\"\n      },\n      \"utilizedInstances\": 2758\n    },\n    \"testFailureByGroup\": [\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"2021-10-13T06:55:11.670Z\",\n            \"value\": 1765.2861680053122\n          },\n          {\n            \"reportTime\": \"2010-12-18T00:17:10.975Z\",\n            \"value\": 2946.9640510460517\n          }\n        ]\n      },\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"1985-10-21T06:14:39.713Z\",\n            \"value\": 1416.8192835511584\n          },\n          {\n            \"reportTime\": \"1989-05-03T20:46:42.702Z\",\n            \"value\": 26.418016674771838\n          }\n        ]\n      }\n    ],\n    \"testFailures\": [\n      {\n        \"reportTime\": \"1977-11-20T05:22:17.349Z\",\n        \"value\": 3609.8496421648074\n      },\n      {\n        \"reportTime\": \"1952-03-19T12:50:04.234Z\",\n        \"value\": 2204.7675405950663\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 5762,\n    \"lastRequestTimestamp\": \"2011-11-22T08:02:08.064Z\",\n    \"limits\": {\n      \"minute\": 3930,\n      \"hour\": 7669,\n      \"day\": 7438\n    },\n    \"runs\": {\n      \"minute\": 6098,\n      \"hour\": 659,\n      \"day\": 8624\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 5423,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1468,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5028\n          },\n          {\n            \"consumerId\": 3779,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6077\n          }\n        ]\n      },\n      {\n        \"divisionId\": 7811,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6855,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9829\n          },\n          {\n            \"consumerId\": 4264,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6835\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dbe3891a-7d38-45b1-b12f-ebefd93be09d",
+          "name": "Returns the number of tests based on Node ID.",
+          "request": {
+            "name": "Returns the number of tests based on Node ID.",
+            "description": {
+              "content": "Works only on Enterprise Nodes.\r\n            \r\nThe maximum time range allowed is 7 days over the period of last 365 days. If no time range is provided, last 24-hour data is returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "nodes",
+                "testruncount",
+                ":nodeId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<string>",
+                  "description": "Start time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<string>",
+                  "description": "End time in UTC (YYYY-MM-DDThh:mm:ss)"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "nodeId",
+                  "description": "(Required) Node ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ce0d901e-f783-4b93-a038-604416f2242d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "nodes",
+                    "testruncount",
+                    ":nodeId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "nodeId",
+                      "description": "(Required) Node ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"node\": {\n      \"instances\": [\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 6253,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 2254,\n          \"memory\": 4648\n        },\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 233,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 5188,\n          \"memory\": 8686\n        }\n      ],\n      \"isPaused\": false,\n      \"country\": {\n        \"id\": 9925,\n        \"name\": \"string\"\n      },\n      \"state\": {\n        \"id\": 9853,\n        \"name\": \"string\"\n      },\n      \"continent\": {\n        \"id\": 3800,\n        \"name\": \"string\"\n      },\n      \"latitude\": \"string\",\n      \"longitude\": \"string\",\n      \"runRate\": 3700.414564510063,\n      \"instanceCount\": 803,\n      \"activeInstanceCount\": 9597,\n      \"capacity\": 6081,\n      \"id\": 5359,\n      \"name\": \"string\",\n      \"status\": {\n        \"id\": 879,\n        \"name\": \"string\"\n      },\n      \"networkType\": {\n        \"id\": 385,\n        \"name\": \"string\"\n      },\n      \"osType\": {\n        \"id\": 7466,\n        \"name\": \"string\"\n      },\n      \"size\": 6760,\n      \"isIPv6\": true,\n      \"nodeToNodeAddress\": \"string\",\n      \"internetServiceProvider\": {\n        \"id\": 6518,\n        \"name\": \"string\"\n      },\n      \"city\": {\n        \"id\": 7485,\n        \"name\": \"string\"\n      },\n      \"package\": {\n        \"id\": 5101,\n        \"name\": \"string\"\n      },\n      \"utilizedInstances\": 5604\n    },\n    \"allTestRuns\": [\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"1963-08-19T06:23:48.958Z\",\n            \"value\": 9277.301363849412\n          },\n          {\n            \"reportTime\": \"2009-10-03T08:31:23.807Z\",\n            \"value\": 6410.551074755109\n          }\n        ]\n      },\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"1962-04-29T15:45:31.598Z\",\n            \"value\": 8754.523998726332\n          },\n          {\n            \"reportTime\": \"1996-08-31T04:10:11.768Z\",\n            \"value\": 4024.6090700693626\n          }\n        ]\n      }\n    ],\n    \"uniqueTestRuns\": [\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"1957-01-01T12:12:40.214Z\",\n            \"value\": 2965.0460800971323\n          },\n          {\n            \"reportTime\": \"1979-09-01T00:06:42.040Z\",\n            \"value\": 1367.9466573629638\n          }\n        ]\n      },\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"1990-01-23T14:14:23.907Z\",\n            \"value\": 6332.168499474281\n          },\n          {\n            \"reportTime\": \"2015-12-22T07:12:12.235Z\",\n            \"value\": 9137.409443941588\n          }\n        ]\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 909,\n    \"lastRequestTimestamp\": \"2003-05-27T21:05:08.643Z\",\n    \"limits\": {\n      \"minute\": 5797,\n      \"hour\": 5265,\n      \"day\": 7016\n    },\n    \"runs\": {\n      \"minute\": 9719,\n      \"hour\": 9241,\n      \"day\": 1695\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 1299,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1724,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 973\n          },\n          {\n            \"consumerId\": 8587,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1994\n          }\n        ]\n      },\n      {\n        \"divisionId\": 245,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2302,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6685\n          },\n          {\n            \"consumerId\": 2927,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5460\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1aa2a531-5a6d-42d8-baee-89b76b17fbeb",
+          "name": "Returns the average test time taken based on Node ID.",
+          "request": {
+            "name": "Returns the average test time taken based on Node ID.",
+            "description": {
+              "content": "Works only on Enterprise Nodes.\r\n            \r\nThe maximum time range allowed is 7 days over the period of last 365 days. If no time range is provided, last 24-hour data is returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "nodes",
+                "testtime",
+                ":nodeId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<string>",
+                  "description": "Start time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<string>",
+                  "description": "End time in UTC (YYYY-MM-DDThh:mm:ss)"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "nodeId",
+                  "description": "(Required) Node ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bc979459-344b-4afd-9e9d-395803d3bca7",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "nodes",
+                    "testtime",
+                    ":nodeId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "nodeId",
+                      "description": "(Required) Node ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"node\": {\n      \"instances\": [\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 238,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 3455,\n          \"memory\": 4466\n        },\n        {\n          \"activationKey\": \"string\",\n          \"node\": {\n            \"value\": \"<Circular reference to #/components/schemas/Catchpoint.Symphony.REST.Common.Response.v2_0.Node.NodeResponseModel detected>\"\n          },\n          \"id\": 150,\n          \"hostName\": \"string\",\n          \"status\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"operatingSystem\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"macAddress\": \"string\",\n          \"internalIpAddress\": \"string\",\n          \"core\": 9454,\n          \"memory\": 2415\n        }\n      ],\n      \"isPaused\": true,\n      \"country\": {\n        \"id\": 9888,\n        \"name\": \"string\"\n      },\n      \"state\": {\n        \"id\": 4279,\n        \"name\": \"string\"\n      },\n      \"continent\": {\n        \"id\": 1520,\n        \"name\": \"string\"\n      },\n      \"latitude\": \"string\",\n      \"longitude\": \"string\",\n      \"runRate\": 8145.700495676863,\n      \"instanceCount\": 2823,\n      \"activeInstanceCount\": 6200,\n      \"capacity\": 2931,\n      \"id\": 4594,\n      \"name\": \"string\",\n      \"status\": {\n        \"id\": 3626,\n        \"name\": \"string\"\n      },\n      \"networkType\": {\n        \"id\": 7991,\n        \"name\": \"string\"\n      },\n      \"osType\": {\n        \"id\": 4860,\n        \"name\": \"string\"\n      },\n      \"size\": 4430,\n      \"isIPv6\": false,\n      \"nodeToNodeAddress\": \"string\",\n      \"internetServiceProvider\": {\n        \"id\": 3280,\n        \"name\": \"string\"\n      },\n      \"city\": {\n        \"id\": 762,\n        \"name\": \"string\"\n      },\n      \"package\": {\n        \"id\": 3178,\n        \"name\": \"string\"\n      },\n      \"utilizedInstances\": 2574\n    },\n    \"data\": [\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"2025-05-13T02:36:33.884Z\",\n            \"value\": 4917.239798800271\n          },\n          {\n            \"reportTime\": \"1986-12-26T20:53:37.622Z\",\n            \"value\": 1233.1253593056767\n          }\n        ]\n      },\n      {\n        \"monitorSetType\": null,\n        \"data\": [\n          {\n            \"reportTime\": \"1978-06-16T15:24:03.059Z\",\n            \"value\": 9400.128090204646\n          },\n          {\n            \"reportTime\": \"1987-02-10T12:36:33.474Z\",\n            \"value\": 8440.056944288859\n          }\n        ]\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 6722,\n    \"lastRequestTimestamp\": \"2023-12-14T01:43:39.960Z\",\n    \"limits\": {\n      \"minute\": 5900,\n      \"hour\": 5160,\n      \"day\": 1733\n    },\n    \"runs\": {\n      \"minute\": 9544,\n      \"hour\": 9958,\n      \"day\": 5221\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 7407,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2035,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2067\n          },\n          {\n            \"consumerId\": 6514,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2213\n          }\n        ]\n      },\n      {\n        \"divisionId\": 3438,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 282,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8286\n          },\n          {\n            \"consumerId\": 4373,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1847\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "683497d2-7493-4f04-9e16-931408e13c79",
+    "name": "Catchpoint REST API v2.0 Account NodeUtilization API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

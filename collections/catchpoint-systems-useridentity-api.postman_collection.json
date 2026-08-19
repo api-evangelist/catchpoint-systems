@@ -1,0 +1,117 @@
+{
+  "item": [
+    {
+      "id": "2919d747-89df-41ac-9e9c-211dd6d729c1",
+      "name": "UserIdentity",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c5974117-5ed7-474d-8a95-16f5d577980e",
+          "name": "Returns the user contact details based on the REST API Key.",
+          "request": {
+            "name": "Returns the user contact details based on the REST API Key.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "useridentity"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "43a5a43f-f5e8-4a96-8885-a785b907de1f",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "useridentity"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"contact_id\": 8513,\n    \"contact_email\": \"string\",\n    \"user_id\": 2414\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 8582,\n    \"lastRequestTimestamp\": \"2015-12-18T11:43:14.791Z\",\n    \"limits\": {\n      \"minute\": 1869,\n      \"hour\": 6012,\n      \"day\": 8780\n    },\n    \"runs\": {\n      \"minute\": 1470,\n      \"hour\": 9444,\n      \"day\": 8724\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 4216,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1495,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 816\n          },\n          {\n            \"consumerId\": 5907,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7881\n          }\n        ]\n      },\n      {\n        \"divisionId\": 2330,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1181,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4407\n          },\n          {\n            \"consumerId\": 1725,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3474\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fff3fa83-a91d-411b-a7fb-383494cd6196",
+    "name": "Catchpoint REST API v2.0 Account UserIdentity API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

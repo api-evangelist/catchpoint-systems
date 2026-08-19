@@ -5,7 +5,8 @@ source: openapi/catchpoint-systems-rest-api-v2-openapi.json
 server:
   name: catchpoint-systems
   transport: stdio
-  note: No official Catchpoint MCP server found; candidate tool list derived one-per-operation from the REST API v2 OpenAPI.
+  note: No official Catchpoint MCP server found; candidate tool list derived one-per-operation from the
+    REST API v2 OpenAPI.
 tools:
 - name: get_account_activity
   tag: Account
@@ -61,7 +62,8 @@ tools:
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/assertions
 - name: get_commandcontrol
   tag: CommandControl
-  description: Returns all the external IPs and hostnames of the available Catchpoint Servers for whitelisting purposes.
+  description: Returns all the external IPs and hostnames of the available Catchpoint Servers for whitelisting
+    purposes.
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/commandcontrol
 - name: get_contacts
   tag: Contacts
@@ -297,8 +299,8 @@ tools:
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/geographycity
 - name: get_nodes_chromeversions
   tag: Node
-  description: Retrieves the Chrome versions information for the Enterprise node, this will include all versions installed
-    on the node, even if not targeted.
+  description: Retrieves the Chrome versions information for the Enterprise node, this will include all
+    versions installed on the node, even if not targeted.
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/chromeversions
 - name: create_nodes_chromeversions
   tag: Node
@@ -334,8 +336,8 @@ tools:
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/groups/objecttype
 - name: get_nodes_groups_nodelocations
   tag: NodeGroup
-  description: This endpoint allows to fetch all the available continents, countries and cities that can be used as Node Locations
-    when creating a Node Group
+  description: This endpoint allows to fetch all the available continents, countries and cities that can
+    be used as Node Locations when creating a Node Group
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/nodes/groups/nodelocations
 - name: get_nodes_testrun
   tag: NodeUtilization
@@ -395,8 +397,8 @@ tools:
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/realuser/explorer/data/{siteIds}
 - name: get_realuser_favoritechart_defaultdata
   tag: RealUser
-  description: Returns the real user favorite chart default data set by the user when the favorite chart was created based
-    on the ID.
+  description: Returns the real user favorite chart default data set by the user when the favorite chart
+    was created based on the ID.
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/realuser/favoritechart/defaultdata/{favoriteChartId}
 - name: get_realuser_explorer_enumeration
   tag: RealUser
@@ -456,7 +458,8 @@ tools:
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/slo/enumeration
 - name: get_slo_violations
   tag: SLO
-  description: Retrieve violation data for all SLOs matching request parameters within the requested date range.
+  description: Retrieve violation data for all SLOs matching request parameters within the requested date
+    range.
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/slo/violations
 - name: get_tests
   tag: Test
@@ -492,7 +495,8 @@ tools:
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/enumeration
 - name: create_tests_scriptconvert
   tag: Test
-  description: Convert a script to a specified language. Only Selenium (1) to Playwright (3) is currently supported.
+  description: Convert a script to a specified language. Only Selenium (1) to Playwright (3) is currently
+    supported.
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/tests/scriptconvert
 - name: get_tests_records_waterfall
   tag: TestPerformance
@@ -536,7 +540,8 @@ tools:
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/enumeration
 - name: get_tests_explorer_favoritechart_defaultdata
   tag: TestPerformance
-  description: Returns favorite chart default data set by the user when the favorite chart was created based on the ID.
+  description: Returns favorite chart default data set by the user when the favorite chart was created
+    based on the ID.
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#GET /v2/tests/explorer/favoritechart/defaultdata/{favoriteChartId}
 - name: get_testtemplates
   tag: TestTemplates
@@ -590,3 +595,9 @@ tools:
   tag: Workflow
   description: Build a custom workflow based on Workflow ID.
   source_operation: openapi/catchpoint-systems-rest-api-v2-openapi.json#POST /v2/workflow/{workflow_id}
+deployment:
+  mode: none
+  verified: derived
+  tools: 145
+  checked: '2026-08-12'
+  source: catalog MCP census

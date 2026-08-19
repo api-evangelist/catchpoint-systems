@@ -1,0 +1,584 @@
+{
+  "item": [
+    {
+      "id": "ded57446-7c45-42a5-bbab-4c980a79889c",
+      "name": "UserRole",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c10a14aa-78ad-4da4-8381-c4a74d7e2d77",
+          "name": "Return user role details by the IDs passed.",
+          "request": {
+            "name": "Return user role details by the IDs passed.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "userroles",
+                ":userRoleIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userRoleIds",
+                  "description": "(Required) Comma-separated list of user role IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a08e701e-a0e5-4a31-bbcc-56219402b55a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "userroles",
+                    ":userRoleIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userRoleIds",
+                      "description": "(Required) Comma-separated list of user role IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"userRoles\": [\n      {\n        \"id\": 8573,\n        \"name\": \"string\",\n        \"divisionName\": \"string\",\n        \"levelType\": {\n          \"id\": 2716,\n          \"name\": \"string\"\n        },\n        \"levelId\": 6876,\n        \"inActiveContacts\": 1738,\n        \"activeContacts\": 2047,\n        \"permissions\": [\n          {\n            \"id\": 2204,\n            \"permissionId\": 4850,\n            \"name\": \"string\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": 1061,\n            \"permissionId\": 3363,\n            \"name\": \"string\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"id\": 2447,\n        \"name\": \"string\",\n        \"divisionName\": \"string\",\n        \"levelType\": {\n          \"id\": 1106,\n          \"name\": \"string\"\n        },\n        \"levelId\": 5725,\n        \"inActiveContacts\": 3510,\n        \"activeContacts\": 5062,\n        \"permissions\": [\n          {\n            \"id\": 1372,\n            \"permissionId\": 2030,\n            \"name\": \"string\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": 6918,\n            \"permissionId\": 6486,\n            \"name\": \"string\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"userRole\": {\n      \"id\": 8636,\n      \"name\": \"string\",\n      \"divisionName\": \"string\",\n      \"levelType\": {\n        \"id\": 18,\n        \"name\": \"string\"\n      },\n      \"levelId\": 7235,\n      \"inActiveContacts\": 3409,\n      \"activeContacts\": 6540,\n      \"permissions\": [\n        {\n          \"id\": 7301,\n          \"permissionId\": 2201,\n          \"name\": \"string\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        {\n          \"id\": 7974,\n          \"permissionId\": 7986,\n          \"name\": \"string\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      ]\n    },\n    \"id\": 8674,\n    \"deletedUserRoles\": \"string\",\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 801,\n    \"lastRequestTimestamp\": \"1990-09-01T15:29:42.411Z\",\n    \"limits\": {\n      \"minute\": 8524,\n      \"hour\": 8818,\n      \"day\": 4058\n    },\n    \"runs\": {\n      \"minute\": 3409,\n      \"hour\": 2512,\n      \"day\": 9259\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 6000,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 9502,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6204\n          },\n          {\n            \"consumerId\": 5,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5224\n          }\n        ]\n      },\n      {\n        \"divisionId\": 9905,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 7105,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8991\n          },\n          {\n            \"consumerId\": 7028,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1473\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8af708ac-ad21-4ae1-98fd-f21c28595d3c",
+          "name": "Return user role details by the Parameters passed",
+          "request": {
+            "name": "Return user role details by the Parameters passed",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "userroles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "divisionIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Division IDs"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ce54cec9-4af6-4118-b8fe-f194a39d9a75",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "userroles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "divisionIds",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"userRoles\": [\n      {\n        \"id\": 824,\n        \"name\": \"string\",\n        \"divisionName\": \"string\",\n        \"levelType\": {\n          \"id\": 1732,\n          \"name\": \"string\"\n        },\n        \"levelId\": 7720,\n        \"inActiveContacts\": 9894,\n        \"activeContacts\": 7453,\n        \"permissions\": [\n          {\n            \"id\": 41,\n            \"permissionId\": 8450,\n            \"name\": \"string\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": 8274,\n            \"permissionId\": 6200,\n            \"name\": \"string\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"id\": 987,\n        \"name\": \"string\",\n        \"divisionName\": \"string\",\n        \"levelType\": {\n          \"id\": 1387,\n          \"name\": \"string\"\n        },\n        \"levelId\": 1902,\n        \"inActiveContacts\": 3834,\n        \"activeContacts\": 5733,\n        \"permissions\": [\n          {\n            \"id\": 608,\n            \"permissionId\": 4357,\n            \"name\": \"string\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": 2889,\n            \"permissionId\": 6259,\n            \"name\": \"string\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"userRole\": {\n      \"id\": 2818,\n      \"name\": \"string\",\n      \"divisionName\": \"string\",\n      \"levelType\": {\n        \"id\": 8147,\n        \"name\": \"string\"\n      },\n      \"levelId\": 998,\n      \"inActiveContacts\": 3673,\n      \"activeContacts\": 8302,\n      \"permissions\": [\n        {\n          \"id\": 1396,\n          \"permissionId\": 9239,\n          \"name\": \"string\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        {\n          \"id\": 8239,\n          \"permissionId\": 959,\n          \"name\": \"string\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      ]\n    },\n    \"id\": 6895,\n    \"deletedUserRoles\": \"string\",\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 490,\n    \"lastRequestTimestamp\": \"1999-05-09T19:36:29.485Z\",\n    \"limits\": {\n      \"minute\": 7123,\n      \"hour\": 9039,\n      \"day\": 3677\n    },\n    \"runs\": {\n      \"minute\": 219,\n      \"hour\": 2870,\n      \"day\": 8599\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 3280,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 109,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7105\n          },\n          {\n            \"consumerId\": 5284,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3565\n          }\n        ]\n      },\n      {\n        \"divisionId\": 8832,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4114,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5639\n          },\n          {\n            \"consumerId\": 5567,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1450\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "589f2eb1-dfc7-44a9-97ee-23489f8224f9",
+          "name": "Create a new User Role based on the PostData.",
+          "request": {
+            "name": "Create a new User Role based on the PostData.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "userroles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"divisionName\": \"<string>\",\n  \"levelType\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"levelId\": \"<integer>\",\n  \"inActiveContacts\": \"<integer>\",\n  \"activeContacts\": \"<integer>\",\n  \"permissions\": [\n    {\n      \"id\": \"<integer>\",\n      \"permissionId\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"permissionOptions\": [\n        {\n          \"name\": \"<string>\",\n          \"isEnabled\": \"<boolean>\",\n          \"id\": \"<long>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"isEnabled\": \"<boolean>\",\n          \"id\": \"<long>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<integer>\",\n      \"permissionId\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"permissionOptions\": [\n        {\n          \"name\": \"<string>\",\n          \"isEnabled\": \"<boolean>\",\n          \"id\": \"<long>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"isEnabled\": \"<boolean>\",\n          \"id\": \"<long>\"\n        }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7ebb1d18-cc03-4f26-971a-92fa6f7c0975",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "userroles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"divisionName\": \"<string>\",\n  \"levelType\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"levelId\": \"<integer>\",\n  \"inActiveContacts\": \"<integer>\",\n  \"activeContacts\": \"<integer>\",\n  \"permissions\": [\n    {\n      \"id\": \"<integer>\",\n      \"permissionId\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"permissionOptions\": [\n        {\n          \"name\": \"<string>\",\n          \"isEnabled\": \"<boolean>\",\n          \"id\": \"<long>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"isEnabled\": \"<boolean>\",\n          \"id\": \"<long>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<integer>\",\n      \"permissionId\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"permissionOptions\": [\n        {\n          \"name\": \"<string>\",\n          \"isEnabled\": \"<boolean>\",\n          \"id\": \"<long>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"isEnabled\": \"<boolean>\",\n          \"id\": \"<long>\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"userRoles\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"divisionName\": \"<string>\",\n        \"levelType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"levelId\": \"<integer>\",\n        \"inActiveContacts\": \"<integer>\",\n        \"activeContacts\": \"<integer>\",\n        \"permissions\": [\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"divisionName\": \"<string>\",\n        \"levelType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"levelId\": \"<integer>\",\n        \"inActiveContacts\": \"<integer>\",\n        \"activeContacts\": \"<integer>\",\n        \"permissions\": [\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"userRole\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"divisionName\": \"<string>\",\n      \"levelType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"levelId\": \"<integer>\",\n      \"inActiveContacts\": \"<integer>\",\n      \"activeContacts\": \"<integer>\",\n      \"permissions\": [\n        {\n          \"id\": \"<integer>\",\n          \"permissionId\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        {\n          \"id\": \"<integer>\",\n          \"permissionId\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      ]\n    },\n    \"id\": 9192,\n    \"deletedUserRoles\": \"string\",\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 1568,\n    \"lastRequestTimestamp\": \"1994-09-28T07:53:37.384Z\",\n    \"limits\": {\n      \"minute\": 4959,\n      \"hour\": 6729,\n      \"day\": 8145\n    },\n    \"runs\": {\n      \"minute\": 4690,\n      \"hour\": 9222,\n      \"day\": 5798\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 7213,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3132,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4258\n          },\n          {\n            \"consumerId\": 9702,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4933\n          }\n        ]\n      },\n      {\n        \"divisionId\": 3052,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2913,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1163\n          },\n          {\n            \"consumerId\": 9231,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6336\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e9b5d57d-ef75-4fb9-93e4-403842033714",
+          "name": "Delete existing User Roles by Ids.",
+          "request": {
+            "name": "Delete existing User Roles by Ids.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "userroles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ids",
+                  "value": "<string>",
+                  "description": "To delete User Roles based on the specified list of IDs, the IDs need to be separated by commas. This endpoint allows partial deletion; if you provide a list of five IDs and only three of them are valid, then it will delete those three User Roles. The response will indicate the three that were deleted, and the two invalid IDs will be listed as errors."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f953671b-9dd3-4b31-81fe-b6b42e2feb38",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "userroles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"userRoles\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"divisionName\": \"<string>\",\n        \"levelType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"levelId\": \"<integer>\",\n        \"inActiveContacts\": \"<integer>\",\n        \"activeContacts\": \"<integer>\",\n        \"permissions\": [\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"divisionName\": \"<string>\",\n        \"levelType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"levelId\": \"<integer>\",\n        \"inActiveContacts\": \"<integer>\",\n        \"activeContacts\": \"<integer>\",\n        \"permissions\": [\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"userRole\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"divisionName\": \"<string>\",\n      \"levelType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"levelId\": \"<integer>\",\n      \"inActiveContacts\": \"<integer>\",\n      \"activeContacts\": \"<integer>\",\n      \"permissions\": [\n        {\n          \"id\": \"<integer>\",\n          \"permissionId\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        {\n          \"id\": \"<integer>\",\n          \"permissionId\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      ]\n    },\n    \"id\": 9192,\n    \"deletedUserRoles\": \"string\",\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 1568,\n    \"lastRequestTimestamp\": \"1994-09-28T07:53:37.384Z\",\n    \"limits\": {\n      \"minute\": 4959,\n      \"hour\": 6729,\n      \"day\": 8145\n    },\n    \"runs\": {\n      \"minute\": 4690,\n      \"hour\": 9222,\n      \"day\": 5798\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 7213,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3132,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4258\n          },\n          {\n            \"consumerId\": 9702,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4933\n          }\n        ]\n      },\n      {\n        \"divisionId\": 3052,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2913,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1163\n          },\n          {\n            \"consumerId\": 9231,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6336\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e12a9fd3-9d78-4f51-afe2-43d745cc46c9",
+          "name": "Update an existing User Role based on the request body.",
+          "request": {
+            "name": "Update an existing User Role based on the request body.",
+            "description": {
+              "content": "**Request:**\r\n            \r\nOnly the property to be updated can be passed in the request body instead of the whole object. The update request body requires a total of three keys to be filled with appropriate value as listed below:\r\n* **value** – The value property provides the new value.\r\n            \r\n* **path** – The path property indicates the element to update. The entire path with slashes needs to be provided here. Example: /status/id\r\n            \r\n* **op** – The op property indicates the type of operation; we support the following three operations.\r\n            \r\n    * **add** - Add a property or array element. For existing property: set value.\r\n            \r\n    * **Remove** - Remove a property or array element.\r\n            \r\n    * **replace** - Same as remove followed by add at same location.\r\n            \r\n* **from** - [Not Used]\r\n            \r\n    * **Explanation** - The \"from\" parameter represents the starting or current value of the resource that the operation intends to modify. The from parameter is included in the example value schema but is not utilized in this endpoint's functionality. It is reserved for potential future use or could be used in specific scenarios not covered by the current implementation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "userroles",
+                ":userRoleId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "userRoleId",
+                  "description": "(Required) User Role Id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9f3fe099-6bd6-450f-b03f-2a3913545be4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "userroles",
+                    ":userRoleId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "userRoleId",
+                      "description": "(Required) User Role Id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"userRoles\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"divisionName\": \"<string>\",\n        \"levelType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"levelId\": \"<integer>\",\n        \"inActiveContacts\": \"<integer>\",\n        \"activeContacts\": \"<integer>\",\n        \"permissions\": [\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"divisionName\": \"<string>\",\n        \"levelType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"levelId\": \"<integer>\",\n        \"inActiveContacts\": \"<integer>\",\n        \"activeContacts\": \"<integer>\",\n        \"permissions\": [\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"id\": \"<integer>\",\n            \"permissionId\": \"<integer>\",\n            \"name\": \"<string>\",\n            \"permissionOptions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"userRole\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"divisionName\": \"<string>\",\n      \"levelType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"levelId\": \"<integer>\",\n      \"inActiveContacts\": \"<integer>\",\n      \"activeContacts\": \"<integer>\",\n      \"permissions\": [\n        {\n          \"id\": \"<integer>\",\n          \"permissionId\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        {\n          \"id\": \"<integer>\",\n          \"permissionId\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"permissionOptions\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      ]\n    },\n    \"id\": 9192,\n    \"deletedUserRoles\": \"string\",\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 1568,\n    \"lastRequestTimestamp\": \"1994-09-28T07:53:37.384Z\",\n    \"limits\": {\n      \"minute\": 4959,\n      \"hour\": 6729,\n      \"day\": 8145\n    },\n    \"runs\": {\n      \"minute\": 4690,\n      \"hour\": 9222,\n      \"day\": 5798\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 7213,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3132,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4258\n          },\n          {\n            \"consumerId\": 9702,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4933\n          }\n        ]\n      },\n      {\n        \"divisionId\": 3052,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2913,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1163\n          },\n          {\n            \"consumerId\": 9231,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6336\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b51820d4-9d1c-4dd5-9c26-20cb78592109",
+    "name": "Catchpoint REST API v2.0 Account UserRole API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "item": [
+    {
+      "id": "e1503845-3528-47bb-8a2b-21d8b5a78fa3",
+      "name": "Insights",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "81703973-a95f-4026-adaa-e43a45b746ca",
+          "name": "Returns the insight details from tracepoints and indicators for tokens passed.",
+          "request": {
+            "name": "Returns the insight details from tracepoints and indicators for tokens passed.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "insights",
+                ":insightTokens"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "insightTokens",
+                  "description": "(Required) Comma-separated list of Insight Tokens. Tokens can be Tracepoint or Indicator tokens."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9d8fb593-3fa3-4b1f-beec-47b85d5b3ac8",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "insights",
+                    ":insightTokens"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "insightTokens",
+                      "description": "(Required) Comma-separated list of Insight Tokens. Tokens can be Tracepoint or Indicator tokens."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"insights\": [\n      {\n        \"id\": 889,\n        \"name\": \"string\",\n        \"statusType\": null,\n        \"insightType\": null,\n        \"token\": \"string\",\n        \"httpSection\": null,\n        \"matchHeaderKey\": false,\n        \"format\": \"string\",\n        \"includeChildren\": true,\n        \"isJsonFormat\": true,\n        \"contentType\": null,\n        \"glimpseSiteId\": 5723\n      },\n      {\n        \"id\": 2542,\n        \"name\": \"string\",\n        \"statusType\": null,\n        \"insightType\": null,\n        \"token\": \"string\",\n        \"httpSection\": null,\n        \"matchHeaderKey\": true,\n        \"format\": \"string\",\n        \"includeChildren\": true,\n        \"isJsonFormat\": false,\n        \"contentType\": null,\n        \"glimpseSiteId\": 9380\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 6113,\n    \"lastRequestTimestamp\": \"1951-10-27T02:46:14.629Z\",\n    \"limits\": {\n      \"minute\": 5713,\n      \"hour\": 1373,\n      \"day\": 2034\n    },\n    \"runs\": {\n      \"minute\": 3450,\n      \"hour\": 3089,\n      \"day\": 8783\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 4431,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5252,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6416\n          },\n          {\n            \"consumerId\": 4712,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4221\n          }\n        ]\n      },\n      {\n        \"divisionId\": 6159,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5006,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5541\n          },\n          {\n            \"consumerId\": 6376,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3818\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d01e654-a32c-422d-9a19-e989e9f3d28d",
+          "name": "Returns the insight details from tracepoints and indicators for parameters passed.",
+          "request": {
+            "name": "Returns the insight details from tracepoints and indicators for parameters passed.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "insights",
+                "insights"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "insightName",
+                  "value": "<string>",
+                  "description": "Insight name"
+                },
+                {
+                  "disabled": false,
+                  "key": "insightStatus",
+                  "value": "<integer>",
+                  "description": "Insight Status. “0” for Active and “1” for Inactive"
+                },
+                {
+                  "disabled": false,
+                  "key": "insightType",
+                  "value": "<integer>",
+                  "description": "Insight Type. “0” for Tracepoint and “1” for Indicator (refer InternalLink[Test Enumeration Endpoint,operations-tag-Test,operations-Test-get_v2_tests_enumeration])"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f096903a-51bf-45b7-bd57-00fb8a672d78",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "insights",
+                    "insights"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "insightName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "insightStatus",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "insightType",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"insights\": [\n      {\n        \"id\": 7756,\n        \"name\": \"string\",\n        \"statusType\": null,\n        \"insightType\": null,\n        \"token\": \"string\",\n        \"httpSection\": null,\n        \"matchHeaderKey\": false,\n        \"format\": \"string\",\n        \"includeChildren\": true,\n        \"isJsonFormat\": true,\n        \"contentType\": null,\n        \"glimpseSiteId\": 7038\n      },\n      {\n        \"id\": 8414,\n        \"name\": \"string\",\n        \"statusType\": null,\n        \"insightType\": null,\n        \"token\": \"string\",\n        \"httpSection\": null,\n        \"matchHeaderKey\": true,\n        \"format\": \"string\",\n        \"includeChildren\": true,\n        \"isJsonFormat\": false,\n        \"contentType\": null,\n        \"glimpseSiteId\": 7658\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 8224,\n    \"lastRequestTimestamp\": \"1982-12-07T12:01:49.506Z\",\n    \"limits\": {\n      \"minute\": 3851,\n      \"hour\": 8113,\n      \"day\": 544\n    },\n    \"runs\": {\n      \"minute\": 3607,\n      \"hour\": 2257,\n      \"day\": 2657\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 148,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8606,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6630\n          },\n          {\n            \"consumerId\": 8027,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7504\n          }\n        ]\n      },\n      {\n        \"divisionId\": 5804,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 353,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1178\n          },\n          {\n            \"consumerId\": 4255,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9124\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8acbf3f2-e15f-489a-8a9e-aad2866612a0",
+          "name": "Create a new insight based on the PostData.",
+          "request": {
+            "name": "Create a new insight based on the PostData.",
+            "description": {
+              "content": "To get payload for creating a new insight and to get the created insight details refer InternalLink[Insight Details with Tokens Endpoint,operations-tag-Insights,operations-Insights-get_v2_insights__insightTokens_]. Pass “0” for Insight ID to create a new insight.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "insights"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the created object in the response body, otherwise the response body will only return created object ID."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"statusType\": \"<integer>\",\n  \"insightType\": \"<integer>\",\n  \"token\": \"<string>\",\n  \"httpSection\": \"<integer>\",\n  \"matchHeaderKey\": \"<boolean>\",\n  \"format\": \"<string>\",\n  \"includeChildren\": \"<boolean>\",\n  \"isJsonFormat\": \"<boolean>\",\n  \"contentType\": \"<integer>\",\n  \"glimpseSiteId\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e1e4e600-d076-40e8-9f29-22f7cfc8d2b2",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "insights"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"statusType\": \"<integer>\",\n  \"insightType\": \"<integer>\",\n  \"token\": \"<string>\",\n  \"httpSection\": \"<integer>\",\n  \"matchHeaderKey\": \"<boolean>\",\n  \"format\": \"<string>\",\n  \"includeChildren\": \"<boolean>\",\n  \"isJsonFormat\": \"<boolean>\",\n  \"contentType\": \"<integer>\",\n  \"glimpseSiteId\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"insights\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"statusType\": \"<integer>\",\n        \"insightType\": \"<integer>\",\n        \"token\": \"<string>\",\n        \"httpSection\": \"<integer>\",\n        \"matchHeaderKey\": \"<boolean>\",\n        \"format\": \"<string>\",\n        \"includeChildren\": \"<boolean>\",\n        \"isJsonFormat\": \"<boolean>\",\n        \"contentType\": \"<integer>\",\n        \"glimpseSiteId\": \"<integer>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"statusType\": \"<integer>\",\n        \"insightType\": \"<integer>\",\n        \"token\": \"<string>\",\n        \"httpSection\": \"<integer>\",\n        \"matchHeaderKey\": \"<boolean>\",\n        \"format\": \"<string>\",\n        \"includeChildren\": \"<boolean>\",\n        \"isJsonFormat\": \"<boolean>\",\n        \"contentType\": \"<integer>\",\n        \"glimpseSiteId\": \"<integer>\"\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 9589,\n    \"lastRequestTimestamp\": \"1958-08-21T14:51:55.479Z\",\n    \"limits\": {\n      \"minute\": 2762,\n      \"hour\": 1477,\n      \"day\": 3753\n    },\n    \"runs\": {\n      \"minute\": 7837,\n      \"hour\": 3235,\n      \"day\": 1492\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 4960,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2892,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5397\n          },\n          {\n            \"consumerId\": 5742,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7427\n          }\n        ]\n      },\n      {\n        \"divisionId\": 8117,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8994,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8316\n          },\n          {\n            \"consumerId\": 3087,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8506\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "21146d6a-5062-4097-a6df-3f5ed6e5412e",
+          "name": "Update an existing insight based on the request body.",
+          "request": {
+            "name": "Update an existing insight based on the request body.",
+            "description": {
+              "content": "**Request:**\r\n\r\nOnly the property to be updated can be passed in the request body instead of the whole object. The update request body requires a total of three keys to be filled with appropriate value as listed below:\r\n* **value** – The value property provides the new value.\r\n\r\n* **path** – The path property indicates the element to update. The entire path with slashes needs to be provided here. Example: /status/id\r\n\r\n* **op** – The op property indicates the type of operation; we support the following three operations.\r\n\r\n    * **add** - Add a property or array element. For existing property: set value.\r\n    \r\n    * **Remove** - Remove a property or array element.\r\n    \r\n    * **replace** - Same as remove followed by add at same location.\r\n    \r\n* **from** - [Not Used]\r\n\r\n    * **Explanation** - The \"from\" parameter represents the starting or current value of the resource that the operation intends to modify. The from parameter is included in the example value schema but is not utilized in this endpoint's functionality. It is reserved for potential future use or could be used in specific scenarios not covered by the current implementation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "insights",
+                ":insightType",
+                ":insightToken"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the updated object in the response body, otherwise the response body will only return the updated object ID."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "insightType",
+                  "description": "(Required) Insight Type. “0” for Tracepoint and “1” for Indicator (refer InternalLink[Test Enumeration Endpoint,operations-tag-Test,operations-Test-get_v2_tests_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "insightToken",
+                  "description": "(Required) Insight Token"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d0d6bbde-c287-4241-866b-148583337d3d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "insights",
+                    ":insightType",
+                    ":insightToken"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "insightType",
+                      "description": "(Required) Insight Type. “0” for Tracepoint and “1” for Indicator (refer InternalLink[Test Enumeration Endpoint,operations-tag-Test,operations-Test-get_v2_tests_enumeration])"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "insightToken",
+                      "description": "(Required) Insight Token"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"insights\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"statusType\": \"<integer>\",\n        \"insightType\": \"<integer>\",\n        \"token\": \"<string>\",\n        \"httpSection\": \"<integer>\",\n        \"matchHeaderKey\": \"<boolean>\",\n        \"format\": \"<string>\",\n        \"includeChildren\": \"<boolean>\",\n        \"isJsonFormat\": \"<boolean>\",\n        \"contentType\": \"<integer>\",\n        \"glimpseSiteId\": \"<integer>\"\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"statusType\": \"<integer>\",\n        \"insightType\": \"<integer>\",\n        \"token\": \"<string>\",\n        \"httpSection\": \"<integer>\",\n        \"matchHeaderKey\": \"<boolean>\",\n        \"format\": \"<string>\",\n        \"includeChildren\": \"<boolean>\",\n        \"isJsonFormat\": \"<boolean>\",\n        \"contentType\": \"<integer>\",\n        \"glimpseSiteId\": \"<integer>\"\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 9589,\n    \"lastRequestTimestamp\": \"1958-08-21T14:51:55.479Z\",\n    \"limits\": {\n      \"minute\": 2762,\n      \"hour\": 1477,\n      \"day\": 3753\n    },\n    \"runs\": {\n      \"minute\": 7837,\n      \"hour\": 3235,\n      \"day\": 1492\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 4960,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2892,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5397\n          },\n          {\n            \"consumerId\": 5742,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7427\n          }\n        ]\n      },\n      {\n        \"divisionId\": 8117,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8994,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8316\n          },\n          {\n            \"consumerId\": 3087,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8506\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "46349f07-4090-4ef6-8210-c739e128b935",
+    "name": "Catchpoint REST API v2.0 Account Insights API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "item": [
+    {
+      "id": "2f6cc236-a8cb-486c-a27a-23258e46e0f9",
+      "name": "Divisions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9f914553-3b01-4eda-8fa8-875f116de206",
+          "name": "Returns details about a Division per the parameters.",
+          "request": {
+            "name": "Returns details about a Division per the parameters.",
+            "description": {
+              "content": "If no parameters are passed, all active divisions are returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "divisions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "divisionId",
+                  "value": "<integer>",
+                  "description": "Division ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "divisionStatus",
+                  "value": "<integer>",
+                  "description": "Status ID. “0” for Active and “1” for Inactive"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ef47f8c9-2b10-4514-83a4-86e3d5494bd9",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "divisions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "divisionId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "divisionStatus",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"divisions\": [\n      {\n        \"id\": 5386,\n        \"name\": \"string\",\n        \"statusType\": null\n      },\n      {\n        \"id\": 5922,\n        \"name\": \"string\",\n        \"statusType\": null\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 4313,\n    \"lastRequestTimestamp\": \"1997-01-12T12:21:44.879Z\",\n    \"limits\": {\n      \"minute\": 6557,\n      \"hour\": 9644,\n      \"day\": 2537\n    },\n    \"runs\": {\n      \"minute\": 6230,\n      \"hour\": 9202,\n      \"day\": 3100\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 400,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4367,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1609\n          },\n          {\n            \"consumerId\": 4107,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5905\n          }\n        ]\n      },\n      {\n        \"divisionId\": 5200,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8771,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 344\n          },\n          {\n            \"consumerId\": 1014,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9257\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f91083f9-64f6-40e1-81f7-dd582e242976",
+    "name": "Catchpoint REST API v2.0 Account Divisions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

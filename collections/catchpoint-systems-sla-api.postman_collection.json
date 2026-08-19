@@ -1,0 +1,662 @@
+{
+  "item": [
+    {
+      "id": "d6d7e103-3d59-4f1c-bf3a-5c444a8a9d58",
+      "name": "SLA",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3326d686-9d5f-451c-8bac-f6f033fbbe75",
+          "name": "Return SLA purge item details by the IDs passed.",
+          "request": {
+            "name": "Return SLA purge item details by the IDs passed.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "slapurgeitems",
+                ":ids"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ids",
+                  "description": "(Required) Comma-separated list of SLA purge item IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fab174a8-d453-42e4-b2c2-88bd28119140",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "slapurgeitems",
+                    ":ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ids",
+                      "description": "(Required) Comma-separated list of SLA purge item IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"slaItems\": [\n      {\n        \"id\": 5892,\n        \"name\": \"string\",\n        \"reason\": \"string\",\n        \"statusType\": {\n          \"id\": 7981,\n          \"name\": \"string\"\n        },\n        \"intervalStart\": \"1949-04-20T16:38:37.437Z\",\n        \"intervalEnd\": \"2001-06-18T14:49:49.173Z\",\n        \"purgeRuns\": {\n          \"id\": 1092,\n          \"name\": \"string\"\n        },\n        \"tests\": [\n          {\n            \"id\": 7154,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 7470,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      {\n        \"id\": 6877,\n        \"name\": \"string\",\n        \"reason\": \"string\",\n        \"statusType\": {\n          \"id\": 773,\n          \"name\": \"string\"\n        },\n        \"intervalStart\": \"2025-03-13T06:27:23.346Z\",\n        \"intervalEnd\": \"2021-04-29T23:54:03.123Z\",\n        \"purgeRuns\": {\n          \"id\": 3497,\n          \"name\": \"string\"\n        },\n        \"tests\": [\n          {\n            \"id\": 600,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 5287,\n            \"name\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"slaPurgeItem\": {\n      \"id\": 362,\n      \"name\": \"string\",\n      \"reason\": \"string\",\n      \"statusType\": {\n        \"id\": 2453,\n        \"name\": \"string\"\n      },\n      \"intervalStart\": \"1978-01-27T03:26:31.283Z\",\n      \"intervalEnd\": \"2008-01-31T12:49:47.657Z\",\n      \"purgeRuns\": {\n        \"id\": 1634,\n        \"name\": \"string\"\n      },\n      \"tests\": [\n        {\n          \"id\": 7953,\n          \"name\": \"string\"\n        },\n        {\n          \"id\": 7778,\n          \"name\": \"string\"\n        }\n      ]\n    },\n    \"id\": 3749,\n    \"slaPurgeItems\": [\n      {\n        \"id\": 5179,\n        \"statusType\": {\n          \"id\": 3956,\n          \"name\": \"string\"\n        }\n      },\n      {\n        \"id\": 8795,\n        \"statusType\": {\n          \"id\": 4471,\n          \"name\": \"string\"\n        }\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 9880,\n    \"lastRequestTimestamp\": \"2013-12-15T20:14:59.299Z\",\n    \"limits\": {\n      \"minute\": 1450,\n      \"hour\": 5981,\n      \"day\": 1606\n    },\n    \"runs\": {\n      \"minute\": 4907,\n      \"hour\": 813,\n      \"day\": 8549\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 99,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1066,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5937\n          },\n          {\n            \"consumerId\": 5552,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6552\n          }\n        ]\n      },\n      {\n        \"divisionId\": 5050,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6603,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4506\n          },\n          {\n            \"consumerId\": 8499,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2854\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "660ed683-000d-4c45-9fba-407dde45d579",
+          "name": "Returns Schedule details by parameters passed.",
+          "request": {
+            "name": "Returns Schedule details by parameters passed.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "slapurgeitems"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "statusId",
+                  "value": "<integer>",
+                  "description": "SLA purge item Status Type. “0” for Active; “1” for Inactive."
+                },
+                {
+                  "disabled": false,
+                  "key": "purgeTypeId",
+                  "value": "<integer>",
+                  "description": "Purge Type. “0” for AllRuns; “1” for FailedRunsOnly"
+                },
+                {
+                  "disabled": false,
+                  "key": "startTime",
+                  "value": "<dateTime>",
+                  "description": "SLA purge item Start time in UTC (YYYY-MM-DDThh:mm:ss)."
+                },
+                {
+                  "disabled": false,
+                  "key": "endTime",
+                  "value": "<dateTime>",
+                  "description": "SLA purge item End time in UTC (YYYY-MM-DDThh:mm:ss)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "10a1a9c9-5807-4a15-a3f8-964c25eb1a73",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "slapurgeitems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "statusId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "purgeTypeId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "startTime",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endTime",
+                      "value": "<dateTime>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"slaItems\": [\n      {\n        \"id\": 6334,\n        \"name\": \"string\",\n        \"reason\": \"string\",\n        \"statusType\": {\n          \"id\": 908,\n          \"name\": \"string\"\n        },\n        \"intervalStart\": \"2015-05-20T22:02:39.961Z\",\n        \"intervalEnd\": \"1961-03-26T03:19:01.370Z\",\n        \"purgeRuns\": {\n          \"id\": 8641,\n          \"name\": \"string\"\n        },\n        \"tests\": [\n          {\n            \"id\": 5433,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 2702,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      {\n        \"id\": 7689,\n        \"name\": \"string\",\n        \"reason\": \"string\",\n        \"statusType\": {\n          \"id\": 441,\n          \"name\": \"string\"\n        },\n        \"intervalStart\": \"2025-08-11T22:25:39.647Z\",\n        \"intervalEnd\": \"2011-01-02T20:09:46.177Z\",\n        \"purgeRuns\": {\n          \"id\": 5025,\n          \"name\": \"string\"\n        },\n        \"tests\": [\n          {\n            \"id\": 9985,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 1734,\n            \"name\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"slaPurgeItem\": {\n      \"id\": 6403,\n      \"name\": \"string\",\n      \"reason\": \"string\",\n      \"statusType\": {\n        \"id\": 1573,\n        \"name\": \"string\"\n      },\n      \"intervalStart\": \"1948-04-11T05:28:41.006Z\",\n      \"intervalEnd\": \"1998-10-17T06:42:04.285Z\",\n      \"purgeRuns\": {\n        \"id\": 1467,\n        \"name\": \"string\"\n      },\n      \"tests\": [\n        {\n          \"id\": 5811,\n          \"name\": \"string\"\n        },\n        {\n          \"id\": 655,\n          \"name\": \"string\"\n        }\n      ]\n    },\n    \"id\": 5364,\n    \"slaPurgeItems\": [\n      {\n        \"id\": 4471,\n        \"statusType\": {\n          \"id\": 5792,\n          \"name\": \"string\"\n        }\n      },\n      {\n        \"id\": 2782,\n        \"statusType\": {\n          \"id\": 2059,\n          \"name\": \"string\"\n        }\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 730,\n    \"lastRequestTimestamp\": \"1950-10-15T00:17:58.000Z\",\n    \"limits\": {\n      \"minute\": 920,\n      \"hour\": 4323,\n      \"day\": 2538\n    },\n    \"runs\": {\n      \"minute\": 5907,\n      \"hour\": 9681,\n      \"day\": 1763\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 7898,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4881,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5148\n          },\n          {\n            \"consumerId\": 8813,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5667\n          }\n        ]\n      },\n      {\n        \"divisionId\": 2829,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 9526,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8317\n          },\n          {\n            \"consumerId\": 1026,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3945\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fb501f4a-e524-46d6-b05a-49744d360ec8",
+          "name": "Create an SLA purge item based on the PostData.",
+          "request": {
+            "name": "Create an SLA purge item based on the PostData.",
+            "description": {
+              "content": "To get payload for creating a new SLA purge item and to get the created SLA purge item details refer InternalLink[SLA purge item by ID Endpoint,operations-tag-SLAClassification,operations-SLAClassification-get_v2_slapurgeitems__ids_]. Pass “0” for SLA purge item ID to create a new SLA purge item.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "slapurgeitems"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the created object in the response body, otherwise the response body will only return created object ID."
+                },
+                {
+                  "disabled": false,
+                  "key": "isConsentAgreed",
+                  "value": "true",
+                  "description": "Set to true always when an SLA purge item is created from REST API."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"reason\": \"<string>\",\n  \"statusType\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"intervalStart\": \"<dateTime>\",\n  \"intervalEnd\": \"<dateTime>\",\n  \"purgeRuns\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"tests\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "846d4259-3cb3-44d0-b865-63fd7d8cf8a8",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "slapurgeitems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "isConsentAgreed",
+                      "value": "true"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"reason\": \"<string>\",\n  \"statusType\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"intervalStart\": \"<dateTime>\",\n  \"intervalEnd\": \"<dateTime>\",\n  \"purgeRuns\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"tests\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"slaItems\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"reason\": \"<string>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"intervalStart\": \"<dateTime>\",\n        \"intervalEnd\": \"<dateTime>\",\n        \"purgeRuns\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"tests\": [\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"reason\": \"<string>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"intervalStart\": \"<dateTime>\",\n        \"intervalEnd\": \"<dateTime>\",\n        \"purgeRuns\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"tests\": [\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          }\n        ]\n      }\n    ],\n    \"slaPurgeItem\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"reason\": \"<string>\",\n      \"statusType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"intervalStart\": \"<dateTime>\",\n      \"intervalEnd\": \"<dateTime>\",\n      \"purgeRuns\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"tests\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    \"id\": 1450,\n    \"slaPurgeItems\": [\n      {\n        \"id\": 1206,\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        }\n      },\n      {\n        \"id\": 8010,\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        }\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 1151,\n    \"lastRequestTimestamp\": \"1946-12-20T04:35:28.415Z\",\n    \"limits\": {\n      \"minute\": 8912,\n      \"hour\": 7763,\n      \"day\": 7924\n    },\n    \"runs\": {\n      \"minute\": 3938,\n      \"hour\": 7115,\n      \"day\": 6595\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 5065,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6063,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2685\n          },\n          {\n            \"consumerId\": 43,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2612\n          }\n        ]\n      },\n      {\n        \"divisionId\": 6978,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1788,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6144\n          },\n          {\n            \"consumerId\": 5233,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5283\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e91b19ea-5acb-4f8f-b35b-955bb689c98a",
+          "name": "Update the status of existing SLA purge items based on the request body.",
+          "request": {
+            "name": "Update the status of existing SLA purge items based on the request body.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "slapurgeitems",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "isConsentAgreed",
+                  "value": "true",
+                  "description": "Set to true always when an SLA purge item is created from REST API."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"id\": \"<integer>\",\n    \"statusType\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"statusType\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "171a39b2-9c02-49cc-8e00-91f737541512",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "slapurgeitems",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "isConsentAgreed",
+                      "value": "true"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"id\": \"<integer>\",\n    \"statusType\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"statusType\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"slaItems\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"reason\": \"<string>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"intervalStart\": \"<dateTime>\",\n        \"intervalEnd\": \"<dateTime>\",\n        \"purgeRuns\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"tests\": [\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"reason\": \"<string>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"intervalStart\": \"<dateTime>\",\n        \"intervalEnd\": \"<dateTime>\",\n        \"purgeRuns\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"tests\": [\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          }\n        ]\n      }\n    ],\n    \"slaPurgeItem\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"reason\": \"<string>\",\n      \"statusType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"intervalStart\": \"<dateTime>\",\n      \"intervalEnd\": \"<dateTime>\",\n      \"purgeRuns\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"tests\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    \"id\": 1337,\n    \"slaPurgeItems\": [\n      {\n        \"id\": \"<integer>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        }\n      },\n      {\n        \"id\": \"<integer>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        }\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 9332,\n    \"lastRequestTimestamp\": \"2010-11-12T20:23:34.209Z\",\n    \"limits\": {\n      \"minute\": 8126,\n      \"hour\": 3750,\n      \"day\": 7894\n    },\n    \"runs\": {\n      \"minute\": 6799,\n      \"hour\": 3495,\n      \"day\": 7020\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 6635,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1584,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3155\n          },\n          {\n            \"consumerId\": 6265,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9852\n          }\n        ]\n      },\n      {\n        \"divisionId\": 9533,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6674,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1307\n          },\n          {\n            \"consumerId\": 5375,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4021\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dbf9a6e2-9e73-488e-9a92-65fdeac98ece",
+          "name": "Update an existing SLA purge item based on the request body.",
+          "request": {
+            "name": "Update an existing SLA purge item based on the request body.",
+            "description": {
+              "content": "**Request:**\r\n\r\nOnly the property to be updated can be passed in the request body instead of the whole object. The update request body requires a total of three keys to be filled with appropriate value as listed below:\r\n* **value** – The value property provides the new value.\r\n\r\n* **path** – The path property indicates the element to update. The entire path with slashes needs to be provided here. Example: /status/id\r\n\r\n* **op** – The op property indicates the type of operation; we support the following three operations.\r\n\r\n    * **add** - Add a property or array element. For existing property: set value.\r\n    \r\n    * **Remove** - Remove a property or array element.\r\n    \r\n    * **replace** - Same as remove followed by add at same location.\r\n    \r\n* **from** - [Not Used]\r\n\r\n    * **Explanation** - The \"from\" parameter represents the starting or current value of the resource that the operation intends to modify. The from parameter is included in the example value schema but is not utilized in this endpoint's functionality. It is reserved for potential future use or could be used in specific scenarios not covered by the current implementation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "slapurgeitems",
+                ":slaId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the updated object in the response body, otherwise the response body will only return the updated object ID."
+                },
+                {
+                  "disabled": false,
+                  "key": "isConsentAgreed",
+                  "value": "true",
+                  "description": "Set to true always when an SLA purge item is created from REST API."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "slaId",
+                  "description": "(Required) SLA purge item ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dcd72286-eea3-4e78-9f49-879e051888cd",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "slapurgeitems",
+                    ":slaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "isConsentAgreed",
+                      "value": "true"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "slaId",
+                      "description": "(Required) SLA purge item ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"slaItems\": [\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"reason\": \"<string>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"intervalStart\": \"<dateTime>\",\n        \"intervalEnd\": \"<dateTime>\",\n        \"purgeRuns\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"tests\": [\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"reason\": \"<string>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"intervalStart\": \"<dateTime>\",\n        \"intervalEnd\": \"<dateTime>\",\n        \"purgeRuns\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"tests\": [\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          },\n          {\n            \"id\": \"<long>\",\n            \"name\": \"<string>\"\n          }\n        ]\n      }\n    ],\n    \"slaPurgeItem\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"reason\": \"<string>\",\n      \"statusType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"intervalStart\": \"<dateTime>\",\n      \"intervalEnd\": \"<dateTime>\",\n      \"purgeRuns\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"tests\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    \"id\": 1337,\n    \"slaPurgeItems\": [\n      {\n        \"id\": \"<integer>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        }\n      },\n      {\n        \"id\": \"<integer>\",\n        \"statusType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        }\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 9332,\n    \"lastRequestTimestamp\": \"2010-11-12T20:23:34.209Z\",\n    \"limits\": {\n      \"minute\": 8126,\n      \"hour\": 3750,\n      \"day\": 7894\n    },\n    \"runs\": {\n      \"minute\": 6799,\n      \"hour\": 3495,\n      \"day\": 7020\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 6635,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1584,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3155\n          },\n          {\n            \"consumerId\": 6265,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9852\n          }\n        ]\n      },\n      {\n        \"divisionId\": 9533,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6674,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1307\n          },\n          {\n            \"consumerId\": 5375,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4021\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "137b2945-d9ce-4c7d-a925-de6cc5614dc0",
+    "name": "Catchpoint REST API v2.0 Account SLA API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

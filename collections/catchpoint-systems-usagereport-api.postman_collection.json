@@ -1,0 +1,184 @@
+{
+  "item": [
+    {
+      "id": "bafc3c2c-26b7-43ad-a6d9-fc09b7549243",
+      "name": "UsageReport",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5930f37a-6f73-43fd-a253-cc975e840090",
+          "name": "Returns the Usage Report",
+          "request": {
+            "name": "Returns the Usage Report",
+            "description": {
+              "content": " Return usage report for the provided parameters.  \r\nThe parameters are optional, and you may include either of them to customize the query.If no parameters are passed, then usage report by months is returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "usagereport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "dataByDays",
+                  "value": "<boolean>",
+                  "description": "Usage Report of last 7 days including the present day."
+                },
+                {
+                  "disabled": false,
+                  "key": "dataByWeeks",
+                  "value": "<boolean>",
+                  "description": "Usage Report of last 5 weeks including present week."
+                },
+                {
+                  "disabled": false,
+                  "key": "dataByMonths",
+                  "value": "<boolean>",
+                  "description": "Usage Report of last 4 Months including the current month."
+                },
+                {
+                  "disabled": false,
+                  "key": "dataByQuarters",
+                  "value": "<boolean>",
+                  "description": "Usage Report of last 3 quarters including current quarter."
+                },
+                {
+                  "disabled": false,
+                  "key": "divisionId",
+                  "value": "<integer>",
+                  "description": "Division id of which usage report Required"
+                },
+                {
+                  "disabled": false,
+                  "key": "productId",
+                  "value": "<integer>",
+                  "description": "ProductId if which usage report required"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fec50f1f-078b-4cb1-9baf-3caa7cb1a93f",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "usagereport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "dataByDays",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "dataByWeeks",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "dataByMonths",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "dataByQuarters",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "divisionId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "productId",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"day\": [\n      {\n        \"divisionData\": [\n          {\n            \"divisionId\": 4164,\n            \"divisionName\": \"string\",\n            \"productId\": 8890,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 5475,\n            \"divisionName\": \"string\",\n            \"productId\": 5630,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"productData\": [\n          {\n            \"divisionId\": 6080,\n            \"divisionName\": \"string\",\n            \"productId\": 8652,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 406,\n            \"divisionName\": \"string\",\n            \"productId\": 1200,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"sumTotalPoints\": 8099.264388476535,\n        \"allowanceTotalPoints\": 8641.63352201971\n      },\n      {\n        \"divisionData\": [\n          {\n            \"divisionId\": 5424,\n            \"divisionName\": \"string\",\n            \"productId\": 8807,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 6486,\n            \"divisionName\": \"string\",\n            \"productId\": 1842,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"productData\": [\n          {\n            \"divisionId\": 9693,\n            \"divisionName\": \"string\",\n            \"productId\": 1558,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 6596,\n            \"divisionName\": \"string\",\n            \"productId\": 3550,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"sumTotalPoints\": 9479.045386498909,\n        \"allowanceTotalPoints\": 803.3758549543179\n      }\n    ],\n    \"week\": [\n      {\n        \"divisionData\": [\n          {\n            \"divisionId\": 8022,\n            \"divisionName\": \"string\",\n            \"productId\": 2256,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 4080,\n            \"divisionName\": \"string\",\n            \"productId\": 8380,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"productData\": [\n          {\n            \"divisionId\": 3510,\n            \"divisionName\": \"string\",\n            \"productId\": 8339,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 1847,\n            \"divisionName\": \"string\",\n            \"productId\": 9080,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"sumTotalPoints\": 953.9903929323578,\n        \"allowanceTotalPoints\": 6016.098707290615\n      },\n      {\n        \"divisionData\": [\n          {\n            \"divisionId\": 4644,\n            \"divisionName\": \"string\",\n            \"productId\": 1857,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 8229,\n            \"divisionName\": \"string\",\n            \"productId\": 279,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"productData\": [\n          {\n            \"divisionId\": 9348,\n            \"divisionName\": \"string\",\n            \"productId\": 3348,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 7923,\n            \"divisionName\": \"string\",\n            \"productId\": 3725,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"sumTotalPoints\": 1193.9586612953058,\n        \"allowanceTotalPoints\": 8953.28137335777\n      }\n    ],\n    \"month\": [\n      {\n        \"divisionData\": [\n          {\n            \"divisionId\": 5866,\n            \"divisionName\": \"string\",\n            \"productId\": 413,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 3163,\n            \"divisionName\": \"string\",\n            \"productId\": 4606,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"productData\": [\n          {\n            \"divisionId\": 7644,\n            \"divisionName\": \"string\",\n            \"productId\": 4610,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 9831,\n            \"divisionName\": \"string\",\n            \"productId\": 1059,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"sumTotalPoints\": 5855.6542626965165,\n        \"allowanceTotalPoints\": 3502.5139816425412\n      },\n      {\n        \"divisionData\": [\n          {\n            \"divisionId\": 3704,\n            \"divisionName\": \"string\",\n            \"productId\": 8218,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 2702,\n            \"divisionName\": \"string\",\n            \"productId\": 7498,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"productData\": [\n          {\n            \"divisionId\": 3030,\n            \"divisionName\": \"string\",\n            \"productId\": 3816,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 5849,\n            \"divisionName\": \"string\",\n            \"productId\": 2421,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"sumTotalPoints\": 7247.7945095383,\n        \"allowanceTotalPoints\": 5112.7277241046995\n      }\n    ],\n    \"quarter\": [\n      {\n        \"divisionData\": [\n          {\n            \"divisionId\": 1683,\n            \"divisionName\": \"string\",\n            \"productId\": 8366,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 5127,\n            \"divisionName\": \"string\",\n            \"productId\": 2958,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"productData\": [\n          {\n            \"divisionId\": 7128,\n            \"divisionName\": \"string\",\n            \"productId\": 812,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 3275,\n            \"divisionName\": \"string\",\n            \"productId\": 693,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"sumTotalPoints\": 5035.7494340169305,\n        \"allowanceTotalPoints\": 4820.541558930473\n      },\n      {\n        \"divisionData\": [\n          {\n            \"divisionId\": 2948,\n            \"divisionName\": \"string\",\n            \"productId\": 83,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 5614,\n            \"divisionName\": \"string\",\n            \"productId\": 6410,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"productData\": [\n          {\n            \"divisionId\": 7847,\n            \"divisionName\": \"string\",\n            \"productId\": 5735,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"divisionId\": 4701,\n            \"divisionName\": \"string\",\n            \"productId\": 5569,\n            \"productName\": \"string\",\n            \"points\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"sumTotalPoints\": 1789.0653843904024,\n        \"allowanceTotalPoints\": 3464.7627095452126\n      }\n    ],\n    \"totalPoints\": [\n      {\n        \"divisionId\": 5836,\n        \"productId\": 6095,\n        \"aggregatedTotal\": 3838.34244179999,\n        \"totalAllocatedPoints\": 8286.87701734922,\n        \"allowance\": 9042.267550676712\n      },\n      {\n        \"divisionId\": 8669,\n        \"productId\": 1234,\n        \"aggregatedTotal\": 1119.8960243491829,\n        \"totalAllocatedPoints\": 700.5059374734391,\n        \"allowance\": 1655.960034079693\n      }\n    ],\n    \"startDate\": \"2016-09-25T14:20:39.644Z\",\n    \"endDate\": \"1999-06-11T11:54:34.406Z\",\n    \"totalPointsUsed\": 4623.671067863728,\n    \"contractBalance\": 9030.337585027211,\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 5119,\n    \"lastRequestTimestamp\": \"2024-02-22T21:13:25.697Z\",\n    \"limits\": {\n      \"minute\": 5022,\n      \"hour\": 7008,\n      \"day\": 4509\n    },\n    \"runs\": {\n      \"minute\": 6526,\n      \"hour\": 8066,\n      \"day\": 7880\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 5014,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8704,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8731\n          },\n          {\n            \"consumerId\": 4703,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3128\n          }\n        ]\n      },\n      {\n        \"divisionId\": 6291,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4250,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9250\n          },\n          {\n            \"consumerId\": 3832,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4466\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "72365444-a431-415a-9328-92a5ba347ebe",
+    "name": "Catchpoint REST API v2.0 Account UsageReport API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

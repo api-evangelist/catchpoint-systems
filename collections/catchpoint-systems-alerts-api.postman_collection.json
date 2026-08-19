@@ -1,0 +1,473 @@
+{
+  "item": [
+    {
+      "id": "8c769d94-2c10-457a-8195-5a859f551de0",
+      "name": "Alerts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e45d35fa-036f-4286-b1f4-dc956c8fd0dc",
+          "name": "Returns alert details based on the alert IDs.",
+          "request": {
+            "name": "Returns alert details based on the alert IDs.",
+            "description": {
+              "content": "*[Analytics Endpoint]*\r\n\r\nThe data returned is in UTC.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "tests",
+                "alerts",
+                ":alertIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "alertIds",
+                  "description": "(Required) Comma-separated list of alert IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b86bb959-16ad-4931-9f5b-da3069700d11",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "tests",
+                    "alerts",
+                    ":alertIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "alertIds",
+                      "description": "(Required) Comma-separated list of alert IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"alerts\": [\n      {\n        \"id\": \"string\",\n        \"reportTime\": \"1976-09-08T07:56:00.395Z\",\n        \"processingTimestamp\": \"1995-12-24T03:16:46.130Z\",\n        \"startTime\": \"1955-09-01T13:10:31.078Z\",\n        \"level\": null,\n        \"test\": {\n          \"id\": 9216,\n          \"name\": \"string\"\n        },\n        \"testPath\": [\n          \"string\",\n          \"string\"\n        ],\n        \"testPathStyled\": \"string\",\n        \"testUrl\": \"string\",\n        \"testSmartboardUrl\": \"string\",\n        \"testPerformanceUrl\": \"string\",\n        \"testStatisticalUrl\": \"string\",\n        \"testScatterplotUrl\": \"string\",\n        \"testRecordUrl\": \"string\",\n        \"testType\": null,\n        \"alertType\": null,\n        \"alertSubtype\": null,\n        \"triggerType\": null,\n        \"operationType\": null,\n        \"warningTrigger\": 5794.829075488374,\n        \"criticalTrigger\": 6333.612819588426,\n        \"durationInSecond\": 6417,\n        \"node\": {\n          \"id\": 9982,\n          \"name\": \"string\"\n        },\n        \"acknowledgedBy\": {\n          \"id\": 8867,\n          \"name\": \"string\"\n        },\n        \"labels\": [\n          {\n            \"color\": \"string\",\n            \"id\": 8968,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"color\": \"string\",\n            \"id\": 6093,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"id\": \"string\",\n        \"reportTime\": \"1981-11-12T23:17:53.854Z\",\n        \"processingTimestamp\": \"1952-09-12T16:47:38.242Z\",\n        \"startTime\": \"1978-04-09T20:42:07.881Z\",\n        \"level\": null,\n        \"test\": {\n          \"id\": 4474,\n          \"name\": \"string\"\n        },\n        \"testPath\": [\n          \"string\",\n          \"string\"\n        ],\n        \"testPathStyled\": \"string\",\n        \"testUrl\": \"string\",\n        \"testSmartboardUrl\": \"string\",\n        \"testPerformanceUrl\": \"string\",\n        \"testStatisticalUrl\": \"string\",\n        \"testScatterplotUrl\": \"string\",\n        \"testRecordUrl\": \"string\",\n        \"testType\": null,\n        \"alertType\": null,\n        \"alertSubtype\": null,\n        \"triggerType\": null,\n        \"operationType\": null,\n        \"warningTrigger\": 4743.603580070772,\n        \"criticalTrigger\": 743.1300680834174,\n        \"durationInSecond\": 5542,\n        \"node\": {\n          \"id\": 9580,\n          \"name\": \"string\"\n        },\n        \"acknowledgedBy\": {\n          \"id\": 5485,\n          \"name\": \"string\"\n        },\n        \"labels\": [\n          {\n            \"color\": \"string\",\n            \"id\": 4343,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"color\": \"string\",\n            \"id\": 9818,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 313,\n    \"lastRequestTimestamp\": \"1976-08-08T11:07:18.706Z\",\n    \"limits\": {\n      \"minute\": 9556,\n      \"hour\": 5813,\n      \"day\": 4291\n    },\n    \"runs\": {\n      \"minute\": 3932,\n      \"hour\": 1837,\n      \"day\": 769\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 6812,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4704,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7237\n          },\n          {\n            \"consumerId\": 4701,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1102\n          }\n        ]\n      },\n      {\n        \"divisionId\": 7553,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 7578,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 485\n          },\n          {\n            \"consumerId\": 6726,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3610\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b8036206-2cbf-4176-bb5c-df62af2aada1",
+          "name": "Returns alert details based on the parameters.",
+          "request": {
+            "name": "Returns alert details based on the parameters.",
+            "description": {
+              "content": "*[Analytics Endpoint]*\r\n\r\nIf no time is specified, the alerts from the last 24 hours are returned. The data returned is in UTC.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "tests",
+                "alerts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<dateTime>",
+                  "description": "Start time in UTC (YYYY-MM-DDThh:mm:ss). Specify an End time if Start time is set."
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<dateTime>",
+                  "description": "End time in UTC (YYYY-MM-DDThh:mm:ss). Specify a Start time if End time is set."
+                },
+                {
+                  "disabled": false,
+                  "key": "levelId",
+                  "value": "<integer>",
+                  "description": "Alert level Id. (Warning = 0, Critical = 1, Information = 2, Improved = 3)"
+                },
+                {
+                  "disabled": false,
+                  "key": "testName",
+                  "value": "<string>",
+                  "description": "Test name to filter alerts for"
+                },
+                {
+                  "disabled": false,
+                  "key": "testIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of test IDs to filter alerts for"
+                },
+                {
+                  "disabled": false,
+                  "key": "alertTypeId",
+                  "value": "<integer>",
+                  "description": "Alert Type ID (refer InternalLink[Test Enumeration Endpoint,operations-tag-Test,operations-Test-get_v2_tests_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "key": "alertTypeSubId",
+                  "value": "<integer>",
+                  "description": "Alert Type Sub ID (refer InternalLink[Test Enumeration Endpoint,operations-tag-Test,operations-Test-get_v2_tests_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "key": "productIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Product IDs to filter alerts for"
+                },
+                {
+                  "disabled": false,
+                  "key": "productName",
+                  "value": "<string>",
+                  "description": "Product name to filter alerts for"
+                },
+                {
+                  "disabled": false,
+                  "key": "acknowledgedBy",
+                  "value": "<integer>",
+                  "description": "Contact ID that acknowledged the test alert"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeNodeDetails",
+                  "value": "false",
+                  "description": "Include Node details"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageNumber",
+                  "value": "1",
+                  "description": "Page number to return records from when the number of records exceeds pageSize"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "100",
+                  "description": "Number of results per page. Maximum value is 100."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bb96fef2-2837-42a2-81c0-8f7ec0d4b311",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "tests",
+                    "alerts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "levelId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "testName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "testIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "alertTypeId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "alertTypeSubId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "productIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "productName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "acknowledgedBy",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "includeNodeDetails",
+                      "value": "false"
+                    },
+                    {
+                      "key": "pageNumber",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"alerts\": {\n      \"id\": \"string\",\n      \"reportTime\": \"1995-07-21T17:06:30.032Z\",\n      \"processingTimestamp\": \"1984-02-23T05:14:52.845Z\",\n      \"startTime\": \"1980-08-31T18:38:34.411Z\",\n      \"level\": null,\n      \"test\": {\n        \"id\": 4935,\n        \"name\": \"string\"\n      },\n      \"testPath\": [\n        \"string\",\n        \"string\"\n      ],\n      \"testPathStyled\": \"string\",\n      \"testUrl\": \"string\",\n      \"testSmartboardUrl\": \"string\",\n      \"testPerformanceUrl\": \"string\",\n      \"testStatisticalUrl\": \"string\",\n      \"testScatterplotUrl\": \"string\",\n      \"testRecordUrl\": \"string\",\n      \"testType\": null,\n      \"alertType\": null,\n      \"alertSubtype\": null,\n      \"triggerType\": null,\n      \"operationType\": null,\n      \"warningTrigger\": 5538.8057346267715,\n      \"criticalTrigger\": 8359.781868257476,\n      \"durationInSecond\": 9453,\n      \"node\": {\n        \"id\": 6396,\n        \"name\": \"string\"\n      },\n      \"acknowledgedBy\": {\n        \"id\": 6380,\n        \"name\": \"string\"\n      },\n      \"labels\": [\n        {\n          \"color\": \"string\",\n          \"id\": 2809,\n          \"name\": \"string\",\n          \"values\": [\n            \"string\",\n            \"string\"\n          ]\n        },\n        {\n          \"color\": \"string\",\n          \"id\": 160,\n          \"name\": \"string\",\n          \"values\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      ]\n    },\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 6208,\n    \"lastRequestTimestamp\": \"1970-02-12T14:57:43.495Z\",\n    \"limits\": {\n      \"minute\": 128,\n      \"hour\": 3496,\n      \"day\": 9662\n    },\n    \"runs\": {\n      \"minute\": 791,\n      \"hour\": 5448,\n      \"day\": 5671\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 8364,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2313,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9642\n          },\n          {\n            \"consumerId\": 8012,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6939\n          }\n        ]\n      },\n      {\n        \"divisionId\": 7469,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1313,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9675\n          },\n          {\n            \"consumerId\": 3369,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9747\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ec83609-1a1b-4007-9266-b1cd87ab9809",
+          "name": "Assign, Acknowledge or Drop alerts.",
+          "request": {
+            "name": "Assign, Acknowledge or Drop alerts.",
+            "description": {
+              "content": "The request body requires 3 keys to be filled with appropriate value as listed below.\r\n\r\n* **alertId** - Alert ID\r\n\r\n* **acknowledgeAlert** - set to true or false\r\n\r\n* **dropAlert** - set to true or false\r\n\r\n* **assignToContactByEmail** - email address string",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "tests",
+                "alerts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"alertId\": \"<string>\",\n    \"acknowledgeAlert\": \"<boolean>\",\n    \"dropAlert\": \"<boolean>\",\n    \"assignToContactByEmail\": \"<string>\"\n  },\n  {\n    \"alertId\": \"<string>\",\n    \"acknowledgeAlert\": \"<boolean>\",\n    \"dropAlert\": \"<boolean>\",\n    \"assignToContactByEmail\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ba2c2c45-971d-4c9d-80fc-c87ec2f69093",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "tests",
+                    "alerts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"alertId\": \"<string>\",\n    \"acknowledgeAlert\": \"<boolean>\",\n    \"dropAlert\": \"<boolean>\",\n    \"assignToContactByEmail\": \"<string>\"\n  },\n  {\n    \"alertId\": \"<string>\",\n    \"acknowledgeAlert\": \"<boolean>\",\n    \"dropAlert\": \"<boolean>\",\n    \"assignToContactByEmail\": \"<string>\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"alerts\": [\n      \"string\",\n      \"string\"\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 1146,\n    \"lastRequestTimestamp\": \"1979-10-09T18:48:15.973Z\",\n    \"limits\": {\n      \"minute\": 2859,\n      \"hour\": 1926,\n      \"day\": 3485\n    },\n    \"runs\": {\n      \"minute\": 4612,\n      \"hour\": 770,\n      \"day\": 6057\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 5578,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1102,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3569\n          },\n          {\n            \"consumerId\": 2399,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6026\n          }\n        ]\n      },\n      {\n        \"divisionId\": 2062,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5699,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2702\n          },\n          {\n            \"consumerId\": 1772,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2910\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7b53d4b0-025e-4cea-ad10-aba7aa27aac1",
+    "name": "Catchpoint REST API v2.0 Account Alerts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

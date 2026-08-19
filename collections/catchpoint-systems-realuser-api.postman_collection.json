@@ -1,0 +1,852 @@
+{
+  "item": [
+    {
+      "id": "546552cd-f0af-447a-9dd6-92d959958a7d",
+      "name": "RealUser",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3b2a8b33-5445-4536-bf79-bb52853120ff",
+          "name": "Returns the list of real user favorite charts from a client or a division.",
+          "request": {
+            "name": "Returns the list of real user favorite charts from a client or a division.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "realuser",
+                "favoritechart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "76cddbd7-df05-48c4-b420-fc239557503b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "realuser",
+                    "favoritechart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"favoriteCharts\": [\n      {\n        \"id\": 1056,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"changeDate\": \"1998-08-24T17:12:07.504Z\"\n      },\n      {\n        \"id\": 3448,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"changeDate\": \"1999-10-01T18:08:09.726Z\"\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 2941,\n    \"lastRequestTimestamp\": \"1972-05-26T17:02:35.603Z\",\n    \"limits\": {\n      \"minute\": 3489,\n      \"hour\": 3227,\n      \"day\": 4265\n    },\n    \"runs\": {\n      \"minute\": 9693,\n      \"hour\": 4206,\n      \"day\": 8121\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 3633,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5606,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7917\n          },\n          {\n            \"consumerId\": 1566,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4653\n          }\n        ]\n      },\n      {\n        \"divisionId\": 2249,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3803,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1797\n          },\n          {\n            \"consumerId\": 6178,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7955\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ad89ec0b-1690-4af6-b523-62146ef4e7e0",
+          "name": "Returns the real user favorite chart details based on the favorite chart ID.",
+          "request": {
+            "name": "Returns the real user favorite chart details based on the favorite chart ID.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "realuser",
+                "favoritechart",
+                ":favoritechartIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "favoritechartIds",
+                  "description": "(Required) Comma-separated list of real user favorite chart IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4935a4b0-474f-4a17-ab1a-4866f0fe8033",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "realuser",
+                    "favoritechart",
+                    ":favoritechartIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "favoritechartIds",
+                      "description": "(Required) Comma-separated list of real user favorite chart IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"favoriteCharts\": [\n      {\n        \"id\": 4105,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"timeFrame\": {\n          \"id\": 3064,\n          \"name\": \"string\"\n        },\n        \"interval\": {\n          \"id\": 9056,\n          \"name\": \"string\"\n        },\n        \"dimension\": {\n          \"id\": 4489,\n          \"name\": \"string\"\n        },\n        \"breakdownOne\": {\n          \"id\": 9535,\n          \"name\": \"string\"\n        },\n        \"breakdownTwo\": {\n          \"id\": 6421,\n          \"name\": \"string\"\n        },\n        \"statisticalValues\": [\n          {\n            \"id\": 1068,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 9929,\n            \"name\": \"string\"\n          }\n        ],\n        \"tests\": [\n          {\n            \"id\": 8889,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 1306,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"apps\": [\n          {\n            \"id\": 2775,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 118,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"syntheticMetrics\": [\n          {\n            \"id\": 3696,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 1989,\n            \"name\": \"string\"\n          }\n        ],\n        \"appMetrics\": [\n          {\n            \"id\": 1012,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 1714,\n            \"name\": \"string\"\n          }\n        ],\n        \"dataFilters\": [\n          {\n            \"id\": 8021,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 5905,\n            \"name\": \"string\"\n          }\n        ],\n        \"changeDate\": \"1964-07-10T10:07:56.056Z\",\n        \"sourceType\": null\n      },\n      {\n        \"id\": 4383,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"timeFrame\": {\n          \"id\": 2152,\n          \"name\": \"string\"\n        },\n        \"interval\": {\n          \"id\": 8929,\n          \"name\": \"string\"\n        },\n        \"dimension\": {\n          \"id\": 6944,\n          \"name\": \"string\"\n        },\n        \"breakdownOne\": {\n          \"id\": 7239,\n          \"name\": \"string\"\n        },\n        \"breakdownTwo\": {\n          \"id\": 7988,\n          \"name\": \"string\"\n        },\n        \"statisticalValues\": [\n          {\n            \"id\": 1500,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 3711,\n            \"name\": \"string\"\n          }\n        ],\n        \"tests\": [\n          {\n            \"id\": 1867,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 3241,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"apps\": [\n          {\n            \"id\": 102,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 189,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"syntheticMetrics\": [\n          {\n            \"id\": 7004,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 2668,\n            \"name\": \"string\"\n          }\n        ],\n        \"appMetrics\": [\n          {\n            \"id\": 5998,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 6196,\n            \"name\": \"string\"\n          }\n        ],\n        \"dataFilters\": [\n          {\n            \"id\": 4785,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 5813,\n            \"name\": \"string\"\n          }\n        ],\n        \"changeDate\": \"2025-07-27T18:20:03.713Z\",\n        \"sourceType\": null\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 1392,\n    \"lastRequestTimestamp\": \"2015-12-31T15:52:30.643Z\",\n    \"limits\": {\n      \"minute\": 9585,\n      \"hour\": 9718,\n      \"day\": 1656\n    },\n    \"runs\": {\n      \"minute\": 7342,\n      \"hour\": 3258,\n      \"day\": 6387\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 7602,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2008,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8162\n          },\n          {\n            \"consumerId\": 6855,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4728\n          }\n        ]\n      },\n      {\n        \"divisionId\": 6405,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8982,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1996\n          },\n          {\n            \"consumerId\": 9649,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1649\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b542e5b-c6f5-4e66-88b9-e8414a25a9a1",
+          "name": "Returns the real user favorite chart data based on the ID and the parameters.",
+          "request": {
+            "name": "Returns the real user favorite chart data based on the ID and the parameters.",
+            "description": {
+              "content": "*[Analytics Endpoint]*\r\n            \r\nThe favorite chart data returned is in UTC time.\r\n            \r\n**Note:**\r\n- Time interval \"Second\" is only valid for timeframes less than or equal to 30 minutes.\r\n- Similarly, time interval \"Minutes1\" is only valid for timeframes less than or equal to 12 hours.\r\n- Using these time intervals with other timeframes will result in an error response.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "realuser",
+                "favoritechart",
+                "data",
+                ":favoriteChartId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<string>",
+                  "description": "Start Time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<string>",
+                  "description": "End Time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeInterval",
+                  "value": "<integer>",
+                  "description": "Time interval window to aggregate data (refer InternalLink[Real User Application Enumeration,operations-tag-RealUser,operations-RealUser-get_v2_realuser_explorer_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "key": "siteIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of site IDs to get favorite chart data for."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "favoriteChartId",
+                  "description": "(Required) Real user favorite chart ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "234fe947-0974-431f-8415-dc80f306ad56",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "realuser",
+                    "favoritechart",
+                    "data",
+                    ":favoriteChartId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timeInterval",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "favoriteChartId",
+                      "description": "(Required) Real user favorite chart ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"favoriteCharts\": [\n      {\n        \"id\": 1786,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"timeFrame\": {\n          \"id\": 5249,\n          \"name\": \"string\"\n        },\n        \"interval\": {\n          \"id\": 3940,\n          \"name\": \"string\"\n        },\n        \"dimension\": {\n          \"id\": 342,\n          \"name\": \"string\"\n        },\n        \"breakdownOne\": {\n          \"id\": 3991,\n          \"name\": \"string\"\n        },\n        \"breakdownTwo\": {\n          \"id\": 7942,\n          \"name\": \"string\"\n        },\n        \"statisticalValues\": [\n          {\n            \"id\": 3822,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 2741,\n            \"name\": \"string\"\n          }\n        ],\n        \"tests\": [\n          {\n            \"id\": 274,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 1088,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"apps\": [\n          {\n            \"id\": 2030,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 9164,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"syntheticMetrics\": [\n          {\n            \"id\": 4119,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 8903,\n            \"name\": \"string\"\n          }\n        ],\n        \"appMetrics\": [\n          {\n            \"id\": 212,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 4881,\n            \"name\": \"string\"\n          }\n        ],\n        \"dataFilters\": [\n          {\n            \"id\": 2480,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 2842,\n            \"name\": \"string\"\n          }\n        ],\n        \"changeDate\": \"2014-09-18T18:32:23.847Z\",\n        \"sourceType\": null\n      },\n      {\n        \"id\": 2627,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"timeFrame\": {\n          \"id\": 650,\n          \"name\": \"string\"\n        },\n        \"interval\": {\n          \"id\": 8043,\n          \"name\": \"string\"\n        },\n        \"dimension\": {\n          \"id\": 2727,\n          \"name\": \"string\"\n        },\n        \"breakdownOne\": {\n          \"id\": 8986,\n          \"name\": \"string\"\n        },\n        \"breakdownTwo\": {\n          \"id\": 4269,\n          \"name\": \"string\"\n        },\n        \"statisticalValues\": [\n          {\n            \"id\": 5396,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 6763,\n            \"name\": \"string\"\n          }\n        ],\n        \"tests\": [\n          {\n            \"id\": 1918,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 4034,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"apps\": [\n          {\n            \"id\": 7952,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 184,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"syntheticMetrics\": [\n          {\n            \"id\": 2978,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 4461,\n            \"name\": \"string\"\n          }\n        ],\n        \"appMetrics\": [\n          {\n            \"id\": 4098,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 369,\n            \"name\": \"string\"\n          }\n        ],\n        \"dataFilters\": [\n          {\n            \"id\": 5469,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 4071,\n            \"name\": \"string\"\n          }\n        ],\n        \"changeDate\": \"1999-02-22T05:22:14.354Z\",\n        \"sourceType\": null\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 2322,\n    \"lastRequestTimestamp\": \"2024-07-12T03:51:33.123Z\",\n    \"limits\": {\n      \"minute\": 7901,\n      \"hour\": 5087,\n      \"day\": 6923\n    },\n    \"runs\": {\n      \"minute\": 4088,\n      \"hour\": 3983,\n      \"day\": 7156\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 3224,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3468,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7060\n          },\n          {\n            \"consumerId\": 1045,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5402\n          }\n        ]\n      },\n      {\n        \"divisionId\": 1834,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 7507,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4636\n          },\n          {\n            \"consumerId\": 7194,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 676\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6ae75273-8bf0-4c28-8b4b-202579cd3fae",
+          "name": "Returns the real user explorer data by site ID and filters.",
+          "request": {
+            "name": "Returns the real user explorer data by site ID and filters.",
+            "description": {
+              "content": "*[Analytics Endpoint]*\r\n            \r\n**Note:**\r\n- Time interval \"Second\" is only valid for timeframes less than or equal to 30 minutes.\r\n- Similarly, time interval \"Minutes1\" is only valid for timeframes less than or equal to 12 hours.\r\n- Using these time intervals with other timeframes will result in an error response.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "realuser",
+                "explorer",
+                "data",
+                ":siteIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startTimeUtc",
+                  "value": "<dateTime>",
+                  "description": "Start Time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "endTimeUtc",
+                  "value": "<dateTime>",
+                  "description": "End Time in UTC (YYYY-MM-DDThh:mm:ss)"
+                },
+                {
+                  "disabled": false,
+                  "key": "subSourceTypeId",
+                  "value": "<integer>",
+                  "description": "Sub Source Type ID to return Sub Source Data. “1” for Provider; “2” for Ajax; “6” for Zone"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeInterval",
+                  "value": "<integer>",
+                  "description": "Time interval window to aggregate data (refer InternalLink[Real User Application Enumeration,operations-tag-RealUser,operations-RealUser-get_v2_realuser_explorer_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "key": "dimensionIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Dimension IDs (refer InternalLink[Real User Application Enumeration,operations-tag-RealUser,operations-RealUser-get_v2_realuser_explorer_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "key": "metricIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of metric IDs (refer InternalLink[Real User Application Enumeration,operations-tag-RealUser,operations-RealUser-get_v2_realuser_explorer_enumeration]). Default metrics based on SubSourceTypeId are returned if no value is passed."
+                },
+                {
+                  "disabled": false,
+                  "key": "tracepointIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Tracepoint IDs"
+                },
+                {
+                  "disabled": false,
+                  "key": "indicatorIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Indicator IDs"
+                },
+                {
+                  "disabled": false,
+                  "key": "zoneTypeIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Zone Type IDs. ”-2” for Self Zone and “-3” for Third Party Zone."
+                },
+                {
+                  "disabled": false,
+                  "key": "filters",
+                  "value": "{\"dimension\":\"<integer>\",\"include\":\"<boolean>\"}",
+                  "description": "Add filter dimension, filter value and flag"
+                },
+                {
+                  "disabled": false,
+                  "key": "filters",
+                  "value": "{\"dimension\":\"<integer>\",\"include\":\"<boolean>\"}",
+                  "description": "Add filter dimension, filter value and flag"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "siteIds",
+                  "description": "(Required) Comma-separated list of site IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "77adc8b6-5d8d-4716-9f7c-89d8414ef199",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "realuser",
+                    "explorer",
+                    "data",
+                    ":siteIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startTimeUtc",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endTimeUtc",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "subSourceTypeId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "timeInterval",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "dimensionIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "metricIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tracepointIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "indicatorIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "zoneTypeIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "siteIds",
+                      "description": "(Required) Comma-separated list of site IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"responseItems\": [\n      {\n        \"timeInterval\": {\n          \"id\": 3344,\n          \"name\": \"string\"\n        },\n        \"startTimeUtc\": \"1991-04-27T01:15:37.905Z\",\n        \"endTimeUtc\": \"1967-05-18T13:06:27.809Z\",\n        \"timeZoneOffSet\": \"string\",\n        \"hasMoreRecords\": false,\n        \"dimensions\": [\n          {\n            \"id\": 9787,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 5249,\n            \"name\": \"string\"\n          }\n        ],\n        \"indicators\": [\n          {\n            \"id\": 111,\n            \"index\": 1785,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 7332,\n            \"index\": 5397,\n            \"name\": \"string\"\n          }\n        ],\n        \"tracepoints\": [\n          {\n            \"id\": 8141,\n            \"index\": 8064,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 1658,\n            \"index\": 2125,\n            \"name\": \"string\"\n          }\n        ],\n        \"metrics\": [\n          {\n            \"index\": 1243,\n            \"name\": \"string\"\n          },\n          {\n            \"index\": 7440,\n            \"name\": \"string\"\n          }\n        ],\n        \"items\": [\n          {\n            \"dateTime\": \"2019-03-20T18:58:12.332Z\",\n            \"reportDate\": \"2017-10-24T10:21:00.780Z\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"dimensions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"indicators\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"tracepoints\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"dateTime\": \"1967-05-17T04:27:44.402Z\",\n            \"reportDate\": \"1990-02-03T19:59:51.487Z\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"dimensions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"indicators\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"tracepoints\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"summaryItems\": [\n          {\n            \"dateTime\": \"2018-11-16T12:37:58.142Z\",\n            \"reportDate\": \"2015-07-13T17:23:11.675Z\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"dimensions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"indicators\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"tracepoints\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"dateTime\": \"1993-03-02T03:30:56.936Z\",\n            \"reportDate\": \"1975-01-01T03:05:29.528Z\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"dimensions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"indicators\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"tracepoints\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"timeInterval\": {\n          \"id\": 9397,\n          \"name\": \"string\"\n        },\n        \"startTimeUtc\": \"1984-02-26T16:42:42.077Z\",\n        \"endTimeUtc\": \"1994-04-30T13:33:22.295Z\",\n        \"timeZoneOffSet\": \"string\",\n        \"hasMoreRecords\": true,\n        \"dimensions\": [\n          {\n            \"id\": 3146,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 9482,\n            \"name\": \"string\"\n          }\n        ],\n        \"indicators\": [\n          {\n            \"id\": 438,\n            \"index\": 3473,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 5638,\n            \"index\": 2518,\n            \"name\": \"string\"\n          }\n        ],\n        \"tracepoints\": [\n          {\n            \"id\": 8562,\n            \"index\": 947,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 5529,\n            \"index\": 6776,\n            \"name\": \"string\"\n          }\n        ],\n        \"metrics\": [\n          {\n            \"index\": 9709,\n            \"name\": \"string\"\n          },\n          {\n            \"index\": 6830,\n            \"name\": \"string\"\n          }\n        ],\n        \"items\": [\n          {\n            \"dateTime\": \"1981-07-02T06:30:55.473Z\",\n            \"reportDate\": \"1999-05-30T05:04:45.217Z\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"dimensions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"indicators\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"tracepoints\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"dateTime\": \"2015-08-16T16:10:53.052Z\",\n            \"reportDate\": \"1982-10-24T06:40:01.143Z\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"dimensions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"indicators\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"tracepoints\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"summaryItems\": [\n          {\n            \"dateTime\": \"2001-03-28T18:06:01.029Z\",\n            \"reportDate\": \"1973-08-22T12:19:57.549Z\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"dimensions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"indicators\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"tracepoints\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"dateTime\": \"1953-07-24T10:56:23.923Z\",\n            \"reportDate\": \"1964-07-20T03:15:59.654Z\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"dimensions\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"indicators\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"tracepoints\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 8269,\n    \"lastRequestTimestamp\": \"1955-05-05T06:17:11.505Z\",\n    \"limits\": {\n      \"minute\": 8878,\n      \"hour\": 1850,\n      \"day\": 6444\n    },\n    \"runs\": {\n      \"minute\": 6756,\n      \"hour\": 886,\n      \"day\": 2344\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 2816,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5330,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2306\n          },\n          {\n            \"consumerId\": 3652,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5246\n          }\n        ]\n      },\n      {\n        \"divisionId\": 7601,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 7859,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7654\n          },\n          {\n            \"consumerId\": 1380,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8613\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9d8e74d2-3e88-4ba8-b540-43a2a634acd4",
+          "name": "Returns the real user favorite chart default data set by the user when the favorite chart was created based on the ID.",
+          "request": {
+            "name": "Returns the real user favorite chart default data set by the user when the favorite chart was created based on the ID.",
+            "description": {
+              "content": "*[Analytics Endpoint]*\r\n            \r\nThe favorite chart data returned is in UTC time.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "realuser",
+                "favoritechart",
+                "defaultdata",
+                ":favoriteChartId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "favoriteChartId",
+                  "description": "(Required) Real user favorite chart ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "26820ae0-cb96-45a9-ab09-b8833c8e9e18",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "realuser",
+                    "favoritechart",
+                    "defaultdata",
+                    ":favoriteChartId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "favoriteChartId",
+                      "description": "(Required) Real user favorite chart ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"favoriteCharts\": [\n      {\n        \"id\": 1786,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"timeFrame\": {\n          \"id\": 5249,\n          \"name\": \"string\"\n        },\n        \"interval\": {\n          \"id\": 3940,\n          \"name\": \"string\"\n        },\n        \"dimension\": {\n          \"id\": 342,\n          \"name\": \"string\"\n        },\n        \"breakdownOne\": {\n          \"id\": 3991,\n          \"name\": \"string\"\n        },\n        \"breakdownTwo\": {\n          \"id\": 7942,\n          \"name\": \"string\"\n        },\n        \"statisticalValues\": [\n          {\n            \"id\": 3822,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 2741,\n            \"name\": \"string\"\n          }\n        ],\n        \"tests\": [\n          {\n            \"id\": 274,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 1088,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"apps\": [\n          {\n            \"id\": 2030,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 9164,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"syntheticMetrics\": [\n          {\n            \"id\": 4119,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 8903,\n            \"name\": \"string\"\n          }\n        ],\n        \"appMetrics\": [\n          {\n            \"id\": 212,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 4881,\n            \"name\": \"string\"\n          }\n        ],\n        \"dataFilters\": [\n          {\n            \"id\": 2480,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 2842,\n            \"name\": \"string\"\n          }\n        ],\n        \"changeDate\": \"2014-09-18T18:32:23.847Z\",\n        \"sourceType\": null\n      },\n      {\n        \"id\": 2627,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"timeFrame\": {\n          \"id\": 650,\n          \"name\": \"string\"\n        },\n        \"interval\": {\n          \"id\": 8043,\n          \"name\": \"string\"\n        },\n        \"dimension\": {\n          \"id\": 2727,\n          \"name\": \"string\"\n        },\n        \"breakdownOne\": {\n          \"id\": 8986,\n          \"name\": \"string\"\n        },\n        \"breakdownTwo\": {\n          \"id\": 4269,\n          \"name\": \"string\"\n        },\n        \"statisticalValues\": [\n          {\n            \"id\": 5396,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 6763,\n            \"name\": \"string\"\n          }\n        ],\n        \"tests\": [\n          {\n            \"id\": 1918,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 4034,\n            \"name\": \"string\",\n            \"testType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"apps\": [\n          {\n            \"id\": 7952,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"id\": 184,\n            \"name\": \"string\",\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"syntheticMetrics\": [\n          {\n            \"id\": 2978,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 4461,\n            \"name\": \"string\"\n          }\n        ],\n        \"appMetrics\": [\n          {\n            \"id\": 4098,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 369,\n            \"name\": \"string\"\n          }\n        ],\n        \"dataFilters\": [\n          {\n            \"id\": 5469,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 4071,\n            \"name\": \"string\"\n          }\n        ],\n        \"changeDate\": \"1999-02-22T05:22:14.354Z\",\n        \"sourceType\": null\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 2322,\n    \"lastRequestTimestamp\": \"2024-07-12T03:51:33.123Z\",\n    \"limits\": {\n      \"minute\": 7901,\n      \"hour\": 5087,\n      \"day\": 6923\n    },\n    \"runs\": {\n      \"minute\": 4088,\n      \"hour\": 3983,\n      \"day\": 7156\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 3224,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3468,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7060\n          },\n          {\n            \"consumerId\": 1045,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5402\n          }\n        ]\n      },\n      {\n        \"divisionId\": 1834,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 7507,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4636\n          },\n          {\n            \"consumerId\": 7194,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 676\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4a9d0bcb-19ee-4a2c-be64-9a7f0bb5923f",
+          "name": "Returns the real user enumeration details for automation.",
+          "request": {
+            "name": "Returns the real user enumeration details for automation.",
+            "description": {
+              "content": "Use parameters to specify which enumeration to pull, if no parameter is passed then it returns all the enumerations. Returns the enumeration based on the parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "realuser",
+                "explorer",
+                "enumeration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subSourceId",
+                  "value": "<integer>",
+                  "description": "Sub Source Type ID to return Sub Source Data. “1” for Provider; “2” for Ajax; “6” for Zone"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeDimensions",
+                  "value": "<boolean>",
+                  "description": "Set to “true” to return enumerations of dimensions."
+                },
+                {
+                  "disabled": false,
+                  "key": "includeMetrics",
+                  "value": "<boolean>",
+                  "description": "Set to “true” to return enumerations of metrics."
+                },
+                {
+                  "disabled": false,
+                  "key": "includeSubSourceTypes",
+                  "value": "<boolean>",
+                  "description": "Set to “true” to return enumerations of sub sources."
+                },
+                {
+                  "disabled": false,
+                  "key": "includeTimeIntervals",
+                  "value": "<boolean>",
+                  "description": "Set to “true” to return enumerations of time intervals."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ac79c290-a818-46d2-9e7c-630f8299bf80",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "realuser",
+                    "explorer",
+                    "enumeration"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subSourceId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "includeDimensions",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeMetrics",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeSubSourceTypes",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeTimeIntervals",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"sections\": [\n      {\n        \"section\": \"string\",\n        \"enumeration\": [\n          {\n            \"id\": 3706,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 3008,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      {\n        \"section\": \"string\",\n        \"enumeration\": [\n          {\n            \"id\": 2395,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 2992,\n            \"name\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 276,\n    \"lastRequestTimestamp\": \"1979-10-27T17:24:34.279Z\",\n    \"limits\": {\n      \"minute\": 2438,\n      \"hour\": 1940,\n      \"day\": 8895\n    },\n    \"runs\": {\n      \"minute\": 4694,\n      \"hour\": 7675,\n      \"day\": 4299\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 8854,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 9983,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1881\n          },\n          {\n            \"consumerId\": 3654,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2494\n          }\n        ]\n      },\n      {\n        \"divisionId\": 3041,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5609,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6165\n          },\n          {\n            \"consumerId\": 1100,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 996\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "52dcb7db-d3cd-4d57-b331-ca690f6f5ee8",
+    "name": "Catchpoint REST API v2.0 Account RealUser API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "item": [
+    {
+      "id": "6a5e49e2-0cab-4d28-bbbb-fff0d1aca95c",
+      "name": "ASNs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "433ae0b9-872a-4831-aee0-c547d42bbcd9",
+          "name": "Return ASN's details by the IDs passed",
+          "request": {
+            "name": "Return ASN's details by the IDs passed",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "library",
+                "asns",
+                ":ids"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ids",
+                  "description": "(Required) Comma separated list of ASN's IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "388b0fae-6ed3-47bb-8f6c-9f509e84164e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "library",
+                    "asns",
+                    ":ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ids",
+                      "description": "(Required) Comma separated list of ASN's IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"asns\": [\n      {\n        \"id\": 2449,\n        \"asn\": 5906,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"1969-11-30T21:05:51.699Z\"\n      },\n      {\n        \"id\": 6699,\n        \"asn\": 6692,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"1995-11-11T17:00:45.704Z\"\n      }\n    ],\n    \"asn\": {\n      \"id\": 50,\n      \"asn\": 7958,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"lastUpdated\": \"2002-05-30T00:37:40.283Z\"\n    },\n    \"deletedAsns\": \"string\",\n    \"id\": 2005,\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 6006,\n    \"lastRequestTimestamp\": \"1961-05-16T04:09:27.355Z\",\n    \"limits\": {\n      \"minute\": 3664,\n      \"hour\": 5715,\n      \"day\": 5955\n    },\n    \"runs\": {\n      \"minute\": 6585,\n      \"hour\": 1274,\n      \"day\": 731\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 180,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6294,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9643\n          },\n          {\n            \"consumerId\": 6773,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4814\n          }\n        ]\n      },\n      {\n        \"divisionId\": 3283,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 645,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7386\n          },\n          {\n            \"consumerId\": 9227,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7932\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ba903968-4597-4a83-82b6-8b5491ce10d1",
+          "name": "Deletes existing ASNs by parameters passed",
+          "request": {
+            "name": "Deletes existing ASNs by parameters passed",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "library",
+                "asns",
+                ":ids"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ids",
+                  "description": "(Required) To delete ASNs based on the specified list of IDs, the IDs need to be separated by commas. This endpoint allows partial deletion; if you provide a list of five IDs and only three of them are valid, then it will delete those three ASNs. The response will indicate the three that were deleted, and the two invalid IDs will be listed as errors."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c0a6fd6e-12ae-44c8-9de0-522a1ace1b37",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "library",
+                    "asns",
+                    ":ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ids",
+                      "description": "(Required) To delete ASNs based on the specified list of IDs, the IDs need to be separated by commas. This endpoint allows partial deletion; if you provide a list of five IDs and only three of them are valid, then it will delete those three ASNs. The response will indicate the three that were deleted, and the two invalid IDs will be listed as errors."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"asns\": [\n      {\n        \"id\": 2039,\n        \"asn\": 6329,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"2020-03-14T20:23:22.500Z\"\n      },\n      {\n        \"id\": 3619,\n        \"asn\": 7131,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"1970-04-02T03:02:51.213Z\"\n      }\n    ],\n    \"asn\": {\n      \"id\": 1012,\n      \"asn\": 5458,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"lastUpdated\": \"1951-03-30T02:37:01.653Z\"\n    },\n    \"deletedAsns\": \"string\",\n    \"id\": 26,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 3283,\n    \"lastRequestTimestamp\": \"1991-02-21T14:27:15.000Z\",\n    \"limits\": {\n      \"minute\": 6224,\n      \"hour\": 9996,\n      \"day\": 2604\n    },\n    \"runs\": {\n      \"minute\": 8008,\n      \"hour\": 3017,\n      \"day\": 6885\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 800,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5208,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5689\n          },\n          {\n            \"consumerId\": 4390,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9999\n          }\n        ]\n      },\n      {\n        \"divisionId\": 1710,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 687,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3205\n          },\n          {\n            \"consumerId\": 3765,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5538\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5db7e6b2-d0f5-411d-a8dc-f8cfbb39d2ae",
+          "name": "Return ASN details by the parameters passed",
+          "request": {
+            "name": "Return ASN details by the parameters passed",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "library",
+                "asns"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "asn",
+                  "value": "<integer>",
+                  "description": "ASN"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a97d473f-d3f6-4f46-8221-6914bc8aac24",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "library",
+                    "asns"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asn",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"asns\": [\n      {\n        \"id\": 2039,\n        \"asn\": 6329,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"2020-03-14T20:23:22.500Z\"\n      },\n      {\n        \"id\": 3619,\n        \"asn\": 7131,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"1970-04-02T03:02:51.213Z\"\n      }\n    ],\n    \"asn\": {\n      \"id\": 1012,\n      \"asn\": 5458,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"lastUpdated\": \"1951-03-30T02:37:01.653Z\"\n    },\n    \"deletedAsns\": \"string\",\n    \"id\": 26,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 3283,\n    \"lastRequestTimestamp\": \"1991-02-21T14:27:15.000Z\",\n    \"limits\": {\n      \"minute\": 6224,\n      \"hour\": 9996,\n      \"day\": 2604\n    },\n    \"runs\": {\n      \"minute\": 8008,\n      \"hour\": 3017,\n      \"day\": 6885\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 800,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5208,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5689\n          },\n          {\n            \"consumerId\": 4390,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9999\n          }\n        ]\n      },\n      {\n        \"divisionId\": 1710,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 687,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3205\n          },\n          {\n            \"consumerId\": 3765,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5538\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "21debc17-8abd-4052-ac5c-81a4eba8923f",
+          "name": "Create an ASN based on the PostData.",
+          "request": {
+            "name": "Create an ASN based on the PostData.",
+            "description": {
+              "content": "To get payload for creating a new ASN and to get the created ASN details refer InternalLink[ASN by ID Endpoint,operations-tag-ASN,operations-ASN-get_v2_asns__asnIds_]. Pass “0” for ASN ID to create a new ASN.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "library",
+                "asns"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the created object in the response body, otherwise the response body will only return created object ID."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"asn\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6461be30-2747-46f2-92bf-53c0ad0046af",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "library",
+                    "asns"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"asn\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"asns\": [\n      {\n        \"id\": 2039,\n        \"asn\": 6329,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"2020-03-14T20:23:22.500Z\"\n      },\n      {\n        \"id\": 3619,\n        \"asn\": 7131,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"1970-04-02T03:02:51.213Z\"\n      }\n    ],\n    \"asn\": {\n      \"id\": 1012,\n      \"asn\": 5458,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"lastUpdated\": \"1951-03-30T02:37:01.653Z\"\n    },\n    \"deletedAsns\": \"string\",\n    \"id\": 26,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 3283,\n    \"lastRequestTimestamp\": \"1991-02-21T14:27:15.000Z\",\n    \"limits\": {\n      \"minute\": 6224,\n      \"hour\": 9996,\n      \"day\": 2604\n    },\n    \"runs\": {\n      \"minute\": 8008,\n      \"hour\": 3017,\n      \"day\": 6885\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 800,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5208,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5689\n          },\n          {\n            \"consumerId\": 4390,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9999\n          }\n        ]\n      },\n      {\n        \"divisionId\": 1710,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 687,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3205\n          },\n          {\n            \"consumerId\": 3765,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5538\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ccacb368-5c3d-4305-866e-0d46af1dfe69",
+          "name": "Update an existing ASN based on the request body.",
+          "request": {
+            "name": "Update an existing ASN based on the request body.",
+            "description": {
+              "content": "Only the property to be updated can be passed in the request body instead of the whole object. The update request body requires a total of three keys to be filled with appropriate value as listed below:\r\n* **value** – The value property provides the new value.\r\n            \r\n* **path** – The path property indicates the element to update. The entire path with slashes needs to be provided here. Example: /status/id\r\n            \r\n* **op** – The op property indicates the type of operation; we support the following three operations.\r\n            \r\n    * **Remove** - Remove a property or array element.\r\n            \r\n    * **replace** - Same as remove followed by add at same location.\r\n            \r\n* **from** - [Not Used]\r\n            \r\n    * **Explanation** - The \"from\" parameter represents the starting or current value of the resource that the operation intends to modify. The from parameter is included in the example value schema but is not utilized in this endpoint's functionality. It is reserved for potential future use or could be used in specific scenarios not covered by the current implementation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "library",
+                "asns",
+                ":asnId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the updated object in the response body, otherwise the response body will only return the updated object ID."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "asnId",
+                  "description": "(Required) Asn ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f00636d3-b1ef-4afb-856b-8aab2806fa0f",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "library",
+                    "asns",
+                    ":asnId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "asnId",
+                      "description": "(Required) Asn ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"asns\": [\n      {\n        \"id\": 2039,\n        \"asn\": 6329,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"2020-03-14T20:23:22.500Z\"\n      },\n      {\n        \"id\": 3619,\n        \"asn\": 7131,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"lastUpdated\": \"1970-04-02T03:02:51.213Z\"\n      }\n    ],\n    \"asn\": {\n      \"id\": 1012,\n      \"asn\": 5458,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"lastUpdated\": \"1951-03-30T02:37:01.653Z\"\n    },\n    \"deletedAsns\": \"string\",\n    \"id\": 26,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 3283,\n    \"lastRequestTimestamp\": \"1991-02-21T14:27:15.000Z\",\n    \"limits\": {\n      \"minute\": 6224,\n      \"hour\": 9996,\n      \"day\": 2604\n    },\n    \"runs\": {\n      \"minute\": 8008,\n      \"hour\": 3017,\n      \"day\": 6885\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 800,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5208,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5689\n          },\n          {\n            \"consumerId\": 4390,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9999\n          }\n        ]\n      },\n      {\n        \"divisionId\": 1710,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 687,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3205\n          },\n          {\n            \"consumerId\": 3765,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5538\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "87c858fd-58b1-449f-abe9-15faf713c687",
+    "name": "Catchpoint REST API v2.0 Account ASNs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

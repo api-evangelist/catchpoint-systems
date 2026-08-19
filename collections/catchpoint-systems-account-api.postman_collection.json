@@ -1,0 +1,231 @@
+{
+  "item": [
+    {
+      "id": "1c94344b-1052-4553-b2f8-51279f5010d7",
+      "name": "Account",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bfb24c5a-c1ba-478e-8701-65ae0e496c77",
+          "name": "Returns Account Activity details by the parameters passed.",
+          "request": {
+            "name": "Returns Account Activity details by the parameters passed.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "activity"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "month",
+                  "value": "<integer>",
+                  "description": "Account activity for the month"
+                },
+                {
+                  "disabled": false,
+                  "key": "year",
+                  "value": "<integer>",
+                  "description": "Account activity for the year"
+                },
+                {
+                  "disabled": false,
+                  "key": "testName",
+                  "value": "<string>",
+                  "description": "Account activity for the Test Name"
+                },
+                {
+                  "disabled": false,
+                  "key": "networkTypes",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Network Types (refer InternalLink[Test Enumeration Endpoint,operations-tag-Test,operations-Test-get_v2_tests_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "key": "testTypes",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Test Types (refer InternalLink[Test Enumeration Endpoint,operations-tag-Test,operations-Test-get_v2_tests_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "key": "monitorTypes",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Monitor Types (refer InternalLink[Test Enumeration Endpoint,operations-tag-Test,operations-Test-get_v2_tests_enumeration])"
+                },
+                {
+                  "disabled": false,
+                  "key": "divisionId",
+                  "value": "<integer>",
+                  "description": "Account Activity for the Division ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "productIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Product IDs"
+                },
+                {
+                  "disabled": false,
+                  "key": "folderIds",
+                  "value": "<string>",
+                  "description": "Comma-separated list of Folder IDs"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageNumber",
+                  "value": "1",
+                  "description": "Page number to return records from when the number of records exceeds pageSize"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "100",
+                  "description": "Number of results per page. Maximum value is 100."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "18222f1e-35eb-4f51-9cf7-83a330cfd39a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "activity"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "month",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "year",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "testName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "networkTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "testTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "monitorTypes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "divisionId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "productIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "folderIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pageNumber",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"activitySummary\": {\n      \"id\": 8978,\n      \"billingStartDate\": \"2013-11-15T10:47:19.336Z\",\n      \"uniqueTests\": 3602,\n      \"pointsUsed\": 4821.025118453402,\n      \"dailyPointAverage\": 3555.5031815318016,\n      \"totalTestRuns\": 4674,\n      \"dailyTestRuns\": 6643.039719091802,\n      \"dailyPoints\": {\n        \"key_0\": 4217.09735509516,\n        \"key_1\": 5786.612169362766\n      },\n      \"contractActivity\": [\n        {\n          \"startDate\": \"1963-04-12T16:11:17.414Z\",\n          \"endDate\": \"1991-02-28T14:29:59.001Z\",\n          \"monthlyUsedPoints\": 5371.802888377711,\n          \"monthlyContractedPoints\": 1061.744622851144,\n          \"monthlyBalance\": 5761.590386823951,\n          \"contractUsedPoints\": 2504.3302217941978,\n          \"contractContractedPoints\": 3720.802711810021,\n          \"contractBalance\": 345.1680450513661,\n          \"averagePrice\": 3527.4646645197063,\n          \"overagePrice\": 983.9827418166425\n        },\n        {\n          \"startDate\": \"1979-11-17T00:57:44.215Z\",\n          \"endDate\": \"1988-11-27T12:57:09.857Z\",\n          \"monthlyUsedPoints\": 9752.861995404213,\n          \"monthlyContractedPoints\": 5793.744696545094,\n          \"monthlyBalance\": 6593.043200510693,\n          \"contractUsedPoints\": 9123.3607825458,\n          \"contractContractedPoints\": 3690.721615295226,\n          \"contractBalance\": 3354.6262825594963,\n          \"averagePrice\": 7006.272034379003,\n          \"overagePrice\": 8973.881029285074\n        }\n      ],\n      \"accountInformation\": [\n        {\n          \"id\": 9079,\n          \"testId\": 9876,\n          \"testType\": null,\n          \"divisionId\": 7399,\n          \"productId\": 1757,\n          \"folderId\": 1042,\n          \"testName\": \"string\",\n          \"divisionName\": \"string\",\n          \"productName\": \"string\",\n          \"folderName\": \"string\",\n          \"displayMonitorType\": null,\n          \"testRuns\": 6208,\n          \"verifyOnError\": 7150,\n          \"extendedTimeoutFactor\": 1421,\n          \"extendedDownloadFactor\": 4858,\n          \"indicators\": 3870,\n          \"tracepoints\": 7974,\n          \"syntheticNetworkType\": null,\n          \"captures\": 3446,\n          \"filmstripsCount\": 7214,\n          \"runsOrStepsWithHost\": 5880,\n          \"runsOrStepsWithZone\": 2234,\n          \"playTime\": 8738,\n          \"averageRequests\": 8572.207239800942,\n          \"averageSteps\": 133.35645403370066,\n          \"points\": 9086.075245789028,\n          \"reportInterval\": \"1994-09-23T06:49:43.449Z\",\n          \"isDebugOnError\": true,\n          \"isInstantTest\": false,\n          \"instantTestInitiatedFromApi\": false\n        },\n        {\n          \"id\": 3422,\n          \"testId\": 1469,\n          \"testType\": null,\n          \"divisionId\": 3893,\n          \"productId\": 5241,\n          \"folderId\": 4379,\n          \"testName\": \"string\",\n          \"divisionName\": \"string\",\n          \"productName\": \"string\",\n          \"folderName\": \"string\",\n          \"displayMonitorType\": null,\n          \"testRuns\": 3759,\n          \"verifyOnError\": 2143,\n          \"extendedTimeoutFactor\": 3881,\n          \"extendedDownloadFactor\": 9968,\n          \"indicators\": 1083,\n          \"tracepoints\": 6847,\n          \"syntheticNetworkType\": null,\n          \"captures\": 2059,\n          \"filmstripsCount\": 1246,\n          \"runsOrStepsWithHost\": 1980,\n          \"runsOrStepsWithZone\": 9037,\n          \"playTime\": 3864,\n          \"averageRequests\": 5647.332841875322,\n          \"averageSteps\": 8178.997938852629,\n          \"points\": 4550.98816553127,\n          \"reportInterval\": \"1951-09-30T21:32:33.410Z\",\n          \"isDebugOnError\": false,\n          \"isInstantTest\": true,\n          \"instantTestInitiatedFromApi\": true\n        }\n      ],\n      \"hasMoreData\": true\n    },\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 7178,\n    \"lastRequestTimestamp\": \"1962-12-14T17:45:18.751Z\",\n    \"limits\": {\n      \"minute\": 2264,\n      \"hour\": 5424,\n      \"day\": 5297\n    },\n    \"runs\": {\n      \"minute\": 9445,\n      \"hour\": 4512,\n      \"day\": 8396\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 7840,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 9005,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8624\n          },\n          {\n            \"consumerId\": 1497,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3772\n          }\n        ]\n      },\n      {\n        \"divisionId\": 1607,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 9040,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3037\n          },\n          {\n            \"consumerId\": 9210,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3018\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6ab9a136-c7b1-4b64-90f4-d0b1d729d9ac",
+    "name": "Catchpoint REST API v2.0 Account API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

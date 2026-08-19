@@ -1,0 +1,880 @@
+{
+  "item": [
+    {
+      "id": "12b30957-d2ae-4a28-91ec-667c7bd8d9cb",
+      "name": "EndpointDevice",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8f3fdbeb-d65f-4229-913e-bc01b6521cb4",
+          "name": "Returns the details of endpoint devices based on the User ID.",
+          "request": {
+            "name": "Returns the details of endpoint devices based on the User ID.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "endpoints",
+                "device",
+                ":userIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userIds",
+                  "description": "(Required) Comma-separated list of Endpoint User IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bf1dc8a2-f0a1-4a35-8036-6f06496527a2",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "endpoints",
+                    "device",
+                    ":userIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userIds",
+                      "description": "(Required) Comma-separated list of Endpoint User IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"endpoints\": [\n      {\n        \"deviceId\": 5858,\n        \"userId\": 2980,\n        \"deviceName\": \"string\",\n        \"aliasName\": \"string\",\n        \"labels\": [\n          {\n            \"color\": \"string\",\n            \"id\": 9770,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"color\": \"string\",\n            \"id\": 844,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"status\": {\n          \"id\": 3421,\n          \"name\": \"string\"\n        }\n      },\n      {\n        \"deviceId\": 2564,\n        \"userId\": 8512,\n        \"deviceName\": \"string\",\n        \"aliasName\": \"string\",\n        \"labels\": [\n          {\n            \"color\": \"string\",\n            \"id\": 1455,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"color\": \"string\",\n            \"id\": 3269,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"status\": {\n          \"id\": 2122,\n          \"name\": \"string\"\n        }\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 5761,\n    \"lastRequestTimestamp\": \"1953-02-17T04:19:32.430Z\",\n    \"limits\": {\n      \"minute\": 2757,\n      \"hour\": 2616,\n      \"day\": 7564\n    },\n    \"runs\": {\n      \"minute\": 9010,\n      \"hour\": 8595,\n      \"day\": 33\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 8209,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4244,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5064\n          },\n          {\n            \"consumerId\": 6948,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6012\n          }\n        ]\n      },\n      {\n        \"divisionId\": 1153,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4566,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4233\n          },\n          {\n            \"consumerId\": 3038,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2228\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3a5f9631-f96f-4347-820e-456f87851bcf",
+          "name": "Returns the details of endpoint devices based on the parameters passed.",
+          "request": {
+            "name": "Returns the details of endpoint devices based on the parameters passed.",
+            "description": {
+              "content": "If no parameters are passed, the properties of all active endpoint devices within the Client or Division are returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "endpoints",
+                "device"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "deviceName",
+                  "value": "<string>",
+                  "description": "Device Name"
+                },
+                {
+                  "disabled": false,
+                  "key": "aliasName",
+                  "value": "<string>",
+                  "description": "Alias name of the device"
+                },
+                {
+                  "disabled": false,
+                  "key": "statusId",
+                  "value": "<integer>",
+                  "description": "Device status. “0” for Active; “1” for Inactive"
+                },
+                {
+                  "disabled": false,
+                  "key": "labelKeyIds",
+                  "value": "<string>",
+                  "description": "Label ID the device is attached to"
+                },
+                {
+                  "disabled": false,
+                  "key": "labelValueIds",
+                  "value": "<string>",
+                  "description": "Label Value ID the device is attached to."
+                },
+                {
+                  "disabled": false,
+                  "key": "pageNumber",
+                  "value": "1",
+                  "description": "Page number to return records from when the number of records exceeds pageSize"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "100",
+                  "description": "Number of results that is returned per page. Maximum value is 100."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ffbb78a8-1123-41cf-87be-fdaf9d8d644e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "endpoints",
+                    "device"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "deviceName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aliasName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "statusId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "labelKeyIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "labelValueIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pageNumber",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"endpoints\": [\n      {\n        \"deviceId\": 7947,\n        \"userId\": 440,\n        \"deviceName\": \"string\",\n        \"aliasName\": \"string\",\n        \"labels\": [\n          {\n            \"color\": \"string\",\n            \"id\": 8046,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"color\": \"string\",\n            \"id\": 9528,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"status\": {\n          \"id\": 7432,\n          \"name\": \"string\"\n        }\n      },\n      {\n        \"deviceId\": 7067,\n        \"userId\": 6172,\n        \"deviceName\": \"string\",\n        \"aliasName\": \"string\",\n        \"labels\": [\n          {\n            \"color\": \"string\",\n            \"id\": 554,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"color\": \"string\",\n            \"id\": 2035,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"status\": {\n          \"id\": 5525,\n          \"name\": \"string\"\n        }\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 7092,\n    \"lastRequestTimestamp\": \"1967-11-17T08:16:41.383Z\",\n    \"limits\": {\n      \"minute\": 6945,\n      \"hour\": 6495,\n      \"day\": 7890\n    },\n    \"runs\": {\n      \"minute\": 7328,\n      \"hour\": 558,\n      \"day\": 9152\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 2194,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6053,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5490\n          },\n          {\n            \"consumerId\": 1897,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7911\n          }\n        ]\n      },\n      {\n        \"divisionId\": 8198,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8132,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8724\n          },\n          {\n            \"consumerId\": 2970,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 719\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b7aeb2a5-0c18-45b5-a2e1-71165ad47c46",
+          "name": "Returns the endpoint device status based on the User ID.",
+          "request": {
+            "name": "Returns the endpoint device status based on the User ID.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "endpoints",
+                "device",
+                "status",
+                ":userIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userIds",
+                  "description": "(Required) Comma-separated list of Endpoint User IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7a496caf-5e0f-437a-8549-d86332a0a5f6",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "endpoints",
+                    "device",
+                    "status",
+                    ":userIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userIds",
+                      "description": "(Required) Comma-separated list of Endpoint User IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"endpoints\": [\n      {\n        \"userId\": 3133,\n        \"deviceName\": \"string\",\n        \"status\": {\n          \"id\": 3633,\n          \"name\": \"string\"\n        }\n      },\n      {\n        \"userId\": 9420,\n        \"deviceName\": \"string\",\n        \"status\": {\n          \"id\": 1845,\n          \"name\": \"string\"\n        }\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 6309,\n    \"lastRequestTimestamp\": \"2015-10-18T10:31:41.058Z\",\n    \"limits\": {\n      \"minute\": 1666,\n      \"hour\": 1827,\n      \"day\": 3517\n    },\n    \"runs\": {\n      \"minute\": 6640,\n      \"hour\": 3946,\n      \"day\": 3924\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 2651,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5060,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4278\n          },\n          {\n            \"consumerId\": 9573,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7371\n          }\n        ]\n      },\n      {\n        \"divisionId\": 5138,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2683,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6070\n          },\n          {\n            \"consumerId\": 4146,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2294\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3102d79e-5049-41a6-a404-6bbb94b3917e",
+          "name": "Allows to set the status of an existing endpoint device to Active or Inactive.",
+          "request": {
+            "name": "Allows to set the status of an existing endpoint device to Active or Inactive.",
+            "description": {
+              "content": "To get payload for updating an endpoint device status refer InternalLink[Endpoint Device Status Endpoint,operations-tag-EndpointDevice,operations-EndpointDevice-get_v2_endpoints_device_status__userIds_]. Status ID values – “0” for Active; “1” for Inactive. There can be multiple endpoint devices in the payload for which the status update is intended.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "endpoints",
+                "device",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"userId\": \"<long>\",\n    \"deviceName\": \"<string>\",\n    \"status\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  },\n  {\n    \"userId\": \"<long>\",\n    \"deviceName\": \"<string>\",\n    \"status\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2d162880-60d4-4b19-ac44-e27f5de78922",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "endpoints",
+                    "device",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"userId\": \"<long>\",\n    \"deviceName\": \"<string>\",\n    \"status\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  },\n  {\n    \"userId\": \"<long>\",\n    \"deviceName\": \"<string>\",\n    \"status\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\"\n    }\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"endpoints\": [\n      3560,\n      5820\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 8187,\n    \"lastRequestTimestamp\": \"1974-04-11T07:39:15.039Z\",\n    \"limits\": {\n      \"minute\": 4945,\n      \"hour\": 2726,\n      \"day\": 8940\n    },\n    \"runs\": {\n      \"minute\": 6319,\n      \"hour\": 979,\n      \"day\": 8760\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 1836,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1349,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2670\n          },\n          {\n            \"consumerId\": 7203,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2884\n          }\n        ]\n      },\n      {\n        \"divisionId\": 4345,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8420,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6341\n          },\n          {\n            \"consumerId\": 313,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1802\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bef909d7-088e-4a9a-834c-94ebd6a3a4ae",
+          "name": "Returns the endpoint device labels based on the User ID.",
+          "request": {
+            "name": "Returns the endpoint device labels based on the User ID.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "endpoints",
+                "device",
+                "label",
+                ":userIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userIds",
+                  "description": "(Required) Comma-separated list of Endpoint User IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4b55dfc7-d94c-424d-8279-65a2e6224f3e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "endpoints",
+                    "device",
+                    "label",
+                    ":userIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userIds",
+                      "description": "(Required) Comma-separated list of Endpoint User IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"endpoints\": [\n      {\n        \"userId\": 5334,\n        \"deviceName\": \"string\",\n        \"labels\": [\n          {\n            \"color\": \"string\",\n            \"id\": 8869,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"color\": \"string\",\n            \"id\": 7610,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"userId\": 3263,\n        \"deviceName\": \"string\",\n        \"labels\": [\n          {\n            \"color\": \"string\",\n            \"id\": 7931,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"color\": \"string\",\n            \"id\": 732,\n            \"name\": \"string\",\n            \"values\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 7523,\n    \"lastRequestTimestamp\": \"2009-01-04T16:57:09.005Z\",\n    \"limits\": {\n      \"minute\": 8776,\n      \"hour\": 5848,\n      \"day\": 9710\n    },\n    \"runs\": {\n      \"minute\": 2357,\n      \"hour\": 9567,\n      \"day\": 734\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 1377,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2258,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5364\n          },\n          {\n            \"consumerId\": 5059,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7402\n          }\n        ]\n      },\n      {\n        \"divisionId\": 4791,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 241,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6775\n          },\n          {\n            \"consumerId\": 547,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8407\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "19e19221-0357-4e87-8b24-3e2d2aadb49e",
+          "name": "Allows to update the existing endpoint device label.",
+          "request": {
+            "name": "Allows to update the existing endpoint device label.",
+            "description": {
+              "content": "To get payload for updating an endpoint device label refer InternalLink[Endpoint Device Label Endpoint,operations-tag-EndpointDevice,operations-EndpointDevice-get_v2_endpoints_device_label__userIds_]. There can be multiple endpoint devices in the payload for which the label update is intended.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "endpoints",
+                "device",
+                "label"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"userId\": \"<long>\",\n    \"labels\": [\n      {\n        \"name\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"values\": \"d)E\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"values\": \";AAHDlH2,\"\n      }\n    ]\n  },\n  {\n    \"userId\": \"<long>\",\n    \"labels\": [\n      {\n        \"name\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"values\": \"RYn9T\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"values\": \"!7\"\n      }\n    ]\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "86b81e04-92fe-4f6e-bf05-e85e52d4b3aa",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "endpoints",
+                    "device",
+                    "label"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"userId\": \"<long>\",\n    \"labels\": [\n      {\n        \"name\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"values\": \"xik_tS\\\"n\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"values\": \"1]umsQK+\"\n      }\n    ]\n  },\n  {\n    \"userId\": \"<long>\",\n    \"labels\": [\n      {\n        \"name\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"values\": \")\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"values\": \"hwWp9\"\n      }\n    ]\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"endpoints\": [\n      7949,\n      8747\n    ],\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 8853,\n    \"lastRequestTimestamp\": \"1983-03-29T11:18:56.068Z\",\n    \"limits\": {\n      \"minute\": 2238,\n      \"hour\": 3842,\n      \"day\": 4292\n    },\n    \"runs\": {\n      \"minute\": 8909,\n      \"hour\": 3715,\n      \"day\": 7652\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 3028,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6679,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3869\n          },\n          {\n            \"consumerId\": 6023,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2776\n          }\n        ]\n      },\n      {\n        \"divisionId\": 2573,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 8148,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2121\n          },\n          {\n            \"consumerId\": 5332,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8431\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5712e48f-edca-4220-8952-fbf706a55886",
+          "name": "Update properties of an existing endpoint device based on the request body.",
+          "request": {
+            "name": "Update properties of an existing endpoint device based on the request body.",
+            "description": {
+              "content": "**Request:**\r\n            \r\nOnly the property to be updated can be passed in the request body instead of the whole object. The update request body requires a total of three keys to be filled with appropriate value as listed below:\r\n* **value** – The value property provides the new value.\r\n            \r\n* **path** – The path property indicates the element to update. The entire path with slashes needs to be provided here. Example: /status/id\r\n            \r\n* **op** – The op property indicates the type of operation; we support the following three operations.\r\n            \r\n    * **add** - Add a property or array element. For existing property: set value.\r\n            \r\n    * **Remove** - Remove a property or array element.\r\n            \r\n    * **replace** - Same as remove followed by add at same location.\r\n            \r\n* **from** - [Not Used]\r\n            \r\n    * **Explanation** - The \"from\" parameter represents the starting or current value of the resource that the operation intends to modify. The from parameter is included in the example value schema but is not utilized in this endpoint's functionality. It is reserved for potential future use or could be used in specific scenarios not covered by the current implementation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "endpoints",
+                "device",
+                ":userId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the updated object in the response body, otherwise the response body will only return the updated object ID."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "userId",
+                  "description": "(Required) Endpoint User ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d095c040-8c74-47d8-8a7e-13071a7ce5d4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "endpoints",
+                    "device",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "userId",
+                      "description": "(Required) Endpoint User ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"endpoints\": {\n      \"userId\": 4448\n    },\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 6108,\n    \"lastRequestTimestamp\": \"2006-05-19T01:22:40.787Z\",\n    \"limits\": {\n      \"minute\": 9076,\n      \"hour\": 6558,\n      \"day\": 8214\n    },\n    \"runs\": {\n      \"minute\": 3739,\n      \"hour\": 6458,\n      \"day\": 6166\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 8034,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 5518,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6391\n          },\n          {\n            \"consumerId\": 992,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8815\n          }\n        ]\n      },\n      {\n        \"divisionId\": 833,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1353,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 7350\n          },\n          {\n            \"consumerId\": 4404,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 528\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0a1f7893-08a3-4b1b-957c-1d40e00073f6",
+    "name": "Catchpoint REST API v2.0 Account EndpointDevice API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

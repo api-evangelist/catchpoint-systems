@@ -1,0 +1,589 @@
+{
+  "item": [
+    {
+      "id": "57da65fb-dda1-40d3-abd8-84714dca3749",
+      "name": "TestTemplates",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "221af2ec-f504-4020-8032-727c08d35433",
+          "name": "Returns Test Template details by the IDs passed.",
+          "request": {
+            "name": "Returns Test Template details by the IDs passed.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "testtemplates",
+                ":ids"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ids",
+                  "description": "(Required) Comma-separated list of test template IDs"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a991b8b7-3fda-455b-ba1a-2f21844b5410",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "testtemplates",
+                    ":ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ids",
+                      "description": "(Required) Comma-separated list of test template IDs"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"testTemplates\": [\n      {\n        \"id\": 6482,\n        \"version\": \"string\",\n        \"description\": \"string\",\n        \"name\": \"string\",\n        \"status\": {\n          \"id\": 8616,\n          \"name\": \"string\"\n        },\n        \"applicationGroup\": {\n          \"id\": 4626,\n          \"name\": \"string\",\n          \"description\": \"string\"\n        },\n        \"parentTestType\": {\n          \"id\": 8037,\n          \"name\": \"string\"\n        },\n        \"testTemplateParameters\": [\n          {\n            \"id\": 4138,\n            \"displayName\": \"string\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"string\"\n          },\n          {\n            \"id\": 9058,\n            \"displayName\": \"string\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"string\"\n          }\n        ],\n        \"testTypeSchema\": {\n          \"description\": \"string\",\n          \"version\": 547,\n          \"testSchema\": {\n            \"detailSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"requestSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"associatedClientsList\": [\n          {\n            \"id\": 175,\n            \"testTemplateId\": 1970,\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": 8911\n          },\n          {\n            \"id\": 130,\n            \"testTemplateId\": 6869,\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": 8849\n          }\n        ],\n        \"testTypeSchemaId\": 1224,\n        \"levelType\": null,\n        \"levelId\": 7560,\n        \"script\": \"string\",\n        \"transactionScriptType\": {\n          \"id\": 1366,\n          \"name\": \"string\"\n        },\n        \"deprecationDate\": \"1969-06-08T22:34:45.904Z\",\n        \"changeDate\": \"1954-01-12T05:02:44.991Z\",\n        \"isLocked\": true,\n        \"file\": {\n          \"id\": 2537,\n          \"refName\": \"string\",\n          \"checksum\": \"string\",\n          \"changeDate\": \"2024-12-30T18:38:29.194Z\",\n          \"changeContactId\": 8051,\n          \"description\": \"string\",\n          \"fileName\": \"string\",\n          \"fileData\": \"string\",\n          \"fileSize\": 1980,\n          \"fileType\": \"s\",\n          \"statusTypeId\": 7220,\n          \"uId\": \"8744ed7f-8f7a-bd31-a648-d818fe07ae63\"\n        }\n      },\n      {\n        \"id\": 5890,\n        \"version\": \"string\",\n        \"description\": \"string\",\n        \"name\": \"string\",\n        \"status\": {\n          \"id\": 1884,\n          \"name\": \"string\"\n        },\n        \"applicationGroup\": {\n          \"id\": 1024,\n          \"name\": \"string\",\n          \"description\": \"string\"\n        },\n        \"parentTestType\": {\n          \"id\": 2943,\n          \"name\": \"string\"\n        },\n        \"testTemplateParameters\": [\n          {\n            \"id\": 6170,\n            \"displayName\": \"string\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"string\"\n          },\n          {\n            \"id\": 291,\n            \"displayName\": \"string\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"string\"\n          }\n        ],\n        \"testTypeSchema\": {\n          \"description\": \"string\",\n          \"version\": 7018,\n          \"testSchema\": {\n            \"detailSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"requestSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"associatedClientsList\": [\n          {\n            \"id\": 3516,\n            \"testTemplateId\": 9902,\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": 2637\n          },\n          {\n            \"id\": 4164,\n            \"testTemplateId\": 8800,\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": 9116\n          }\n        ],\n        \"testTypeSchemaId\": 484,\n        \"levelType\": null,\n        \"levelId\": 6331,\n        \"script\": \"string\",\n        \"transactionScriptType\": {\n          \"id\": 1153,\n          \"name\": \"string\"\n        },\n        \"deprecationDate\": \"1997-06-27T16:30:26.742Z\",\n        \"changeDate\": \"1990-11-03T13:13:50.079Z\",\n        \"isLocked\": true,\n        \"file\": {\n          \"id\": 6709,\n          \"refName\": \"string\",\n          \"checksum\": \"string\",\n          \"changeDate\": \"1984-11-01T11:08:43.569Z\",\n          \"changeContactId\": 4020,\n          \"description\": \"string\",\n          \"fileName\": \"string\",\n          \"fileData\": \"string\",\n          \"fileSize\": 7950,\n          \"fileType\": \"string\",\n          \"statusTypeId\": 4106,\n          \"uId\": \"9241dc23-910d-62a9-a14d-c643724cb4b6\"\n        }\n      }\n    ],\n    \"testTemplate\": {\n      \"id\": 2882,\n      \"version\": \"string\",\n      \"description\": \"string\",\n      \"name\": \"string\",\n      \"status\": {\n        \"id\": 5983,\n        \"name\": \"string\"\n      },\n      \"applicationGroup\": {\n        \"id\": 2133,\n        \"name\": \"string\",\n        \"description\": \"string\"\n      },\n      \"parentTestType\": {\n        \"id\": 57,\n        \"name\": \"string\"\n      },\n      \"testTemplateParameters\": [\n        {\n          \"id\": 6313,\n          \"displayName\": \"string\",\n          \"macroName\": \"string\",\n          \"defaultValue\": \"string\"\n        },\n        {\n          \"id\": 933,\n          \"displayName\": \"string\",\n          \"macroName\": \"string\",\n          \"defaultValue\": \"string\"\n        }\n      ],\n      \"testTypeSchema\": {\n        \"description\": \"string\",\n        \"version\": 4909,\n        \"testSchema\": {\n          \"detailSection\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"requestSection\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      },\n      \"associatedClientsList\": [\n        {\n          \"id\": 5136,\n          \"testTemplateId\": 4282,\n          \"objectType\": null,\n          \"objectId\": 3012\n        },\n        {\n          \"id\": 1552,\n          \"testTemplateId\": 6641,\n          \"objectType\": null,\n          \"objectId\": 5520\n        }\n      ],\n      \"testTypeSchemaId\": 7271,\n      \"levelType\": null,\n      \"levelId\": 7965,\n      \"script\": \"string\",\n      \"transactionScriptType\": {\n        \"id\": 9810,\n        \"name\": \"string\"\n      },\n      \"deprecationDate\": \"1977-03-02T11:57:17.087Z\",\n      \"changeDate\": \"2014-11-20T06:56:24.131Z\",\n      \"isLocked\": true,\n      \"file\": {\n        \"id\": 6909,\n        \"refName\": \"string\",\n        \"checksum\": \"string\",\n        \"changeDate\": \"1950-09-16T08:22:34.756Z\",\n        \"changeContactId\": 3774,\n        \"description\": \"string\",\n        \"fileName\": \"string\",\n        \"fileData\": \"string\",\n        \"fileSize\": 2261,\n        \"fileType\": \"string\",\n        \"statusTypeId\": 8846,\n        \"uId\": \"fbf81173-c2d0-5386-b792-9688a23f69dd\"\n      }\n    },\n    \"id\": 1659,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 8143,\n    \"lastRequestTimestamp\": \"2013-06-13T19:52:58.047Z\",\n    \"limits\": {\n      \"minute\": 9939,\n      \"hour\": 5729,\n      \"day\": 8945\n    },\n    \"runs\": {\n      \"minute\": 4845,\n      \"hour\": 3633,\n      \"day\": 3353\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 8302,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 6002,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 5325\n          },\n          {\n            \"consumerId\": 5631,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 6050\n          }\n        ]\n      },\n      {\n        \"divisionId\": 129,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 9834,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3471\n          },\n          {\n            \"consumerId\": 1636,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 8195\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2d477448-a355-4d07-805d-711c64f97f9c",
+          "name": "Returns Test Template details by parameters passed.",
+          "request": {
+            "name": "Returns Test Template details by parameters passed.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "testtemplates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "statusId",
+                  "value": "<integer>",
+                  "description": "Test Template status type ID (Draft = 0, Published = 2, Deprecated = 3)"
+                },
+                {
+                  "disabled": false,
+                  "key": "applicationGroupId",
+                  "value": "<integer>",
+                  "description": "Application group ID (refer InternalLink[Application Group Enumeration Endpoint,operations-tag-TestTemplates,operations-TestTemplates-get_v2_testtemplates_applicationgroups])"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "682c38b0-3c7b-4f9c-a9b8-a1fbcd556ad8",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "testtemplates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "statusId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "applicationGroupId",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"testTemplates\": [\n      {\n        \"id\": 4460,\n        \"version\": \"string\",\n        \"description\": \"string\",\n        \"name\": \"string\",\n        \"status\": {\n          \"id\": 1697,\n          \"name\": \"string\"\n        },\n        \"applicationGroup\": {\n          \"id\": 5516,\n          \"name\": \"string\",\n          \"description\": \"string\"\n        },\n        \"parentTestType\": {\n          \"id\": 3423,\n          \"name\": \"string\"\n        },\n        \"testTemplateParameters\": [\n          {\n            \"id\": 5425,\n            \"displayName\": \"string\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"string\"\n          },\n          {\n            \"id\": 1773,\n            \"displayName\": \"string\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"string\"\n          }\n        ],\n        \"testTypeSchema\": {\n          \"description\": \"string\",\n          \"version\": 6679,\n          \"testSchema\": {\n            \"detailSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"requestSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"associatedClientsList\": [\n          {\n            \"id\": 8074,\n            \"testTemplateId\": 798,\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": 2744\n          },\n          {\n            \"id\": 6928,\n            \"testTemplateId\": 9736,\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": 4355\n          }\n        ],\n        \"testTypeSchemaId\": 3721,\n        \"levelType\": null,\n        \"levelId\": 5632,\n        \"script\": \"string\",\n        \"transactionScriptType\": {\n          \"id\": 1365,\n          \"name\": \"string\"\n        },\n        \"deprecationDate\": \"1961-04-13T03:09:18.498Z\",\n        \"changeDate\": \"1953-08-31T17:44:21.651Z\",\n        \"isLocked\": true,\n        \"file\": {\n          \"id\": 5240,\n          \"refName\": \"string\",\n          \"checksum\": \"string\",\n          \"changeDate\": \"2002-03-09T06:32:44.286Z\",\n          \"changeContactId\": 6302,\n          \"description\": \"string\",\n          \"fileName\": \"string\",\n          \"fileData\": \"string\",\n          \"fileSize\": 7816,\n          \"fileType\": \"string\",\n          \"statusTypeId\": 3944,\n          \"uId\": \"427ccf6c-12e4-4c97-f0e8-339e79b7a437\"\n        }\n      },\n      {\n        \"id\": 2036,\n        \"version\": \"string\",\n        \"description\": \"string\",\n        \"name\": \"string\",\n        \"status\": {\n          \"id\": 3183,\n          \"name\": \"string\"\n        },\n        \"applicationGroup\": {\n          \"id\": 9483,\n          \"name\": \"string\",\n          \"description\": \"string\"\n        },\n        \"parentTestType\": {\n          \"id\": 5499,\n          \"name\": \"string\"\n        },\n        \"testTemplateParameters\": [\n          {\n            \"id\": 9190,\n            \"displayName\": \"string\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"string\"\n          },\n          {\n            \"id\": 9562,\n            \"displayName\": \"string\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"string\"\n          }\n        ],\n        \"testTypeSchema\": {\n          \"description\": \"string\",\n          \"version\": 2383,\n          \"testSchema\": {\n            \"detailSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"requestSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"associatedClientsList\": [\n          {\n            \"id\": 2404,\n            \"testTemplateId\": 9019,\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": 8778\n          },\n          {\n            \"id\": 7741,\n            \"testTemplateId\": 9101,\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": 458\n          }\n        ],\n        \"testTypeSchemaId\": 310,\n        \"levelType\": null,\n        \"levelId\": 1492,\n        \"script\": \"string\",\n        \"transactionScriptType\": {\n          \"id\": 6544,\n          \"name\": \"string\"\n        },\n        \"deprecationDate\": \"1990-05-25T09:15:06.629Z\",\n        \"changeDate\": \"1997-03-03T10:05:00.036Z\",\n        \"isLocked\": false,\n        \"file\": {\n          \"id\": 9394,\n          \"refName\": \"string\",\n          \"checksum\": \"string\",\n          \"changeDate\": \"1961-11-03T10:38:44.598Z\",\n          \"changeContactId\": 4207,\n          \"description\": \"string\",\n          \"fileName\": \"string\",\n          \"fileData\": \"string\",\n          \"fileSize\": 2770,\n          \"fileType\": \"string\",\n          \"statusTypeId\": 4881,\n          \"uId\": \"a3ae1918-8777-d456-e32e-5f3734040625\"\n        }\n      }\n    ],\n    \"testTemplate\": {\n      \"id\": 7645,\n      \"version\": \"string\",\n      \"description\": \"string\",\n      \"name\": \"string\",\n      \"status\": {\n        \"id\": 927,\n        \"name\": \"string\"\n      },\n      \"applicationGroup\": {\n        \"id\": 4019,\n        \"name\": \"string\",\n        \"description\": \"string\"\n      },\n      \"parentTestType\": {\n        \"id\": 7936,\n        \"name\": \"string\"\n      },\n      \"testTemplateParameters\": [\n        {\n          \"id\": 6790,\n          \"displayName\": \"string\",\n          \"macroName\": \"string\",\n          \"defaultValue\": \"string\"\n        },\n        {\n          \"id\": 9759,\n          \"displayName\": \"string\",\n          \"macroName\": \"string\",\n          \"defaultValue\": \"string\"\n        }\n      ],\n      \"testTypeSchema\": {\n        \"description\": \"string\",\n        \"version\": 6619,\n        \"testSchema\": {\n          \"detailSection\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"requestSection\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      },\n      \"associatedClientsList\": [\n        {\n          \"id\": 8905,\n          \"testTemplateId\": 3169,\n          \"objectType\": null,\n          \"objectId\": 721\n        },\n        {\n          \"id\": 951,\n          \"testTemplateId\": 8341,\n          \"objectType\": null,\n          \"objectId\": 1651\n        }\n      ],\n      \"testTypeSchemaId\": 2127,\n      \"levelType\": null,\n      \"levelId\": 3543,\n      \"script\": \"string\",\n      \"transactionScriptType\": {\n        \"id\": 1247,\n        \"name\": \"string\"\n      },\n      \"deprecationDate\": \"2020-10-29T18:47:20.885Z\",\n      \"changeDate\": \"2023-08-22T03:07:24.786Z\",\n      \"isLocked\": false,\n      \"file\": {\n        \"id\": 1385,\n        \"refName\": \"string\",\n        \"checksum\": \"string\",\n        \"changeDate\": \"2014-05-17T08:54:40.908Z\",\n        \"changeContactId\": 1115,\n        \"description\": \"string\",\n        \"fileName\": \"string\",\n        \"fileData\": \"string\",\n        \"fileSize\": 41,\n        \"fileType\": \"string\",\n        \"statusTypeId\": 4905,\n        \"uId\": \"b64bf838-b4be-d5c5-7a95-2f18a4137ca5\"\n      }\n    },\n    \"id\": 4224,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 3134,\n    \"lastRequestTimestamp\": \"1978-11-29T18:59:01.400Z\",\n    \"limits\": {\n      \"minute\": 4192,\n      \"hour\": 2324,\n      \"day\": 8408\n    },\n    \"runs\": {\n      \"minute\": 2255,\n      \"hour\": 8079,\n      \"day\": 3812\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 9229,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 2842,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2688\n          },\n          {\n            \"consumerId\": 3367,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2444\n          }\n        ]\n      },\n      {\n        \"divisionId\": 6383,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 3614,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4497\n          },\n          {\n            \"consumerId\": 5984,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1401\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6ea5a3f6-0a3c-4908-8b72-8aed82f69e51",
+          "name": "Create a new test template based on the PostData.",
+          "request": {
+            "name": "Create a new test template based on the PostData.",
+            "description": {
+              "content": "To get payload for creating a new test template and to get the created test template details refer InternalLink[Test Template by ID Endpoint,operations-tag-TestTemplates,operations-TestTemplates-get_v2_testtemplates__ids_]. Pass “0” for Test Template ID to create a new test template.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "testtemplates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the created object in the response body, otherwise the response body will only return created object ID."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"version\": \"<string>\",\n  \"description\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"applicationGroup\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\"\n  },\n  \"parentTestType\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"testTemplateParameters\": [\n    {\n      \"id\": \"<integer>\",\n      \"displayName\": \"<string>\",\n      \"defaultValue\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"displayName\": \"<string>\",\n      \"defaultValue\": \"<string>\"\n    }\n  ],\n  \"testTypeSchema\": {\n    \"description\": \"<string>\",\n    \"version\": \"<integer>\",\n    \"testSchema\": {\n      \"detailSection\": {\n        \"supportedMonitors\": [\n          \"<integer>\",\n          \"<integer>\"\n        ],\n        \"scriptSection\": {\n          \"visible\": \"<boolean>\"\n        },\n        \"scriptFileName\": \"<string>\"\n      },\n      \"requestSection\": {\n        \"authentication\": {\n          \"required\": \"<boolean>\"\n        }\n      }\n    }\n  },\n  \"associatedClientsList\": [\n    {\n      \"id\": \"<integer>\",\n      \"testTemplateId\": \"<integer>\",\n      \"objectType\": \"<integer>\",\n      \"objectId\": \"<long>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"testTemplateId\": \"<integer>\",\n      \"objectType\": \"<integer>\",\n      \"objectId\": \"<long>\"\n    }\n  ],\n  \"testTypeSchemaId\": \"<integer>\",\n  \"levelType\": \"<integer>\",\n  \"levelId\": \"<long>\",\n  \"script\": \"<string>\",\n  \"transactionScriptType\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"deprecationDate\": \"<dateTime>\",\n  \"changeDate\": \"<dateTime>\",\n  \"isLocked\": \"<boolean>\",\n  \"file\": {\n    \"id\": \"<integer>\",\n    \"refName\": \"<string>\",\n    \"checksum\": \"<byte>\",\n    \"changeDate\": \"<dateTime>\",\n    \"changeContactId\": \"<integer>\",\n    \"description\": \"<string>\",\n    \"fileName\": \"<string>\",\n    \"fileData\": \"<byte>\",\n    \"fileSize\": \"<integer>\",\n    \"fileType\": \"<string>\",\n    \"statusTypeId\": \"<integer>\",\n    \"uId\": \"<uuid>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "39f64a3d-0504-4870-ad5d-0be84bb9ecf9",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "testtemplates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"version\": \"<string>\",\n  \"description\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"applicationGroup\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\"\n  },\n  \"parentTestType\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"testTemplateParameters\": [\n    {\n      \"id\": \"<integer>\",\n      \"displayName\": \"<string>\",\n      \"defaultValue\": \"<string>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"displayName\": \"<string>\",\n      \"defaultValue\": \"<string>\"\n    }\n  ],\n  \"testTypeSchema\": {\n    \"description\": \"<string>\",\n    \"version\": \"<integer>\",\n    \"testSchema\": {\n      \"detailSection\": {\n        \"supportedMonitors\": [\n          \"<integer>\",\n          \"<integer>\"\n        ],\n        \"scriptSection\": {\n          \"visible\": \"<boolean>\"\n        },\n        \"scriptFileName\": \"<string>\"\n      },\n      \"requestSection\": {\n        \"authentication\": {\n          \"required\": \"<boolean>\"\n        }\n      }\n    }\n  },\n  \"associatedClientsList\": [\n    {\n      \"id\": \"<integer>\",\n      \"testTemplateId\": \"<integer>\",\n      \"objectType\": \"<integer>\",\n      \"objectId\": \"<long>\"\n    },\n    {\n      \"id\": \"<integer>\",\n      \"testTemplateId\": \"<integer>\",\n      \"objectType\": \"<integer>\",\n      \"objectId\": \"<long>\"\n    }\n  ],\n  \"testTypeSchemaId\": \"<integer>\",\n  \"levelType\": \"<integer>\",\n  \"levelId\": \"<long>\",\n  \"script\": \"<string>\",\n  \"transactionScriptType\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\"\n  },\n  \"deprecationDate\": \"<dateTime>\",\n  \"changeDate\": \"<dateTime>\",\n  \"isLocked\": \"<boolean>\",\n  \"file\": {\n    \"id\": \"<integer>\",\n    \"refName\": \"<string>\",\n    \"checksum\": \"<byte>\",\n    \"changeDate\": \"<dateTime>\",\n    \"changeContactId\": \"<integer>\",\n    \"description\": \"<string>\",\n    \"fileName\": \"<string>\",\n    \"fileData\": \"<byte>\",\n    \"fileSize\": \"<integer>\",\n    \"fileType\": \"<string>\",\n    \"statusTypeId\": \"<integer>\",\n    \"uId\": \"<uuid>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"testTemplates\": [\n      {\n        \"id\": \"<integer>\",\n        \"version\": \"<string>\",\n        \"description\": \"<string>\",\n        \"name\": \"<string>\",\n        \"status\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"applicationGroup\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"description\": \"<string>\"\n        },\n        \"parentTestType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"testTemplateParameters\": [\n          {\n            \"id\": \"<integer>\",\n            \"displayName\": \"<string>\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"<string>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"displayName\": \"<string>\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"<string>\"\n          }\n        ],\n        \"testTypeSchema\": {\n          \"description\": \"<string>\",\n          \"version\": \"<integer>\",\n          \"testSchema\": {\n            \"detailSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"requestSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"associatedClientsList\": [\n          {\n            \"id\": \"<integer>\",\n            \"testTemplateId\": \"<integer>\",\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": \"<long>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"testTemplateId\": \"<integer>\",\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": \"<long>\"\n          }\n        ],\n        \"testTypeSchemaId\": \"<integer>\",\n        \"levelType\": \"<integer>\",\n        \"levelId\": \"<long>\",\n        \"script\": \"<string>\",\n        \"transactionScriptType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"deprecationDate\": \"<dateTime>\",\n        \"changeDate\": \"<dateTime>\",\n        \"isLocked\": \"<boolean>\",\n        \"file\": {\n          \"id\": \"<integer>\",\n          \"refName\": \"<string>\",\n          \"checksum\": \"<byte>\",\n          \"changeDate\": \"<dateTime>\",\n          \"changeContactId\": \"<integer>\",\n          \"description\": \"<string>\",\n          \"fileName\": \"<string>\",\n          \"fileData\": \"<byte>\",\n          \"fileSize\": \"<integer>\",\n          \"fileType\": \"<string>\",\n          \"statusTypeId\": \"<integer>\",\n          \"uId\": \"<uuid>\"\n        }\n      },\n      {\n        \"id\": \"<integer>\",\n        \"version\": \"<string>\",\n        \"description\": \"<string>\",\n        \"name\": \"<string>\",\n        \"status\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"applicationGroup\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"description\": \"<string>\"\n        },\n        \"parentTestType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"testTemplateParameters\": [\n          {\n            \"id\": \"<integer>\",\n            \"displayName\": \"<string>\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"<string>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"displayName\": \"<string>\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"<string>\"\n          }\n        ],\n        \"testTypeSchema\": {\n          \"description\": \"<string>\",\n          \"version\": \"<integer>\",\n          \"testSchema\": {\n            \"detailSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"requestSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"associatedClientsList\": [\n          {\n            \"id\": \"<integer>\",\n            \"testTemplateId\": \"<integer>\",\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": \"<long>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"testTemplateId\": \"<integer>\",\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": \"<long>\"\n          }\n        ],\n        \"testTypeSchemaId\": \"<integer>\",\n        \"levelType\": \"<integer>\",\n        \"levelId\": \"<long>\",\n        \"script\": \"<string>\",\n        \"transactionScriptType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"deprecationDate\": \"<dateTime>\",\n        \"changeDate\": \"<dateTime>\",\n        \"isLocked\": \"<boolean>\",\n        \"file\": {\n          \"id\": \"<integer>\",\n          \"refName\": \"<string>\",\n          \"checksum\": \"<byte>\",\n          \"changeDate\": \"<dateTime>\",\n          \"changeContactId\": \"<integer>\",\n          \"description\": \"<string>\",\n          \"fileName\": \"<string>\",\n          \"fileData\": \"<byte>\",\n          \"fileSize\": \"<integer>\",\n          \"fileType\": \"<string>\",\n          \"statusTypeId\": \"<integer>\",\n          \"uId\": \"<uuid>\"\n        }\n      }\n    ],\n    \"testTemplate\": {\n      \"id\": \"<integer>\",\n      \"version\": \"<string>\",\n      \"description\": \"<string>\",\n      \"name\": \"<string>\",\n      \"status\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"applicationGroup\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\"\n      },\n      \"parentTestType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"testTemplateParameters\": [\n        {\n          \"id\": \"<integer>\",\n          \"displayName\": \"<string>\",\n          \"macroName\": \"string\",\n          \"defaultValue\": \"<string>\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"displayName\": \"<string>\",\n          \"macroName\": \"string\",\n          \"defaultValue\": \"<string>\"\n        }\n      ],\n      \"testTypeSchema\": {\n        \"description\": \"<string>\",\n        \"version\": \"<integer>\",\n        \"testSchema\": {\n          \"detailSection\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"requestSection\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      },\n      \"associatedClientsList\": [\n        {\n          \"id\": \"<integer>\",\n          \"testTemplateId\": \"<integer>\",\n          \"objectType\": \"<integer>\",\n          \"objectId\": \"<long>\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"testTemplateId\": \"<integer>\",\n          \"objectType\": \"<integer>\",\n          \"objectId\": \"<long>\"\n        }\n      ],\n      \"testTypeSchemaId\": \"<integer>\",\n      \"levelType\": \"<integer>\",\n      \"levelId\": \"<long>\",\n      \"script\": \"<string>\",\n      \"transactionScriptType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"deprecationDate\": \"<dateTime>\",\n      \"changeDate\": \"<dateTime>\",\n      \"isLocked\": \"<boolean>\",\n      \"file\": {\n        \"id\": \"<integer>\",\n        \"refName\": \"<string>\",\n        \"checksum\": \"<byte>\",\n        \"changeDate\": \"<dateTime>\",\n        \"changeContactId\": \"<integer>\",\n        \"description\": \"<string>\",\n        \"fileName\": \"<string>\",\n        \"fileData\": \"<byte>\",\n        \"fileSize\": \"<integer>\",\n        \"fileType\": \"<string>\",\n        \"statusTypeId\": \"<integer>\",\n        \"uId\": \"<uuid>\"\n      }\n    },\n    \"id\": 8692,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 6862,\n    \"lastRequestTimestamp\": \"1987-01-04T11:58:29.177Z\",\n    \"limits\": {\n      \"minute\": 9207,\n      \"hour\": 4538,\n      \"day\": 5063\n    },\n    \"runs\": {\n      \"minute\": 14,\n      \"hour\": 7206,\n      \"day\": 3760\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 3922,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 187,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1898\n          },\n          {\n            \"consumerId\": 5636,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9438\n          }\n        ]\n      },\n      {\n        \"divisionId\": 2037,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 566,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2116\n          },\n          {\n            \"consumerId\": 6267,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3720\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "08646486-f11e-41c3-8f09-1f1833fe3909",
+          "name": "Update an existing test template based on the request body.",
+          "request": {
+            "name": "Update an existing test template based on the request body.",
+            "description": {
+              "content": "**Request:**\r\n            \r\nOnly the property to be updated can be passed in the request body instead of the whole object. The update request body requires a total of three keys to be filled with appropriate value as listed below:\r\n* **value** – The value property provides the new value.\r\n            \r\n* **path** – The path property indicates the element to update. The entire path with slashes needs to be provided here. Example: /status/id\r\n            \r\n* **op** –  The op property indicates the type of operation; we support the following three operations.\r\n            \r\n    * **add** - Add a property or array element. For existing property: set value.\r\n            \r\n    * **Remove** - Remove a property or array element.\r\n            \r\n    * **replace** - Same as remove followed by add at same location.\r\n            \r\n* **from** - [Not Used]\r\n            \r\n    * **Explanation** - The \"from\" parameter represents the starting or current value of the resource that the operation intends to modify. The from parameter is included in the example value schema but is not utilized in this endpoint's functionality. It is reserved for potential future use or could be used in specific scenarios not covered by the current implementation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "testtemplates",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "objectDetails",
+                  "value": "<boolean>",
+                  "description": "Set to true to return the updated object in the response body, otherwise the response body will only return the updated object ID."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) Test template ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5c44eb67-4d8c-40d1-85fd-b04861165d89",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "testtemplates",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "objectDetails",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) Test template ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  },\n  {\n    \"value\": {},\n    \"path\": \"<string>\",\n    \"op\": \"<string>\",\n    \"from\": \"<string>\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"testTemplates\": [\n      {\n        \"id\": \"<integer>\",\n        \"version\": \"<string>\",\n        \"description\": \"<string>\",\n        \"name\": \"<string>\",\n        \"status\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"applicationGroup\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"description\": \"<string>\"\n        },\n        \"parentTestType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"testTemplateParameters\": [\n          {\n            \"id\": \"<integer>\",\n            \"displayName\": \"<string>\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"<string>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"displayName\": \"<string>\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"<string>\"\n          }\n        ],\n        \"testTypeSchema\": {\n          \"description\": \"<string>\",\n          \"version\": \"<integer>\",\n          \"testSchema\": {\n            \"detailSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"requestSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"associatedClientsList\": [\n          {\n            \"id\": \"<integer>\",\n            \"testTemplateId\": \"<integer>\",\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": \"<long>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"testTemplateId\": \"<integer>\",\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": \"<long>\"\n          }\n        ],\n        \"testTypeSchemaId\": \"<integer>\",\n        \"levelType\": \"<integer>\",\n        \"levelId\": \"<long>\",\n        \"script\": \"<string>\",\n        \"transactionScriptType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"deprecationDate\": \"<dateTime>\",\n        \"changeDate\": \"<dateTime>\",\n        \"isLocked\": \"<boolean>\",\n        \"file\": {\n          \"id\": \"<integer>\",\n          \"refName\": \"<string>\",\n          \"checksum\": \"<byte>\",\n          \"changeDate\": \"<dateTime>\",\n          \"changeContactId\": \"<integer>\",\n          \"description\": \"<string>\",\n          \"fileName\": \"<string>\",\n          \"fileData\": \"<byte>\",\n          \"fileSize\": \"<integer>\",\n          \"fileType\": \"<string>\",\n          \"statusTypeId\": \"<integer>\",\n          \"uId\": \"<uuid>\"\n        }\n      },\n      {\n        \"id\": \"<integer>\",\n        \"version\": \"<string>\",\n        \"description\": \"<string>\",\n        \"name\": \"<string>\",\n        \"status\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"applicationGroup\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\",\n          \"description\": \"<string>\"\n        },\n        \"parentTestType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"testTemplateParameters\": [\n          {\n            \"id\": \"<integer>\",\n            \"displayName\": \"<string>\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"<string>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"displayName\": \"<string>\",\n            \"macroName\": \"string\",\n            \"defaultValue\": \"<string>\"\n          }\n        ],\n        \"testTypeSchema\": {\n          \"description\": \"<string>\",\n          \"version\": \"<integer>\",\n          \"testSchema\": {\n            \"detailSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"requestSection\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"associatedClientsList\": [\n          {\n            \"id\": \"<integer>\",\n            \"testTemplateId\": \"<integer>\",\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": \"<long>\"\n          },\n          {\n            \"id\": \"<integer>\",\n            \"testTemplateId\": \"<integer>\",\n            \"objectType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"objectId\": \"<long>\"\n          }\n        ],\n        \"testTypeSchemaId\": \"<integer>\",\n        \"levelType\": \"<integer>\",\n        \"levelId\": \"<long>\",\n        \"script\": \"<string>\",\n        \"transactionScriptType\": {\n          \"id\": \"<integer>\",\n          \"name\": \"<string>\"\n        },\n        \"deprecationDate\": \"<dateTime>\",\n        \"changeDate\": \"<dateTime>\",\n        \"isLocked\": \"<boolean>\",\n        \"file\": {\n          \"id\": \"<integer>\",\n          \"refName\": \"<string>\",\n          \"checksum\": \"<byte>\",\n          \"changeDate\": \"<dateTime>\",\n          \"changeContactId\": \"<integer>\",\n          \"description\": \"<string>\",\n          \"fileName\": \"<string>\",\n          \"fileData\": \"<byte>\",\n          \"fileSize\": \"<integer>\",\n          \"fileType\": \"<string>\",\n          \"statusTypeId\": \"<integer>\",\n          \"uId\": \"<uuid>\"\n        }\n      }\n    ],\n    \"testTemplate\": {\n      \"id\": \"<integer>\",\n      \"version\": \"<string>\",\n      \"description\": \"<string>\",\n      \"name\": \"<string>\",\n      \"status\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"applicationGroup\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\"\n      },\n      \"parentTestType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"testTemplateParameters\": [\n        {\n          \"id\": \"<integer>\",\n          \"displayName\": \"<string>\",\n          \"macroName\": \"string\",\n          \"defaultValue\": \"<string>\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"displayName\": \"<string>\",\n          \"macroName\": \"string\",\n          \"defaultValue\": \"<string>\"\n        }\n      ],\n      \"testTypeSchema\": {\n        \"description\": \"<string>\",\n        \"version\": \"<integer>\",\n        \"testSchema\": {\n          \"detailSection\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"requestSection\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      },\n      \"associatedClientsList\": [\n        {\n          \"id\": \"<integer>\",\n          \"testTemplateId\": \"<integer>\",\n          \"objectType\": \"<integer>\",\n          \"objectId\": \"<long>\"\n        },\n        {\n          \"id\": \"<integer>\",\n          \"testTemplateId\": \"<integer>\",\n          \"objectType\": \"<integer>\",\n          \"objectId\": \"<long>\"\n        }\n      ],\n      \"testTypeSchemaId\": \"<integer>\",\n      \"levelType\": \"<integer>\",\n      \"levelId\": \"<long>\",\n      \"script\": \"<string>\",\n      \"transactionScriptType\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string>\"\n      },\n      \"deprecationDate\": \"<dateTime>\",\n      \"changeDate\": \"<dateTime>\",\n      \"isLocked\": \"<boolean>\",\n      \"file\": {\n        \"id\": \"<integer>\",\n        \"refName\": \"<string>\",\n        \"checksum\": \"<byte>\",\n        \"changeDate\": \"<dateTime>\",\n        \"changeContactId\": \"<integer>\",\n        \"description\": \"<string>\",\n        \"fileName\": \"<string>\",\n        \"fileData\": \"<byte>\",\n        \"fileSize\": \"<integer>\",\n        \"fileType\": \"<string>\",\n        \"statusTypeId\": \"<integer>\",\n        \"uId\": \"<uuid>\"\n      }\n    },\n    \"id\": 8692,\n    \"hasMore\": false,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": true,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 6862,\n    \"lastRequestTimestamp\": \"1987-01-04T11:58:29.177Z\",\n    \"limits\": {\n      \"minute\": 9207,\n      \"hour\": 4538,\n      \"day\": 5063\n    },\n    \"runs\": {\n      \"minute\": 14,\n      \"hour\": 7206,\n      \"day\": 3760\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 3922,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 187,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1898\n          },\n          {\n            \"consumerId\": 5636,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9438\n          }\n        ]\n      },\n      {\n        \"divisionId\": 2037,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 566,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 2116\n          },\n          {\n            \"consumerId\": 6267,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3720\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "51ebc39d-c140-48d8-92fb-41946406f9b3",
+          "name": "Returns the Application group enumeration details for automation.",
+          "request": {
+            "name": "Returns the Application group enumeration details for automation.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "testtemplates",
+                "applicationgroups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "21cfb75d-4cb5-43d4-8343-5654c1b80d8b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "testtemplates",
+                    "applicationgroups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"sections\": [\n      {\n        \"section\": \"string\",\n        \"enumeration\": [\n          {\n            \"id\": 9960,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 7965,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      {\n        \"section\": \"string\",\n        \"enumeration\": [\n          {\n            \"id\": 7177,\n            \"name\": \"string\"\n          },\n          {\n            \"id\": 4395,\n            \"name\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"hasMore\": true,\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  },\n  \"messages\": [\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    },\n    {\n      \"information\": \"string\",\n      \"ignoredPath\": [\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        },\n        {\n          \"ops\": \"string\",\n          \"path\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"errors\": [\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"message\": \"string\"\n    }\n  ],\n  \"completed\": false,\n  \"traceId\": \"string\",\n  \"usageLimits\": {\n    \"clientId\": 5294,\n    \"lastRequestTimestamp\": \"1955-12-24T00:34:57.546Z\",\n    \"limits\": {\n      \"minute\": 2223,\n      \"hour\": 8734,\n      \"day\": 1700\n    },\n    \"runs\": {\n      \"minute\": 2088,\n      \"hour\": 427,\n      \"day\": 3711\n    },\n    \"exceededMessage\": \"string\",\n    \"divisionUsageStatistics\": [\n      {\n        \"divisionId\": 1911,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 1019,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 1379\n          },\n          {\n            \"consumerId\": 2734,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 3186\n          }\n        ]\n      },\n      {\n        \"divisionId\": 9623,\n        \"consumerStatistics\": [\n          {\n            \"consumerId\": 4692,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 9161\n          },\n          {\n            \"consumerId\": 3337,\n            \"requestCount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxPerDay\": 4022\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3cb6bc1a-2572-4276-b167-4a3d453a1b2c",
+    "name": "Catchpoint REST API v2.0 Account TestTemplates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}
