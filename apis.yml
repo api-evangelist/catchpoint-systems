@@ -42,6 +42,15 @@ tags:
 - Real User Monitoring
 - Network Monitoring
 - Digital Experience Monitoring
+tags_raw:
+- Company
+- Monitoring
+- Observability
+- Internet Performance Monitoring
+- Synthetic Monitoring
+- Real User Monitoring
+- Network Monitoring
+- Digital Experience Monitoring
 - APIs
 maintainers:
 - FN: Kin Lane
@@ -391,7 +400,8 @@ apis:
   description: The Test API from Catchpoint Systems — 7 operation(s) for test.
   humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
   baseURL: https://io.catchpoint.com/api
-  tags:
+  tags: []
+  tags_raw:
   - Test
   properties:
   - type: OpenAPI
@@ -448,6 +458,8 @@ apis:
   humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
   baseURL: https://io.catchpoint.com/api
   tags:
+  - User Identity
+  tags_raw:
   - UserIdentity
   properties:
   - type: OpenAPI
@@ -476,6 +488,8 @@ apis:
   humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
   baseURL: https://io.catchpoint.com/api
   tags:
+  - Workflows
+  tags_raw:
   - Workflow
   properties:
   - type: OpenAPI
