@@ -470,7 +470,7 @@ apis:
   humanURL: https://docs.catchpoint.com/docs/rest-api-v2-guide
   baseURL: https://io.catchpoint.com/api
   tags:
-  - User Identity
+  - UserIdentity
   tags_raw:
   - UserIdentity
   properties:
