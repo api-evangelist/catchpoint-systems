@@ -512,6 +512,8 @@ apis:
   - type: Swagger
     url: https://io.catchpoint.com/api/swagger/index.html
 common:
+- type: Website
+  url: https://www.catchpoint.com/
 - type: CapabilityMap
   url: capabilities/catchpoint-systems-capability-edges.yml
   name: Catchpoint Systems Business Capability Map
